@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Veloce Bicicletas – Medellín</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; color: #222; }
+
+    /* NAV */
+    nav {
+      background: #111;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 40px;
+      position: sticky; top: 0; z-index: 100;
+    }
+    nav .logo img { height: 40px; display: block; }
+    nav ul { list-style: none; display: flex; gap: 28px; }
+    nav ul a { color: #ccc; text-decoration: none; font-size: 0.95rem; transition: color .2s; }
+    nav ul a:hover { color: #f5a623; }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #111 0%, #1a1a1a 60%, #2a2a2a 100%);
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero-logo { width: 200px; margin: 0 auto 32px; display: block; }
+    .hero h1 { font-size: 3rem; font-weight: 900; margin-bottom: 16px; }
+    .hero h1 span { color: #f5a623; }
+    .hero p { font-size: 1.2rem; color: #aaa; max-width: 560px; margin: 0 auto 36px; }
+    .btn {
+      display: inline-block;
+      background: #f5a623;
+      color: #111;
+      padding: 14px 36px;
+      border-radius: 30px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: transform .2s, background .2s;
+    }
+    .btn:hover { background: #e09510; transform: scale(1.04); }
+
+    /* SECCIÓN */
+    section { padding: 70px 40px; max-width: 1100px; margin: 0 auto; }
+    h2 { font-size: 2rem; margin-bottom: 10px; }
+    h2 span { color: #f5a623; }
+    .subtitle { color: #666; margin-bottom: 40px; font-size: 1rem; }
+
+    /* CARDS */
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+    .card {
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 28px 24px;
+      text-align: center;
+      transition: box-shadow .2s;
+    }
+    .card:hover { box-shadow: 0 8px 24px rgba(0,0,0,.1); }
+    .card .icon { font-size: 2.4rem; margin-bottom: 14px; }
+    .card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+    .card p { color: #666; font-size: 0.9rem; line-height: 1.5; }
+
+    /* CONTACTO */
+    .contacto { background: #f9f9f9; border-radius: 16px; padding: 50px 40px; text-align: center; }
+    .contacto p { color: #555; margin-bottom: 24px; font-size: 1rem; }
+    .contacto a.btn { margin: 8px; }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      color: #666;
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 0.85rem;
+    }
+    footer a { color: #f5a623; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo"><img src="logo-horizontal-dark.png" alt="Veloce Bicicletas" /></div>
+  <ul>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="privacidad.html">Privacidad</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <img src="logo-cuadrado.png" alt="Veloce" class="hero-logo" />
+  <h1>Tu tienda de bicicletas<br/>en <span>Medellín</span></h1>
+  <p>Venta, taller especializado y asesoría profesional. Más de 20 años rodando contigo.</p>
+  <a href="#contacto" class="btn">Escríbenos por WhatsApp</a>
+</div>
+
+<section id="servicios">
+  <h2>Nuestros <span>Servicios</span></h2>
+  <p class="subtitle">Todo lo que necesitas para rodar en condiciones</p>
+  <div class="cards">
+    <div class="card">
+      <div class="icon">🚴</div>
+      <h3>Venta de Bicicletas</h3>
+      <p>Road, MTB, urbana y eléctrica. Las mejores marcas con asesoría personalizada.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🔧</div>
+      <h3>Taller Especializado</h3>
+      <p>Mantenimiento, ajustes y reparaciones por mecánicos certificados.</p>
+    </div>
+    <div class="card">
+      <div class="icon">👕</div>
+      <h3>Accesorios y Ropa</h3>
+      <p>Cascos, luces, herramientas, indumentaria técnica y mucho más.</p>
+    </div>
+    <div class="card">
+      <div class="icon">📋</div>
+      <h3>Asesoría en Fitting</h3>
+      <p>Ajuste biomecánico profesional para que tu bicicleta se adapte a ti.</p>
+    </div>
+  </div>
+</section>
+
+<section id="nosotros">
+  <h2>¿Quiénes <span>somos</span>?</h2>
+  <p class="subtitle">Pasión por el ciclismo desde adentro</p>
+  <div class="cards">
+    <div class="card">
+      <div class="icon">🏆</div>
+      <h3>Experiencia real</h3>
+      <p>Fundada por Carlos Trujillo, ciclista competitivo, entrenador UCI y múltiple campeón nacional de MTB.</p>
+    </div>
+    <div class="card">
+      <div class="icon">📍</div>
+      <h3>Medellín, Colombia</h3>
+      <p>Ubicados en la ciudad de la eterna primavera, el corazón del ciclismo colombiano.</p>
+    </div>
+    <div class="card">
+      <div class="icon">💬</div>
+      <h3>Atención personalizada</h3>
+      <p>Respondemos por WhatsApp, Instagram y Facebook. Siempre hay alguien para ayudarte.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="contacto">
+    <h2>¿Listo para <span>rodar</span>?</h2>
+    <p>Escríbenos y te asesoramos sin compromiso</p>
+    <a href="https://wa.me/573189963904" class="btn">💬 WhatsApp</a>
+    <a href="https://instagram.com/veloce_bicicletas" class="btn" style="background:#e1306c;color:#fff;">📸 Instagram</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Veloce Bicicletas · Medellín, Colombia · <a href="privacidad.html">Política de Privacidad</a></p>
+</footer>
+
+</body>
+</html>
