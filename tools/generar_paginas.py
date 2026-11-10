@@ -230,6 +230,7 @@ paginas = [
      c_cuerpo, c_faq, c_lat, "Clases de ciclismo indoor"),
 ]
 
-for p in paginas:
+if __name__ == "__main__":
+  for p in paginas:
     open(f"{p[0]}.html", "w", encoding="utf-8").write(pagina(*p))
     print("ok", p[0])

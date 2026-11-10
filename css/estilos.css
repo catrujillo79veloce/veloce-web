@@ -218,7 +218,8 @@
   .hrow{display:flex;justify-content:space-between;gap:16px;padding:6px 0;font-size:15px}
   .hrow b{font-weight:700}
   .horario small{color:var(--gray);font-size:13px}
-  .brand h3{font-size:clamp(56px,7vw,96px);margin-bottom:14px}
+  .brand h3{font-size:clamp(48px,6vw,84px);margin-bottom:14px}
+  .brand-hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
   .brand p{color:var(--gray);font-size:16px;max-width:440px}
   .brand-groups{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line)}
   .group{background:var(--white);padding:36px 32px}
@@ -248,7 +249,7 @@
 
   /* Footer */
   footer{background:var(--black);color:#a9a6a0;padding:70px 0 34px;font-size:14px}
-  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:56px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:32px;margin-bottom:56px}
   footer .flogo img{height:46px;width:auto}
   footer h4{color:#fff;font-size:12px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px}
   footer li{list-style:none;padding:5px 0}
@@ -322,3 +323,5 @@
   .page-hero .wrap{position:relative;z-index:1}
   @media (max-width:900px){.page-hero .ph-img{width:100%;opacity:.25;-webkit-mask-image:none;mask-image:none}}
   .prose p{margin:0 0 16px}
+  .brand .btn{align-self:flex-start;margin-top:20px}
+  .group li a:hover{color:var(--rojo)}
