@@ -33,7 +33,7 @@ def wa(txt):
 
 OTRAS = {
     "bike-fit-retul-medellin": ("Bike fit Retül", "Medición 3D de tu posición en la bici."),
-    "taller-de-bicicletas-medellin": ("Taller", "Mantenimiento para bicis de alta gama."),
+    "taller-de-bicicletas-medellin": ("Taller", "Ruta, MTB y eléctricas."),
     "centro-de-entrenamiento-ciclismo-medellin": ("Centro de entrenamiento", "Clases por potencia en simulador."),
 }
 
@@ -153,24 +153,31 @@ bf_lat = f"""      <h3>Agenda tu bike fit</h3>
       <p><b>Tienda:</b> lunes a viernes 10:00 AM – 7:00 PM · sábados 11:00 AM – 5:00 PM.</p>"""
 
 # ---------- TALLER ----------
-t_cuerpo = """      <h2>Taller especializado en bicicletas de alta gama</h2>
-      <p>En el taller de Veloce, en El Poblado, Medellín, trabajamos con mecánicos que conocen las bicicletas de alto nivel. Sabemos que tu bici es una inversión y la tratamos así: con las herramientas correctas, los torques de fábrica y el cuidado que necesitan el carbono, los grupos electrónicos y los frenos de disco.</p>
+t_cuerpo = """      <h2>Taller especializado en Medellín</h2>
+      <p>En el taller de Veloce, en El Poblado, Medellín, atendemos bicicletas de <b>ruta, MTB y eléctricas</b> con mecánicos que conocen las bicis de alto nivel. Sabemos que tu bici es una inversión y la tratamos así: con las herramientas correctas y el cuidado que necesitan el carbono, los grupos electrónicos y las suspensiones.</p>
 
       <h2>Servicios del taller</h2>
       <ul>
-        <li><b>Mantenimiento general y preventivo</b> para que tu bici ruede siempre como nueva.</li>
-        <li><b>Sincronización de grupos electrónicos</b> como Shimano Di2, SRAM AXS y Campagnolo.</li>
-        <li><b>Frenos de disco hidráulicos:</b> ajuste y mantenimiento.</li>
-        <li><b>Tubeless:</b> montaje y mantenimiento de llantas sin neumático.</li>
-        <li><b>Armado de bicicletas a medida:</b> elegimos contigo cuadro, grupo, ruedas y componentes, y la armamos.</li>
-        <li><b>Instalación de componentes y accesorios:</b> potenciómetros, ciclocomputadores, ruedas y más.</li>
+        <li><b>Mantenimiento</b> general y preventivo para que tu bici ruede siempre como nueva.</li>
+        <li><b>Alistada:</b> ajuste completo de cambios, frenos y componentes antes de una salida, una carrera o un viaje.</li>
+        <li><b>Lavada</b> de tu bicicleta.</li>
+        <li><b>Mantenimiento de suspensiones</b> para MTB.</li>
+        <li><b>Encerada de cadena:</b> menos fricción, una transmisión más limpia y más duración de la cadena.</li>
+        <li><b>Grupos electrónicos:</b> instalación y actualización de Shimano Di2, SRAM AXS y Campagnolo.</li>
+        <li><b>Mantenimiento de simuladores</b> (rodillos inteligentes).</li>
       </ul>
+
+      <h2>Ruta, MTB y bicicletas eléctricas</h2>
+      <p>Trabajamos con bicicletas de ruta, de montaña y eléctricas. Cada tipo tiene sus necesidades: desde la sincronización de un grupo electrónico en una bici de ruta hasta el mantenimiento de suspensiones en una MTB.</p>
 
       <h2>¿Por qué traer tu bici a Veloce?</h2>
       <p>Somos ciclistas atendiendo ciclistas. Además del taller tenemos <a href="/bike-fit-retul-medellin">bike fit Retül</a>, así que si cambias un componente que afecta tu posición, como el sillín, el manubrio o las calas, podemos dejarte bien ajustado en el mismo lugar.</p>"""
 t_faq = [
     ("¿Cómo agendo mi bici en el taller?", "Escríbenos por WhatsApp al +57 305 245 1204 y te damos la disponibilidad."),
-    ("¿Trabajan con grupos electrónicos?", "Sí. Hacemos sincronización y mantenimiento de grupos electrónicos y trabajamos también con Campagnolo."),
+    ("¿Trabajan con grupos electrónicos?", "Sí. Instalamos y actualizamos grupos Shimano Di2, SRAM AXS y Campagnolo."),
+    ("¿Hacen mantenimiento a bicicletas eléctricas y MTB?", "Sí. Atendemos bicicletas de ruta, MTB y eléctricas, incluido el mantenimiento de suspensiones."),
+    ("¿Qué es la encerada de cadena?", "Es reemplazar el lubricante tradicional por cera. La transmisión queda más limpia, con menos fricción, y la cadena dura más."),
+    ("¿Hacen mantenimiento a simuladores?", "Sí. También hacemos mantenimiento a simuladores de entrenamiento."),
     ("¿Cada cuánto debo hacerle mantenimiento a mi bicicleta?", "Depende de cuánto montes y en qué condiciones. Si ruedas varias veces por semana, una revisión periódica evita desgastes y daños más caros. Escríbenos y te orientamos según tu caso."),
     ("¿Dónde queda el taller?", "En nuestra tienda: Calle 16A Sur #32B-38, Local 101, Mall Campestre Drive Inn, El Poblado, Medellín."),
 ]
@@ -216,11 +223,11 @@ paginas = [
      bf_cuerpo, bf_faq, bf_lat, "Bike fit Retül", "img/retul-fit.jpg", "Bike fit Retül con captura de movimiento 3D en Veloce, Medellín"),
     ("taller-de-bicicletas-medellin",
      "Taller de bicicletas en Medellín | Veloce, El Poblado",
-     "Taller especializado en bicicletas de alta gama en El Poblado, Medellín: mantenimiento, grupos electrónicos, frenos de disco, tubeless y armado a medida.",
+     "Taller de bicicletas en El Poblado, Medellín: mantenimiento, alistada y lavada de bicis de ruta, MTB y eléctricas, suspensiones, encerada de cadena y Shimano Di2, SRAM AXS y Campagnolo.",
      "Taller de bicicletas", "Taller de bicicletas<br>en Medellín.",
-     "Mantenimiento para bicicletas de alta gama con mecánicos que conocen grupos electrónicos, frenos de disco, tubeless y Campagnolo.",
+     "Mantenimiento, alistada y lavada para bicicletas de ruta, MTB y eléctricas. Suspensiones, encerada de cadena y grupos electrónicos Di2, AXS y Campagnolo.",
      "Agendar taller", "Hola Veloce, quiero agendar mi bici en el taller",
-     t_cuerpo, t_faq, t_lat, "Taller de bicicletas"),
+     t_cuerpo, t_faq, t_lat, "Taller de bicicletas", "img/taller.jpg", "Mecánicos trabajando en el taller de bicicletas de Veloce en Medellín"),
     ("centro-de-entrenamiento-ciclismo-medellin",
      "Centro de entrenamiento de ciclismo en Medellín | Clases por potencia · Veloce",
      "Clases de ciclismo indoor por potencia en simulador inteligente, en El Poblado, Medellín. Lunes a viernes desde las 5:00 AM. Planes con seguimiento en TrainingPeaks.",
