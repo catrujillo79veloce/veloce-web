@@ -162,8 +162,12 @@ t_cuerpo = """      <h2>Taller especializado en Medellín</h2>
         <li><b>Alistada:</b> ajuste completo de cambios, frenos y componentes antes de una salida, una carrera o un viaje.</li>
         <li><b>Lavada</b> de tu bicicleta.</li>
         <li><b>Mantenimiento de suspensiones</b> para MTB.</li>
+        <li><b>Sangrada de frenos de disco</b> hidráulicos para que frenen firme y parejo.</li>
+        <li><b>Tubelizada de ruedas:</b> montaje de llantas sin neumático, con menos pinchazos y mejor agarre.</li>
         <li><b>Encerada de cadena:</b> menos fricción, una transmisión más limpia y más duración de la cadena.</li>
         <li><b>Grupos electrónicos:</b> instalación y actualización de Shimano Di2, SRAM AXS y Campagnolo.</li>
+        <li><b>Armada de bicicletas:</b> armamos tu bici nueva o el proyecto que elijas, pieza por pieza.</li>
+        <li><b>Instalación de potenciómetros</b> y configuración con tu ciclocomputador.</li>
         <li><b>Mantenimiento de simuladores</b> (rodillos inteligentes).</li>
       </ul>
 
@@ -175,6 +179,9 @@ t_cuerpo = """      <h2>Taller especializado en Medellín</h2>
 t_faq = [
     ("¿Cómo agendo mi bici en el taller?", "Escríbenos por WhatsApp al +57 305 245 1204 y te damos la disponibilidad."),
     ("¿Trabajan con grupos electrónicos?", "Sí. Instalamos y actualizamos grupos Shimano Di2, SRAM AXS y Campagnolo."),
+    ("¿Hacen sangrada de frenos de disco?", "Sí. Sangramos frenos de disco hidráulicos para que vuelvan a frenar firme y parejo."),
+    ("¿Tubelizan ruedas?", "Sí. Tubelizamos tus ruedas para que ruedes con menos pinchazos y mejor agarre."),
+    ("¿Arman bicicletas?", "Sí. Armamos tu bicicleta nueva o el proyecto que quieras, e instalamos potenciómetros."),
     ("¿Hacen mantenimiento a bicicletas eléctricas y MTB?", "Sí. Atendemos bicicletas de ruta, MTB y eléctricas, incluido el mantenimiento de suspensiones."),
     ("¿Qué es la encerada de cadena?", "Es reemplazar el lubricante tradicional por cera. La transmisión queda más limpia, con menos fricción, y la cadena dura más."),
     ("¿Hacen mantenimiento a simuladores?", "Sí. También hacemos mantenimiento a simuladores de entrenamiento."),
@@ -223,9 +230,9 @@ paginas = [
      bf_cuerpo, bf_faq, bf_lat, "Bike fit Retül", "img/retul-fit.jpg", "Bike fit Retül con captura de movimiento 3D en Veloce, Medellín"),
     ("taller-de-bicicletas-medellin",
      "Taller de bicicletas en Medellín | Veloce, El Poblado",
-     "Taller de bicicletas en El Poblado, Medellín: mantenimiento, alistada y lavada de bicis de ruta, MTB y eléctricas, suspensiones, encerada de cadena y Shimano Di2, SRAM AXS y Campagnolo.",
+     "Taller de bicicletas en El Poblado, Medellín: mantenimiento, alistada y lavada de ruta, MTB y eléctricas, suspensiones, sangrada de frenos, tubelizada, armada y Shimano Di2, SRAM AXS y Campagnolo.",
      "Taller de bicicletas", "Taller de bicicletas<br>en Medellín.",
-     "Mantenimiento, alistada y lavada para bicicletas de ruta, MTB y eléctricas. Suspensiones, encerada de cadena y grupos electrónicos Di2, AXS y Campagnolo.",
+     "Mantenimiento, alistada y lavada para bicicletas de ruta, MTB y eléctricas. Suspensiones, frenos de disco, tubeless, armado, potenciómetros y grupos electrónicos Di2, AXS y Campagnolo.",
      "Agendar taller", "Hola Veloce, quiero agendar mi bici en el taller",
      t_cuerpo, t_faq, t_lat, "Taller de bicicletas", "img/taller.jpg", "Mecánicos trabajando en el taller de bicicletas de Veloce en Medellín"),
     ("centro-de-entrenamiento-ciclismo-medellin",
