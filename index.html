@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veloce · Bicicletas, taller, bike fit y entrenamiento en Medellín</title>
+<meta name="description" content="Veloce, El Poblado, Medellín. Colnago, Pinarello, Wilier, Orbea y Chapter 2. Taller especializado, bike fit Retül y centro de entrenamiento.">
+<link rel="icon" href="img/bici-blanca.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,700;1,800;1,900&family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#161614; --ink:#1d1d1b; --gray:#6e6b66; --line:#e7e4de; --soft:#f5f3ef; --white:#fff;
+    --verde:#127733; --rojo:#d01317; --beige:#bfad7d; --cafe:#4f3d33;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Titillium Web",system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.55}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+  .display{font-family:"Barlow Condensed",sans-serif;font-style:italic;font-weight:900;text-transform:uppercase;line-height:.92;letter-spacing:-.005em}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:.28em;text-transform:uppercase}
+
+  /* Tricolor de la marca */
+  .tri{display:flex;gap:10px;width:150px}
+  .tri i{flex:1;height:5px;border-radius:3px;background:var(--verde)}
+  .tri i:nth-child(2){background:#fff;box-shadow:inset 0 0 0 1px #bbb}
+  .tri i:nth-child(3){background:var(--rojo)}
+  .tri.on-dark i:nth-child(2){box-shadow:none}
+
+  /* Barra superior */
+  .ticker{background:var(--black);color:#fff;overflow:hidden;white-space:nowrap;font-size:13px;font-weight:600;padding:8px 0}
+  .ticker-track{display:inline-block;animation:tick 40s linear infinite}
+  .ticker span{margin:0 26px}
+  .ticker span::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--rojo);margin-right:12px;vertical-align:middle}
+  .ticker span:nth-child(odd)::before{background:var(--verde)}
+  @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .logo img{height:40px;width:auto}
+  .menu{display:flex;gap:30px;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+  .menu a{position:relative;padding:4px 0}
+  .menu a::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:2px;background:var(--rojo);transition:right .25s}
+  .menu a:hover::after{right:0}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.08em;border:2px solid currentColor;transition:.2s}
+  .btn-solid{background:var(--black);color:#fff;border-color:var(--black)}
+  .btn-solid:hover{background:var(--rojo);border-color:var(--rojo)}
+  .btn-light{background:#fff;color:var(--black);border-color:#fff}
+  .btn-light:hover{background:var(--rojo);border-color:var(--rojo);color:#fff}
+  .btn-ghost{color:#fff}
+  .btn-ghost:hover{background:#fff;color:var(--black)}
+  .nav .btn{padding:10px 18px;font-size:13px}
+
+  /* Placeholder de foto: reemplazar por fotos reales de Veloce */
+  .ph{position:relative;background:radial-gradient(120% 90% at 70% 30%,#3a3834 0%,#1f1e1c 55%,#161614 100%);overflow:hidden}
+  .ph::after{content:attr(data-label);position:absolute;right:16px;bottom:14px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);font-weight:700}
+  .ph.foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .ph .bike{position:absolute;opacity:.13;width:62%;left:19%;top:50%;transform:translateY(-50%)}
+
+  /* Hero */
+  .hero{position:relative;min-height:84vh;display:flex;align-items:flex-end;color:#fff;padding:0;background:#000;overflow:hidden}
+  .hero-img{position:absolute;right:0;top:0;height:100%;width:64%;object-fit:cover;object-position:center 60%;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 30%);mask-image:linear-gradient(90deg,transparent 0%,#000 30%)}
+  .hero .ph{position:absolute;inset:0}
+  .hero .ph .bike{width:58%;left:auto;right:-3%;top:44%;opacity:.16}
+  .hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.25) 60%,transparent)}
+  .hero-content{position:relative;padding:0 24px 84px;max-width:1240px;margin:0 auto;width:100%}
+  .hero h1{font-size:clamp(54px,7.4vw,108px);margin:22px 0 22px}
+  .hero p{font-size:19px;max-width:500px;color:#e8e6e2;margin-bottom:34px}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+
+  /* Trust bar */
+  .trust{border-bottom:1px solid var(--line)}
+  .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+  .trust div{padding:26px 18px;border-right:1px solid var(--line);font-size:14px;color:var(--gray)}
+  .trust div:last-child{border-right:0}
+  .trust strong{display:block;font-family:"Barlow Condensed",sans-serif;font-style:italic;font-weight:800;font-size:24px;text-transform:uppercase;color:var(--black);line-height:1.1;margin-bottom:2px}
+
+  /* Secciones */
+  section{padding:110px 0}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:56px;flex-wrap:wrap}
+  .sec-head h2{font-size:clamp(46px,6vw,80px);margin-top:18px}
+  .sec-head p{max-width:420px;color:var(--gray);font-size:17px}
+
+  /* Servicios */
+  .feature{display:grid;grid-template-columns:1.15fr 1fr;min-height:520px;border-top:1px solid var(--line)}
+  .feature:nth-child(even){grid-template-columns:1fr 1.15fr}
+  .feature:nth-child(even) .ph{order:2}
+  .feature-text{padding:64px 56px;display:flex;flex-direction:column;justify-content:center}
+  .feature-text .num{font-family:"Barlow Condensed",sans-serif;font-style:italic;font-weight:800;font-size:18px;color:var(--rojo);margin-bottom:12px}
+  .feature:nth-child(odd) .num{color:var(--verde)}
+  .feature-text h3{font-size:clamp(42px,4.6vw,66px);margin-bottom:20px}
+  .feature-text p{font-size:17px;color:#45433f;margin-bottom:22px;max-width:480px}
+  .feature-text ul{list-style:none;margin-bottom:30px}
+  .feature-text li{padding:9px 0;border-bottom:1px solid var(--line);font-weight:600;font-size:15px;display:flex;gap:12px}
+  .feature-text li::before{content:"—";color:var(--beige)}
+  .feature-ctas{display:flex;gap:12px;flex-wrap:wrap}
+
+  /* Bike fit */
+  .fit{background:var(--black);color:#fff}
+  .fit-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+  .fit-media img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+  .fit-logo{height:44px;width:auto;margin-bottom:22px}
+  .fit-text h2{font-size:clamp(44px,5.5vw,76px);margin-bottom:22px}
+  .fit-text p{color:#cfccc6;font-size:17px;margin-bottom:28px}
+  .fit-promo{border:2px solid var(--rojo);padding:18px 22px;display:flex;flex-direction:column;gap:2px}
+  .fit-promo strong{font-family:"Barlow Condensed",sans-serif;font-style:italic;font-weight:900;font-size:30px;text-transform:uppercase;color:#fff}
+  .fit-promo span{color:#cfccc6}
+  .fit-benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#2a2a27;margin:64px 0}
+  .fit-benefits>div{background:var(--black);padding:34px 30px}
+  .fb-n{font-family:"Barlow Condensed",sans-serif;font-style:italic;font-weight:800;color:#1e9be0;font-size:18px}
+  .fit-benefits h3{font-family:"Barlow Condensed",sans-serif;font-style:italic;font-weight:800;font-size:30px;text-transform:uppercase;margin:6px 0 10px}
+  .fit-benefits p{color:#bdb9b2;font-size:15px}
+  .fit-steps h3{font-size:clamp(36px,4vw,52px);margin-bottom:24px}
+  .fit-steps ol{list-style:none;counter-reset:st;display:grid;grid-template-columns:1fr 1fr;gap:18px 40px;margin-bottom:34px}
+  .fit-steps li{counter-increment:st;position:relative;padding-left:56px;color:#cfccc6;font-size:16px}
+  .fit-steps li::before{content:counter(st);position:absolute;left:0;top:-4px;width:40px;height:40px;border:2px solid #1e9be0;border-radius:50%;display:grid;place-items:center;font-weight:700;color:#fff}
+  .fit-steps li b{color:#fff}
+  .fit-ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .fit .btn-solid{background:#fff;color:var(--black);border-color:#fff}
+  .fit .btn-solid:hover{background:var(--rojo);border-color:var(--rojo);color:#fff}
+  .fit .btn-outline{color:#fff}
+  .fit .btn-outline:hover{background:#fff;color:var(--black)}
+  .fit-note{margin-top:22px;color:#9a968f;font-size:14px}
+  .btn-outline{color:var(--black)}
+  .btn-outline:hover{background:var(--black);color:#fff}
+  @media (max-width:900px){.fit-grid,.fit-benefits,.fit-steps ol{grid-template-columns:1fr}}
+  .prod-fit{position:absolute;bottom:12px;right:12px;background:#1e9be0;color:#fff;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:5px 9px}
+  /* Destacados */
+  .filtros{display:flex;gap:10px;flex-wrap:wrap;margin:-24px 0 32px}
+  .f-btn{border:1px solid var(--line);background:#fff;padding:10px 18px;font:inherit;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:.15s}
+  .f-btn span{color:var(--gray);font-weight:600;margin-left:4px}
+  .f-btn:hover{border-color:var(--black)}
+  .f-btn.on{background:var(--black);color:#fff;border-color:var(--black)}
+  .f-btn.on span{color:#bbb}
+  .f-of{color:var(--rojo);border-color:var(--rojo)}
+  .f-of.on{background:var(--rojo);border-color:var(--rojo)}
+
+  .prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .prod{display:flex;flex-direction:column;border:1px solid var(--line);background:#fff;transition:box-shadow .2s,transform .2s}
+  .prod:hover{box-shadow:0 14px 34px rgba(0,0,0,.08);transform:translateY(-3px)}
+  .prod-img{aspect-ratio:1/1;background:#fff;border-bottom:1px solid var(--line);display:grid;place-items:center;overflow:hidden;position:relative}
+  .prod-img img{width:100%;height:100%;object-fit:contain}
+  .prod-img.vacio::after{content:"Foto del producto";font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#b3afa8;font-weight:700}
+  .prod-cat{position:absolute;top:12px;left:12px;background:var(--black);color:#fff;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:5px 9px}
+  .prod-body{padding:18px 18px 20px;display:flex;flex-direction:column;flex:1}
+  .prod-brand{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gray)}
+  .prod-name{font-family:"Barlow Condensed",sans-serif;font-style:italic;font-weight:800;font-size:26px;text-transform:uppercase;line-height:1.05;margin:6px 0 10px}
+  .prod-price{font-weight:700;font-size:17px;margin-bottom:16px}
+  .prod-price.consultar{color:var(--gray);font-weight:600;font-size:15px}
+  .prod .btn{margin-top:auto;justify-content:center;padding:12px 16px;font-size:13px}
+  .prod-price s{color:var(--gray);font-weight:400;font-size:14px;margin-right:6px}
+  .prod-oferta{position:absolute;top:12px;right:12px;background:var(--rojo);color:#fff;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:5px 9px}
+  .prod-test{position:absolute;bottom:12px;left:12px;background:var(--verde);color:#fff;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:5px 9px}
+  .btn-test{background:#fff;color:var(--verde);border-color:var(--verde)}
+  .btn-test:hover{background:var(--verde);color:#fff}
+  .prod .btn-test{margin-top:10px}
+  .m-ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .m-test{margin-top:16px!important;background:var(--soft);border-left:3px solid var(--verde);padding:12px 14px;font-size:14px!important;font-weight:600;color:var(--ink)!important}
+  .sw-row{display:flex;gap:8px;margin:0 0 14px;flex-wrap:wrap}
+  .sw{width:22px;height:22px;border-radius:50%;border:1px solid #c9c5bd;cursor:pointer;padding:0;outline-offset:2px}
+  .sw.on{outline:2px solid var(--black)}
+  .sw-lg{width:30px;height:30px}
+  .m-opt{margin:6px 0 18px}
+  .m-opt h4{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gray);margin-bottom:10px}
+  .m-opt h4 span{color:var(--black)}
+  .t-row{display:flex;gap:8px;flex-wrap:wrap}
+  .t-btn{min-width:46px;padding:9px 0;border:1px solid var(--line);background:#fff;font:inherit;font-weight:700;cursor:pointer}
+  .t-btn:hover{border-color:var(--black)}
+  .t-btn.on{background:var(--black);color:#fff;border-color:var(--black)}
+  .prod-res{font-size:14px;color:var(--gray);margin:-4px 0 12px}
+  .prod-more{background:none;border:0;font:inherit;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;text-align:left;cursor:pointer;color:var(--black);margin-bottom:14px;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--rojo)}
+  .modal{position:fixed;inset:0;z-index:100;background:rgba(10,10,10,.7);display:none;align-items:center;justify-content:center;padding:24px}
+  .modal.open{display:flex}
+  .m-box{background:#fff;max-width:1100px;width:100%;max-height:92vh;overflow:auto;position:relative}
+  .m-close{position:absolute;top:10px;right:14px;background:none;border:0;font-size:38px;line-height:1;cursor:pointer;color:var(--black);z-index:2}
+  .m-body{display:grid;grid-template-columns:1.2fr 1fr}
+  .m-gal{background:var(--soft);padding:20px}
+  .m-gal #m-main{width:100%;aspect-ratio:4/3;object-fit:contain;background:#fff}
+  .m-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px}
+  .m-thumbs img{aspect-ratio:1/1;object-fit:cover;cursor:pointer;opacity:.55;border:2px solid transparent}
+  .m-thumbs img.on{opacity:1;border-color:var(--black)}
+  .m-info{padding:44px 40px}
+  .m-info h3{font-size:64px;margin:6px 0 10px}
+  .m-info p{color:#45433f;margin:10px 0 18px;font-size:16px}
+  .m-info ul{list-style:none;margin-bottom:26px}
+  .m-info li{padding:8px 0;border-bottom:1px solid var(--line);font-size:14px;font-weight:600;display:flex;gap:10px}
+  .m-info li::before{content:"—";color:var(--rojo)}
+  @media (max-width:800px){.m-body{grid-template-columns:1fr}.m-info{padding:28px 22px}.m-info h3{font-size:48px}}
+  @media (max-width:900px){.hero-img{width:100%;opacity:.45;-webkit-mask-image:none;mask-image:none}}
+  @media (max-width:980px){.prod-grid{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.prod-grid{grid-template-columns:1fr}}
+  /* Marcas */
+  .brands{background:var(--soft)}
+  .brand-hero{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line);margin-bottom:2px}
+  .brand{background:var(--white);padding:52px 48px;min-height:280px;display:flex;flex-direction:column;justify-content:space-between}
+  .brand .tag{display:inline-block;align-self:flex-start;background:var(--black);color:#fff;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:6px 12px;margin-bottom:26px}
+  .brand .tag.rojo{background:var(--rojo)}
+  .brand .tag.verde{background:var(--verde)}
+  .italia.gris{color:var(--gray)} .italia.rojo{color:var(--rojo)}
+  .horario{background:var(--soft);padding:20px 22px;margin:-6px 0 28px;max-width:480px;border-left:3px solid var(--verde)}
+  .horario h4{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gray);margin-bottom:10px}
+  .hrow{display:flex;justify-content:space-between;gap:16px;padding:6px 0;font-size:15px}
+  .hrow b{font-weight:700}
+  .horario small{color:var(--gray);font-size:13px}
+  .brand h3{font-size:clamp(56px,7vw,96px);margin-bottom:14px}
+  .brand p{color:var(--gray);font-size:16px;max-width:440px}
+  .brand-groups{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line)}
+  .group{background:var(--white);padding:36px 32px}
+  .group h4{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gray);margin-bottom:18px}
+  .group ul{list-style:none}
+  .group li{font-family:"Barlow Condensed",sans-serif;font-style:italic;font-weight:800;font-size:30px;text-transform:uppercase;line-height:1.25;color:var(--black)}
+  .italia{display:inline-block;margin-left:8px;font-family:"Titillium Web";font-style:normal;font-weight:700;font-size:10px;letter-spacing:.16em;color:var(--verde);vertical-align:middle}
+
+  /* Veloce Rides */
+  .rides{position:relative;color:#fff;padding:0}
+  .rides .ph{min-height:620px;display:flex;align-items:center;background:radial-gradient(120% 90% at 75% 40%,#5d4a3f 0%,#4f3d33 45%,#2c221d 100%)}
+  .rides .ph .bike{width:48%;left:auto;right:2%;opacity:.14}
+  .rides-inner{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:100px 24px;width:100%}
+  .rides h2{font-size:clamp(62px,9vw,130px);margin:20px 0 22px}
+  .rides p{font-size:19px;max-width:520px;color:#e6ddd6;margin-bottom:34px}
+
+  /* Visítanos */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:stretch}
+  .info-list{border-top:2px solid var(--black)}
+  .info-row{display:grid;grid-template-columns:150px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
+  .info-row span{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gray);padding-top:3px}
+  .info-row div{font-size:18px;font-weight:600}
+  .info-row small{display:block;font-size:14px;color:var(--gray);font-weight:400}
+  .map{background:var(--black);color:#fff;display:flex;flex-direction:column;justify-content:space-between;padding:48px;min-height:420px}
+  .map h3{font-size:58px;margin-top:20px}
+  .map p{color:#bbb;margin:14px 0 30px;font-size:16px}
+
+  /* Footer */
+  footer{background:var(--black);color:#a9a6a0;padding:70px 0 34px;font-size:14px}
+  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:56px}
+  footer .flogo img{height:46px;width:auto}
+  footer h4{color:#fff;font-size:12px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px}
+  footer li{list-style:none;padding:5px 0}
+  footer a:hover{color:#fff}
+  .foot-bottom{border-top:1px solid #2a2a27;padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px}
+
+  /* WhatsApp flotante */
+  .wa{position:fixed;right:22px;bottom:22px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25);transition:transform .2s}
+  .wa:hover{transform:scale(1.08)}
+
+  /* Responsive */
+  .burger{display:none;background:none;border:0;cursor:pointer}
+  @media (max-width:980px){
+    .brand-groups{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:900px){
+    .menu{display:none}
+    .menu.open{display:flex;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:#fff;padding:24px;gap:18px;border-bottom:1px solid var(--line)}
+    .burger{display:block}
+    .nav .btn{display:none}
+    .logo img{height:32px}
+    .trust .wrap{grid-template-columns:1fr 1fr}
+    .trust div:nth-child(2){border-right:0}
+    .trust div{border-bottom:1px solid var(--line)}
+    .feature,.feature:nth-child(even){grid-template-columns:1fr}
+    .feature .ph,.feature:nth-child(even) .ph{order:0;min-height:300px}
+    .feature-text{padding:44px 24px}
+    .brand-hero,.visit-grid{grid-template-columns:1fr}
+    .brand{padding:40px 24px}
+    .foot-grid{grid-template-columns:1fr 1fr}
+    section{padding:80px 0}
+    .info-row{grid-template-columns:1fr;gap:4px}
+  }
+  @media (max-width:560px){ .brand-groups{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Colnago · Pinarello · Wilier</span><span>Distribuidores oficiales Chapter 2 en Colombia</span><span>Distribuidor autorizado Orbea</span><span>Bike fit Retül GRATIS con tu bici de más de $8.000.000</span><span>Centro de entrenamiento</span><span>Mall Campestre Drive Inn · El Poblado</span>
+    <span>Colnago · Pinarello · Wilier</span><span>Distribuidores oficiales Chapter 2 en Colombia</span><span>Distribuidor autorizado Orbea</span><span>Bike fit Retül GRATIS con tu bici de más de $8.000.000</span><span>Centro de entrenamiento</span><span>Mall Campestre Drive Inn · El Poblado</span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#inicio" class="logo"><img src="img/logo-negro.png" alt="Veloce"></a>
+    <nav class="menu" id="menu">
+      <a href="#servicios">Servicios</a>
+      <a href="#bikefit">Bike fit</a>
+      <a href="#destacados">Destacados</a>
+      <a href="#marcas">Marcas</a>
+      <a href="#rides">Veloce Rides</a>
+      <a href="#visitanos">Visítanos</a>
+    </nav>
+    <a class="btn btn-solid" href="https://wa.me/573052451204?text=Hola%20Veloce%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n">Escríbenos</a>
+    <button class="burger" aria-label="Menú" onclick="document.getElementById('menu').classList.toggle('open')">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#161614" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <img class="hero-img" src="img/hero-colnago.jpg" alt="Colnago V5Rs">
+  <div class="hero-content">
+    <div class="tri on-dark"><i></i><i></i><i></i></div>
+    <h1 class="display">El ciclismo<br>a la italiana.</h1>
+    <p>Bicicletas de alta gama, taller especializado, bike fit Retül y centro de entrenamiento. Todo en un solo lugar, en El Poblado.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-light" href="#servicios">Ver servicios</a>
+      <a class="btn btn-ghost" href="https://wa.me/573052451204?text=Hola%20Veloce%2C%20quiero%20asesor%C3%ADa">Asesoría por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap">
+    <div><strong>Alta gama</strong>Colnago, Pinarello, Wilier y Orbea</div>
+    <div><strong>Chapter 2</strong>Distribuidores oficiales en Colombia</div>
+    <div><strong>Retül</strong>Bike fit con medición 3D</div>
+    <div><strong>Entrenamiento</strong>Clases por potencia en simulador</div>
+  </div>
+</div>
+
+<!-- SERVICIOS -->
+<section id="servicios" style="padding-bottom:0">
+  <div class="wrap sec-head">
+    <div><div class="tri"><i></i><i></i><i></i></div><h2 class="display">Todo para<br>tu bicicleta.</h2></div>
+    <p>Desde elegir tu próxima bici hasta dejarla perfecta para ti. Un equipo de ciclistas atendiendo ciclistas.</p>
+  </div>
+
+  <div class="features">
+    <div class="feature">
+      <div class="ph foto"><img src="img/venta-colnago.jpg" alt="Colnago V5Rs en carretera"></div>
+      <div class="feature-text">
+        <div class="num">01</div>
+        <h3 class="display">Venta de<br>bicicletas</h3>
+        <p>Ruta, gravel, MTB y triatlón de las mejores marcas del mundo. Te asesoramos según cómo y dónde montas.</p>
+        <ul><li>Colnago, Pinarello, Wilier y Orbea</li><li>Chapter 2 · distribución oficial Colombia</li><li>Componentes, ruedas, accesorios y nutrición</li></ul>
+        <div class="feature-ctas"><a class="btn btn-solid" href="https://wa.me/573052451204?text=Hola%2C%20busco%20una%20bicicleta">Cotizar bici</a></div>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="ph" data-label="Foto · taller"><img class="bike" src="img/bici-blanca.png" alt=""></div>
+      <div class="feature-text">
+        <div class="num">02</div>
+        <h3 class="display">Taller</h3>
+        <p>Mantenimiento con mecánicos que conocen las bicis de alto nivel: grupos electrónicos, frenos de disco, tubeless y Campagnolo.</p>
+        <ul><li>Mantenimiento general y preventivo</li><li>Sincronización de grupos electrónicos</li><li>Armado de bicicletas a medida</li></ul>
+        <div class="feature-ctas"><a class="btn btn-solid" href="https://wa.me/573052451204?text=Hola%2C%20quiero%20agendar%20taller">Agendar taller</a></div>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="ph foto"><img src="img/retul-fit.jpg" alt="Bike fit Retül en Veloce" style="object-position:30% center"></div>
+      <div class="feature-text">
+        <div class="num">03</div>
+        <h3 class="display">Bike fit<br>Retül</h3>
+        <p>Medición 3D de tu posición en movimiento. Más potencia, más comodidad y menos lesiones, con datos y no a ojo.</p>
+        <ul><li>Captura 3D en tiempo real</li><li>Ajuste de sillín, manubrio y calas</li><li><b style="color:var(--rojo)">Gratis con tu bici de más de $8.000.000</b></li></ul>
+        <div class="feature-ctas"><a class="btn btn-solid" href="https://wa.me/573052451204?text=Hola%2C%20quiero%20agendar%20un%20bike%20fit%20Ret%C3%BCl">Agendar bike fit</a><a class="btn btn-outline" href="#bikefit">Cómo funciona</a></div>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="ph" data-label="Foto · centro de entrenamiento"><img class="bike" src="img/bici-blanca.png" alt=""></div>
+      <div class="feature-text">
+        <div class="num">04</div>
+        <h3 class="display">Centro de<br>entrenamiento</h3>
+        <p>Clases grupales en simulador por potencia, llueva o truene. Entrenamiento guiado para mejorar de verdad.</p>
+        <ul><li>Clases grupales de 1 hora en simulador inteligente</li><li>Entrenamiento por potencia</li><li>Planes con seguimiento en TrainingPeaks</li></ul>
+        <div class="horario"><h4>Horario de clases</h4><div class="hrow"><b>Lunes</b><span>6:00 · 7:00 · 8:00 AM</span></div><div class="hrow"><b>Martes a viernes</b><span>5:00 · 6:00 · 7:00 · 8:00 AM</span></div><small>Cada clase dura una hora.</small></div>
+        <div class="feature-ctas"><a class="btn btn-solid" href="https://wa.me/573052451204?text=Hola%2C%20quiero%20info%20del%20centro%20de%20entrenamiento">Reservar sesión</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BIKE FIT RETÜL -->
+<section class="fit" id="bikefit">
+  <div class="wrap">
+    <div class="fit-grid">
+      <div class="fit-media"><img src="img/retul-fit.jpg" alt="Bike fit Retül con captura de movimiento 3D"></div>
+      <div class="fit-text">
+        <img class="fit-logo" src="img/retul-logo.png" alt="Retül">
+        <h2 class="display">Tu bici,<br>hecha a tu medida.</h2>
+        <p>Retül es el sistema de bike fit con captura de movimiento 3D que usan los mejores fitters del mundo. Mide cada grado de movimiento y cada milímetro mientras pedaleas, con datos que el ojo no puede ver, para ajustar tu bici a tu cuerpo y no al revés.</p>
+        <div class="fit-promo"><strong>Bike fit Retül GRATIS</strong><span>con la compra de tu bicicleta de más de $8.000.000</span></div>
+      </div>
+    </div>
+
+    <div class="fit-benefits">
+      <div><span class="fb-n">01</span><h3>Más comodidad</h3><p>Una posición correcta te deja rodar más horas sin molestias en espalda, cuello, manos o sillín.</p></div>
+      <div><span class="fb-n">02</span><h3>Menos lesiones</h3><p>Alinear tu cuerpo en la bici ayuda a prevenir dolor de rodilla, espalda baja y adormecimiento en manos y pies.</p></div>
+      <div><span class="fb-n">03</span><h3>Más potencia</h3><p>Una posición óptima aprovecha mejor tu fuerza: más vatios, más resistencia y más velocidad con el mismo esfuerzo.</p></div>
+    </div>
+
+    <div class="fit-steps">
+      <h3 class="display">Así es tu bike fit</h3>
+      <ol>
+        <li><b>Entrevista y evaluación física.</b> Revisamos tu flexibilidad, lesiones anteriores, molestias y tus objetivos en la bici.</li>
+        <li><b>Captura 3D en movimiento.</b> Ponemos marcadores LED en 8 puntos de tu cuerpo y el sistema Retül registra cada pedalada en tiempo real.</li>
+        <li><b>Ajustes con datos.</b> Con la información del software ajustamos sillín, manubrio, calas y, si hace falta, recomendamos cambios de componentes.</li>
+        <li><b>Medición final y reporte.</b> Medimos tu bici con la herramienta Zin de Retül y te entregamos un reporte con todas tus medidas para siempre.</li>
+      </ol>
+      <div class="fit-ctas">
+        <a class="btn btn-solid" href="https://wa.me/573052451204?text=Hola%20Veloce%2C%20quiero%20agendar%20un%20bike%20fit%20Ret%C3%BCl">Agendar bike fit</a>
+        <a class="btn btn-outline" href="#destacados">Ver bicicletas</a>
+      </div>
+      <p class="fit-note">¿Vas a comprar bici y no sabes qué talla o modelo? Hacer el bike fit primero es la mejor forma de acertar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DESTACADOS -->
+<section id="destacados">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="tri"><i></i><i></i><i></i></div><h2 class="display">Destacados.</h2></div>
+      <p>Algunos de los productos que tenemos en tienda. Escríbenos y te asesoramos.</p>
+    </div>
+    <div class="filtros" id="filtros"></div>
+    <div class="prod-grid" id="prod-grid"></div>
+  </div>
+</section>
+
+<!-- MARCAS -->
+<section class="brands" id="marcas">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="tri"><i></i><i></i><i></i></div><h2 class="display">Nuestras<br>marcas.</h2></div>
+      <p>Trabajamos con las marcas que montamos y en las que confiamos.</p>
+    </div>
+
+    <div class="brand-hero">
+      <div class="brand">
+        <div><span class="tag verde">Italia · desde 1954</span><h3 class="display">Colnago</h3></div>
+        <p>Leyenda del ciclismo italiano. Cuadros de ruta y competencia con décadas de historia en el pelotón profesional.</p>
+      </div>
+      <div class="brand">
+        <div><span class="tag rojo">Italia · desde 1952</span><h3 class="display">Pinarello</h3></div>
+        <p>Desde Treviso, bicicletas de ruta que han ganado las carreras más grandes del mundo. Diseño, rigidez y velocidad.</p>
+      </div>
+    </div>
+
+    <div class="brand-groups">
+      <div class="group"><h4>Bicicletas</h4><ul><li>Colnago<span class="italia">ITA</span></li><li>Pinarello<span class="italia">ITA</span></li><li>Wilier<span class="italia">ITA</span></li><li>Orbea<span class="italia gris">AUTORIZADO</span></li><li>Chapter 2<span class="italia rojo">DISTRIBUIDOR COL</span></li></ul></div>
+      <div class="group"><h4>Componentes y ruedas</h4><ul><li>Campagnolo<span class="italia">ITA</span></li><li>ENVE</li><li>Pirelli<span class="italia">ITA</span></li><li>Look</li></ul></div>
+      <div class="group"><h4>Equipamiento</h4><ul><li>Kask<span class="italia">ITA</span></li><li>KOO<span class="italia">ITA</span></li><li>Sidi<span class="italia">ITA</span></li><li>Fizik<span class="italia">ITA</span></li></ul></div>
+      <div class="group"><h4>Nutrición y tecnología</h4><ul><li>SIS</li><li>Carbs</li><li>CamelBak</li><li>Magene</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- VELOCE RIDES -->
+<section class="rides" id="rides">
+  <div class="ph" data-label="Foto · rodada Veloce Rides">
+    <img class="bike" src="img/bici-blanca.png" alt="">
+    <div class="rides-inner">
+      <div class="tri on-dark"><i></i><i></i><i></i></div>
+      <h2 class="display">Veloce<br>Rides.</h2>
+      <p>Rodadas, viajes y eventos para salir a montar en grupo por las mejores rutas de Colombia.</p>
+      <a class="btn btn-light" href="https://www.instagram.com/velocecycling/">Próximas rodadas en Instagram</a>
+    </div>
+  </div>
+</section>
+
+<!-- VISÍTANOS -->
+<section id="visitanos">
+  <div class="wrap">
+    <div class="sec-head"><div><div class="tri"><i></i><i></i><i></i></div><h2 class="display">Visítanos.</h2></div></div>
+    <div class="visit-grid">
+      <div class="info-list">
+        <div class="info-row"><span>Dirección</span><div>Calle 16A Sur #32B-38, Local 101<small>Mall Campestre Drive Inn · El Poblado, Medellín</small></div></div>
+        <div class="info-row"><span>Tienda</span><div>Lunes a viernes · 10:00 AM – 7:00 PM<small>Sábados · 11:00 AM – 5:00 PM · Domingos estamos pedaleando 🚴</small></div></div>
+        <div class="info-row"><span>Clases</span><div>Lunes · 6, 7 y 8 AM<small>Martes a viernes · 5, 6, 7 y 8 AM</small></div></div>
+        <div class="info-row"><span>WhatsApp</span><div><a href="https://wa.me/573052451204">+57 305 245 1204</a></div></div>
+        <div class="info-row"><span>Instagram</span><div><a href="https://www.instagram.com/velocecycling/">@velocecycling</a></div></div>
+      </div>
+      <div class="map">
+        <div>
+          <div class="tri on-dark"><i></i><i></i><i></i></div>
+          <h3 class="display">Mall Campestre<br>Drive Inn</h3>
+          <p>Local 101 · El Poblado, Medellín. Ven por tu bike fit, una sesión en simulador o simplemente a hablar de bicis.</p>
+        </div>
+        <a class="btn btn-light" style="align-self:flex-start" href="https://www.google.com/maps/search/?api=1&query=Veloce+Mall+Campestre+Drive+Inn+Calle+16A+Sur+32B-38+Medell%C3%ADn">Abrir en Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><a class="flogo" href="#inicio"><img src="img/logo-blanco.png" alt="Veloce"></a><p style="margin-top:18px;max-width:300px">Bicicletas, taller, bike fit y entrenamiento en El Poblado, Medellín.</p></div>
+      <div><h4>Servicios</h4><ul><li><a href="#servicios">Venta de bicicletas</a></li><li><a href="#servicios">Taller</a></li><li><a href="#servicios">Bike fit Retül</a></li><li><a href="#servicios">Centro de entrenamiento</a></li></ul></div>
+      <div><h4>Veloce</h4><ul><li><a href="#marcas">Marcas</a></li><li><a href="#rides">Veloce Rides</a></li><li><a href="#visitanos">Visítanos</a></li></ul></div>
+      <div><h4>Contacto</h4><ul><li><a href="https://wa.me/573052451204">WhatsApp +57 305 245 1204</a></li><li><a href="https://www.instagram.com/velocecycling/">Instagram</a></li><li>Calle 16A Sur #32B-38, Local 101</li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Bicicletas Veloce S.A.S. · Medellín, Colombia</span><span>Tienda en línea próximamente</span></div>
+  </div>
+</footer>
+
+<div class="modal" id="modal"><div class="m-box"><button class="m-close" aria-label="Cerrar">×</button><div class="m-body"></div></div></div>
+
+<a class="wa" href="https://wa.me/573052451204?text=Hola%20Veloce" aria-label="Escríbenos por WhatsApp">
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg>
+</a>
+
+<script>
+  /* ===== PRODUCTOS DESTACADOS =====
+     Para agregar un producto, copia una línea:
+     { cat:"Bicicleta", marca:"Colnago", nombre:"V4Rs", precio:"$00.000.000", foto:"img/productos/archivo.jpg" },
+     Si precio queda vacío ("") se muestra "Consultar precio". */
+  const productos = [
+    { cat:"Bicicleta", marca:"Colnago", nombre:"V5Rs", fit:true, precio:"",
+      foto:"img/productos/v5rs-1.jpg",
+      fotos:["img/productos/v5rs-1.jpg","img/productos/v5rs-2.jpg","img/productos/v5rs-4.jpg","img/productos/v5rs-3.jpg"],
+      resumen:"La Colnago más liviana de la historia. La bici de Pogačar.",
+      desc:"La V5Rs es la nueva generación de la serie V de Colnago y la bicicleta con la que Tadej Pogačar y el UAE Team Emirates corren el WorldTour. Es una todoterreno de competencia: liviana para la montaña, rápida en el llano y precisa en los descensos. Con nuevas técnicas de laminación del carbono, Colnago logró su cuadro más liviano hasta hoy, y además más aerodinámico que su antecesora, la V4Rs.",
+      specs:["Cuadro de carbono monocasco de unos 685 g (sin pintar), el más liviano de Colnago","Unos 9 vatios más eficiente que la V4Rs a 50 km/h","Cabina integrada Colnago CC.01","Espacio para llantas de hasta 32 mm","Disponible en varias configuraciones y colores: pregúntanos por la tuya"] },
+    { cat:"Bicicleta aero", marca:"Colnago", nombre:"Y1Rs", fit:true, precio:"",
+      foto:"img/productos/y1rs-1.jpg",
+      fotos:["img/productos/y1rs-1.jpg","img/productos/y1rs-2.jpg","img/productos/y1rs-3.jpg","img/productos/y1rs-4.jpg"],
+      resumen:"La aero de Colnago. Con ella Pogačar ganó el Tour 2025.",
+      desc:"La Y1Rs es la bicicleta aerodinámica más radical que ha hecho Colnago, fruto de tres años de desarrollo junto al UAE Team Emirates. Su diseño rompe con el cuadro tradicional para cortar el viento como ninguna otra Colnago, sin perder la rigidez y el manejo que se esperan de una bici de competencia. Es la bici con la que Tadej Pogačar ganó el Tour de Francia 2025: pensada para ir rápido en el llano, en los ataques y en los finales.",
+      specs:["Unos 20 vatios menos que la V4Rs para rodar a 50 km/h","Diseño aerodinámico desarrollado en túnel de viento","Horquilla integrada y cabina Colnago CC.Y1","Ganadora del Tour de Francia 2025 con Pogačar","Disponible en varias configuraciones y colores: pregúntanos por la tuya"] },
+    { cat:"Bicicleta", marca:"Colnago", nombre:"V3 Black Edition", fit:true, precio:"$21.900.000",
+      foto:"img/productos/v3-1.jpg",
+      fotos:["img/productos/v3-1.jpg","img/productos/v3-2.jpg","img/productos/v3-3.jpg","img/productos/v3-4.jpg","img/productos/v3-5.jpg"],
+      resumen:"Ultegra Di2 12v, manubrio integrado y ruedas Fulcrum Wind.",
+      desc:"La V3 lleva el ADN de competencia de Colnago a una bici para rodar todos los días. Comparte silueta y filosofía de geometría con la V3Rs, la bici con la que Pogačar ganó su primer Tour de Francia, y busca el equilibrio entre peso, rigidez y aerodinámica: sube con agilidad, es estable en el llano y precisa en los descensos. Esta Black Edition, con su acabado en carbono negro, viene lista para rodar con grupo electrónico y ruedas de perfil alto.",
+      specs:["Cuadro y horquilla de carbono monocasco Colnago V3","Grupo Shimano Ultegra Di2 electrónico de 12 velocidades","Manubrio integrado","Ruedas Fulcrum Wind de carbono","Frenos de disco hidráulicos"] },
+    { cat:"Bicicleta", marca:"Colnago", nombre:"V3 105 Di2", fit:true, precio:"$14.900.000", antes:"$17.900.000",
+      foto:"img/productos/v3-105-1.jpg",
+      fotos:["img/productos/v3-105-1.jpg"],
+      resumen:"Shimano 105 Di2 12v, ruedas Fulcrum y cabina Deda. ¡Súper precio!",
+      desc:"La forma más directa de tener una Colnago de carbono con cambios electrónicos. La V3 comparte silueta y filosofía de geometría con la V3Rs, la bici con la que Pogačar ganó su primer Tour de Francia: liviana y ágil para subir, estable en el llano y segura en los descensos. Con el Shimano 105 Di2 de 12 velocidades tienes cambios precisos con un botón, y las ruedas Fulcrum de aluminio la hacen resistente y confiable para entrenar todos los días.",
+      specs:["Cuadro y horquilla de carbono monocasco Colnago V3","Grupo Shimano 105 Di2 electrónico de 12 velocidades","Ruedas Fulcrum en aluminio","Manubrio y espiga Deda","Frenos de disco hidráulicos"] },
+    { cat:"Bicicleta", marca:"Orbea", nombre:"Orca M30", fit:true, precio:"$10.299.000",
+      foto:"img/productos/orca-m30-1.jpg",
+      fotos:["img/productos/orca-m30-1.jpg"],
+      resumen:"Carbono, Shimano 105 de 12v, sillín Fizik y cableado interno.",
+      desc:"La Orca es la bici escaladora de Orbea: liviana, rígida donde importa y con una respuesta inmediata cada vez que te paras en los pedales. La M30 lleva el mismo cuadro de carbono de la familia Orca, diseñado para transmitir toda tu potencia sin peso de más, y la combina con el confiable Shimano 105 de 12 velocidades. Es una puerta de entrada ideal al carbono para subir las montañas de Colombia, con espacio para llantas anchas y la confianza de los frenos de disco.",
+      specs:["Cuadro de carbono Orbea OMR monocasco y horquilla full carbon","Grupo Shimano 105 mecánico de 12 velocidades (2x12)","Frenos de disco hidráulicos Shimano","Sillín Fizik y tija de carbono","Cableado interno y compatible con potenciómetro","Espacio para llantas de hasta 32 mm"] },
+    { cat:"E-MTB", marca:"Orbea", nombre:"Wild H20", fit:true, precio:"$24.499.000", antes:"$29.999.000", test:true,
+      foto:"img/productos/wild-h20-1.jpg",
+      fotos:["img/productos/wild-h20-1.jpg","img/productos/wild-h20-2.jpg","img/productos/wild-h20-3.jpg"],
+      resumen:"E-enduro con motor Bosch de 120 Nm y batería de 750 Wh. ¡Ven a probarla!",
+      desc:"La Wild es la e-MTB de enduro de Orbea, desarrollada con la experiencia de sus equipos de competencia. Tiene 170 mm de recorrido adelante y atrás para bajar con total confianza, y la potencia del motor Bosch para subir lo que antes parecía imposible. La batería de 750 Wh, integrada en el marco de aluminio, te da autonomía para rutas largas de montaña. Tenemos una Wild H20 para test ride: ven a la tienda, pruébala en la montaña y llévate una nueva.",
+      specs:["Motor Bosch Performance Line CX de 120 Nm","Batería Bosch PowerTube de 750 Wh integrada","Marco de aluminio con 170 mm de recorrido","Horquilla RockShox ZEB y amortiguador Fox Float X","Ruedas de 29\" con llantas Maxxis","Disponible en 3 colores: morado, mostaza y verde oliva","Disponible para test ride: agenda tu prueba"] },
+    { cat:"Gravel", marca:"Look", nombre:"765 Optimum+", fit:true, precio:"$9.900.000", antes:"$17.900.000",
+      foto:"img/productos/look765-1.jpg",
+      fotos:["img/productos/look765-1.jpg","img/productos/look765-2.jpg","img/productos/look765-3.jpg","img/productos/look765-4.jpg"],
+      resumen:"Gravel de carbono con Shimano GRX 11v. ¡Al mejor precio que vas a encontrar!",
+      desc:"Look es la marca francesa que inventó el pedal automático y una de las pioneras del carbono en el ciclismo. La 765 Optimum+ comparte el cuadro de su bici de gravel: carbono con tecnología 3D Wave en las vainas para absorber vibraciones, una geometría estable y espacio para llantas anchas de tierra. Es una bici para salir de la carretera sin miedo: caminos destapados, trochas y rutas largas de aventura, con la rigidez de una bici de ruta cuando toca apretar. A este precio, es una oportunidad que no se repite.",
+      specs:["Cuadro y horquilla de carbono Look 765","Tecnología 3D Wave para absorber vibraciones","Grupo Shimano GRX de 11 velocidades","Espacio para llantas de gravel de hasta 42 mm","Frenos de disco hidráulicos","Precio especial: ahorra $8.000.000"] },
+    { cat:"Ciclocomputador", marca:"Magene", nombre:"C706", precio:"$799.000",
+      foto:"img/productos/magene-c706-1.jpg",
+      fotos:["img/productos/magene-c706-1.jpg"],
+      resumen:"GPS de doble banda, pantalla táctil de 3,3\" y guía por voz.",
+      desc:"El C706 es el ciclocomputador insignia de Magene, la marca que equipa al equipo WorldTour Astana. Tiene una pantalla táctil a color de 3,3 pulgadas, GPS de doble banda con cinco sistemas satelitales para una posición rápida y precisa, navegación con indicaciones por voz y detección automática de subidas, incluso sin ruta cargada. Es compatible con potenciómetros, sensores y segmentos de Strava, y su batería aguanta las salidas más largas. Tecnología de gama alta a un precio muy competitivo.",
+      specs:["Pantalla táctil a color de 3,3 pulgadas","GPS de doble banda (L1 + L5) con 5 sistemas satelitales","Navegación con indicaciones por voz","Detección de subidas con perfil y desnivel (ClimbPro)","Segmentos de Strava en vivo","Resistente al agua IPX7 · hasta 25 horas de batería","Incluye soporte metálico, funda y protector de pantalla"] },
+    { cat:"Potenciómetro", marca:"Magene", nombre:"P715 pedales de potencia", precio:"$1.599.000",
+      foto:"img/productos/magene-p715-1.jpg",
+      fotos:["img/productos/magene-p715-1.jpg","img/productos/magene-p715-2.jpg","img/productos/magene-p715-3.jpg"],
+      resumen:"Potencia de ambas piernas con ±1% de precisión y 120 h de batería.",
+      desc:"Entrenar por potencia es la forma más precisa de mejorar, y los P715 lo hacen accesible. Son pedales con medidor de potencia en ambos ejes, así que miden cada pierna por separado y te muestran tu balance izquierda/derecha. Tienen un giroscopio integrado para mayor precisión en sprints y subidas, cuerpo de compuesto de carbono con eje de acero inoxidable y una batería que dura hasta 120 horas con carga magnética. Se conectan por Bluetooth y ANT+ con tu ciclocomputador, reloj o simulador, y se instalan en minutos como cualquier pedal.",
+      specs:["Medición de potencia en ambas piernas · precisión ±1%","Balance izquierda/derecha y métricas avanzadas de pedaleo","Giroscopio integrado para mayor precisión","Batería de hasta 120 horas con carga magnética","Bluetooth y ANT+ · resistentes al agua IPX7","Versiones para calas Shimano SPD-SL y Look KEO"] },
+    { cat:"Casco", marca:"Kask", nombre:"Protone Icon", precio:"Desde $899.000",
+      foto:"img/productos/kask-protone-9.jpg",
+      variantes:[{color:"Gris claro",hex:"#c9c8d0",fotos:["img/productos/kask-protone-9.jpg"]},{color:"Negro",hex:"#1d1d1b",fotos:["img/productos/kask-protone-1.jpg"]},{color:"Durazno",hex:"#f2b48c",fotos:["img/productos/kask-protone-2.jpg"]},{color:"Gris azulado",hex:"#9aa6b3",fotos:["img/productos/kask-protone-3.jpg"]},{color:"Café",hex:"#6b4a45",fotos:["img/productos/kask-protone-4.jpg"]},{color:"Rosa",hex:"#efd4d6",fotos:["img/productos/kask-protone-5.jpg"]},{color:"Blanco",hex:"#f4f4f4",fotos:["img/productos/kask-protone-6.jpg"]},{color:"Naranja",hex:"#f26a1b",fotos:["img/productos/kask-protone-7.jpg"]},{color:"Amarillo",hex:"#e6dc9a",fotos:["img/productos/kask-protone-8.jpg"]}],
+      tallas:["S","M","L"],
+      resumen:"El casco aero-ventilado de Kask, hecho en Italia. Varios colores.",
+      wa:"Hola Veloce, me interesa el casco Kask Protone Icon. ¿Qué colores y tallas tienen disponibles?",
+      desc:"El Protone Icon es la evolución del Protone, el casco con el que Kask ha ganado en las carreras más importantes del mundo. Combina aerodinámica probada en túnel de viento con una ventilación excelente para los días de calor y las subidas largas. Tiene un marco interno de refuerzo para mayor seguridad, el ajuste OCTOFIT+ con rueda de goma fácil de girar y un acolchado CoolMax que se seca rápido y se puede lavar. Como todos los cascos Kask, cumple el protocolo WG11 de impactos rotacionales. El precio va de $899.000 a $1.100.000 según el color.",
+      specs:["Diseñado y hecho en Italia","Aerodinámica probada en túnel de viento y 17 entradas de aire","Marco interno de refuerzo y protocolo de seguridad Kask WG11","Ajuste OCTOFIT+ con estabilizador para la nuca","Acolchado CoolMax removible y lavable · correa en cuero sintético","Peso aproximado: 230 g (talla M) · tallas S, M y L","Disponible en 9 colores · precio entre $899.000 y $1.100.000 según el color"] },
+    { cat:"Casco", marca:"Kask", nombre:"Elemento", precio:"Desde $1.090.000",
+      foto:"img/productos/kask-elemento-6.jpg",
+      variantes:[{color:"Blanco",hex:"#f4f4f4",fotos:["img/productos/kask-elemento-6.jpg"]},{color:"Negro",hex:"#1d1d1b",fotos:["img/productos/kask-elemento-1.jpg"]},{color:"Azul",hex:"#1f3a6e",fotos:["img/productos/kask-elemento-2.jpg"]},{color:"Rojo",hex:"#e31b23",fotos:["img/productos/kask-elemento-3.jpg"]},{color:"Verde",hex:"#1f8a3a",fotos:["img/productos/kask-elemento-4.jpg"]},{color:"Beige",hex:"#cfcbbf",fotos:["img/productos/kask-elemento-5.jpg"]},{color:"Plateado",hex:"#b9bbbe",fotos:["img/productos/kask-elemento-7.jpg"]}],
+      tallas:["S","M","L"],
+      resumen:"El tope de gama de Kask, desarrollado con el INEOS Grenadiers.",
+      wa:"Hola Veloce, me interesa el casco Kask Elemento. ¿Qué colores y tallas tienen disponibles?",
+      desc:"El Elemento es el casco más avanzado de Kask, desarrollado junto al equipo WorldTour INEOS Grenadiers para dar lo máximo en aerodinámica, ventilación y seguridad al mismo tiempo. Sus paneles de carbono Fluid Carbon 12 permiten más canales internos de aire con entradas más pequeñas, así que es rápido en el llano y fresco en las subidas. Por dentro lleva Multipod, un acolchado impreso en 3D que absorbe mejor los impactos lineales y rotacionales y deja circular el aire, más un forro en lana merino para regular la temperatura. El precio va de $1.090.000 a $1.590.000 según el color.",
+      specs:["Desarrollado con el equipo INEOS Grenadiers","Paneles de carbono Fluid Carbon 12 para más ventilación y aerodinámica","Acolchado Multipod impreso en 3D y protocolo de seguridad Kask WG11","Forro en lana merino y correa Pro ultraliviana","Ajuste OCTOFIT+ y detalles reflectivos","Peso aproximado: 260 g (talla M) · tallas S, M y L","Disponible en 7 colores · precio entre $1.090.000 y $1.590.000 según el color"] },
+    { cat:"Casco", marca:"Kask", nombre:"Mojito³", precio:"Desde $600.000",
+      foto:"img/productos/kask-mojito-1.jpg",
+      variantes:[{color:"Azul hielo",hex:"#a9c6cc",fotos:["img/productos/kask-mojito-1.jpg"]},{color:"Negro",hex:"#1d1d1b",fotos:["img/productos/kask-mojito-2.jpg"]},{color:"Gris",hex:"#8a8a8a",fotos:["img/productos/kask-mojito-3.jpg"]},{color:"Blanco",hex:"#f4f4f4",fotos:["img/productos/kask-mojito-4.jpg"]}],
+      tallas:["S","M","L"],
+      resumen:"Liviano, fresco y cómodo. El clásico de Kask, hecho en Italia.",
+      wa:"Hola Veloce, me interesa el casco Kask Mojito³. ¿Qué colores y tallas tienen disponibles?",
+      desc:"El Mojito es uno de los cascos más populares de Kask desde que lo estrenó el Team Sky en 2012, y el Mojito³ es su tercera generación. Pesa apenas unos 230 gramos, así que casi no lo sientes, y sus entradas de aire más grandes con canales internos mejorados lo mantienen fresco en las salidas largas. Es un casco versátil para ruta, gravel o el día a día, con el ajuste Octo Fit que se adapta a casi cualquier forma de cabeza. Supera en 48% la norma europea de seguridad y cumple el protocolo WG11 de Kask. El precio va de $600.000 a $700.000 según el color.",
+      specs:["Diseñado, probado y fabricado en Italia","Peso aproximado: 230 g (talla M) · tallas S, M y L","17 entradas de aire grandes con canales internos","Supera en 48% la norma europea EN 1078 · protocolo Kask WG11","Ajuste Octo Fit y acolchado Blue Tech","Correa en cuero sintético y detalles reflectivos","Disponible en 4 colores · precio entre $600.000 y $700.000 según el color"] },
+    { cat:"Casco", marca:"Kask", nombre:"Sintesi", precio:"Desde $399.000",
+      foto:"img/productos/kask-sintesi-1.jpg",
+      variantes:[{color:"Blanco",hex:"#f4f4f4",fotos:["img/productos/kask-sintesi-1.jpg"]},{color:"Azul claro",hex:"#7fa9bf",fotos:["img/productos/kask-sintesi-2.jpg"]},{color:"Arena",hex:"#a8968a",fotos:["img/productos/kask-sintesi-3.jpg"]},{color:"Azul oscuro",hex:"#1f2a48",fotos:["img/productos/kask-sintesi-4.jpg"]},{color:"Negro",hex:"#1d1d1b",fotos:["img/productos/kask-sintesi-5.jpg"]}],
+      tallas:["M","L"],
+      resumen:"Un casco para todo: ruta, gravel y ciudad. Calidad Kask a gran precio.",
+      wa:"Hola Veloce, me interesa el casco Kask Sintesi. ¿Qué colores y tallas tienen disponibles?",
+      desc:"El Sintesi es la puerta de entrada al mundo Kask: un casco versátil para ruta, gravel o para moverte por la ciudad, con la misma filosofía de seguridad de los cascos más costosos de la marca. Pesa apenas unos 230 gramos, tiene 13 entradas de aire que canalizan muy bien el aire y un acolchado Blue Tech transpirable y antibacterial. El ajuste Ergo Fit con rueda trasera te deja calibrarlo fácil, incluso en terreno irregular, y cumple el protocolo WG11 de Kask contra impactos rotacionales. El precio varía según el color.",
+      specs:["Versátil: ruta, gravel y ciudad","Peso aproximado: 230 g (talla M) · tallas M y L","13 entradas de aire","Cubierta de policarbonato y núcleo EPS · protocolo Kask WG11","Ajuste Ergo Fit y acolchado Blue Tech antibacterial","Correa en cuero sintético y detalle reflectivo trasero","Disponible en varios colores · precio según el color"] },
+    { cat:"Casco aero", marca:"Kask", nombre:"Utopia Y", precio:"Desde $1.200.000",
+      foto:"img/productos/kask-utopia-1.jpg",
+      variantes:[{color:"Negro",hex:"#1d1d1b",fotos:["img/productos/kask-utopia-1.jpg"]},{color:"Verde menta",hex:"#a9d6c6",fotos:["img/productos/kask-utopia-2.jpg"]},{color:"Morado",hex:"#8a2fa0",fotos:["img/productos/kask-utopia-3.jpg"]},{color:"Blanco",hex:"#f4f4f4",fotos:["img/productos/kask-utopia-4.jpg"]}],
+      tallas:["S","M","L"],
+      resumen:"El casco aero de Kask que usa el INEOS cuando la velocidad manda.",
+      wa:"Hola Veloce, me interesa el casco Kask Utopia Y. ¿Qué colores y tallas tienen disponibles?",
+      desc:"El Utopia Y es el casco aerodinámico de Kask, desarrollado con el Team Sky (hoy INEOS Grenadiers), que lo usa en las etapas donde cada vatio cuenta. Su forma compacta, probada en túnel de viento, corta el aire sin parecer un casco de contrarreloj, y sus entradas de aire tipo NACA con canales internos lo mantienen sorprendentemente fresco para ser un casco aero. Esta versión Y suma el ajuste OCTOFIT+, más estable y fácil de girar, y acolchado frontal Resistex Carbon que seca rápido. El precio varía según el color.",
+      specs:["Casco aero desarrollado con el INEOS Grenadiers","Forma probada en túnel de viento con entradas de aire tipo NACA","Ajuste OCTOFIT+ con rueda de goma","Acolchado frontal Resistex Carbon de secado rápido","Protocolo de seguridad Kask WG11 · detalles reflectivos","Peso aproximado: 260 g (talla M) · tallas S, M y L","Hecho en Italia · precio según el color"] },
+    { cat:"Gafas", marca:"KOO", nombre:"Alibi Photochromic", precio:"$990.000",
+      foto:"img/productos/koo-alibi-1.jpg",
+      fotos:["img/productos/koo-alibi-1.jpg"],
+      resumen:"Lente fotocromático Zeiss que se adapta a la luz. Solo 25 g.",
+      wa:"Hola Veloce, me interesan las gafas KOO Alibi Photochromic. ¿Qué colores y tallas tienen disponibles?",
+      desc:"Las Alibi son las gafas de KOO, la marca de gafas de Kask, pensadas para rodar todo el día en ruta o gravel. Su lente fotocromático Zeiss se oscurece con el sol y se aclara en la sombra o cuando cae la tarde (de categoría 1 a 3), así que no tienes que cambiar de gafas cuando salgas temprano o te coja la neblina en la montaña. Pesan apenas 25 gramos, tienen un diseño de media montura para un campo de visión amplio, dos ventilaciones contra el empañamiento y un ajuste firme que no se mueve ni en los sprints ni en los descensos.",
+      specs:["Lente fotocromático Zeiss · categoría 1 a 3 según la luz","Antiempañante, hidrofóbico y antirrayones · 100% protección UV","Peso: 25 g · montura en Grilamid® resistente","Media montura para visión amplia · 2 ventilaciones","Varillas redondeadas y almohadillas nasales suaves","Compatible con clip óptico KOO para lentes formulados","Tallas Regular y Large"] },
+    { cat:"Gafas", marca:"KOO", nombre:"Alibi", precio:"$899.000",
+      foto:"img/productos/koo-alibi-std-1.jpg",
+      fotos:["img/productos/koo-alibi-std-1.jpg","img/productos/koo-alibi-std-2.jpg","img/productos/koo-alibi-std-3.jpg","img/productos/koo-alibi-std-4.jpg","img/productos/koo-alibi-std-5.jpg","img/productos/koo-alibi-std-6.jpg","img/productos/koo-alibi-std-7.jpg"],
+      resumen:"Lente espejado Zeiss, 25 g y ajuste firme. Varios colores.",
+      wa:"Hola Veloce, me interesan las gafas KOO Alibi. ¿Qué colores y tallas tienen disponibles?",
+      desc:"Las Alibi de KOO, la marca de gafas de Kask, están hechas para rodar todo el día en ruta o gravel con visión nítida y comodidad. Esta versión lleva lente espejado Zeiss con tratamiento antirreflejo por dentro y por fuera, que mejora el contraste y la nitidez y reduce la fatiga visual en los días de sol. Pesan apenas 25 gramos, tienen media montura para un campo de visión amplio, dos ventilaciones contra el empañamiento y un ajuste que no se mueve en las subidas, los sprints ni las curvas.",
+      specs:["Lente espejado Zeiss con antirreflejo · ideal para días de sol (categoría 3)","Antiempañante, hidrofóbico y antirrayones · 100% protección UV","Peso: 25 g · montura en Grilamid® resistente","Media montura para visión amplia · 2 ventilaciones","Varillas redondeadas y almohadillas nasales suaves","Compatible con clip óptico KOO para lentes formulados","Tallas Regular y Large · varios colores de montura y lente"] },
+    { cat:"Gafas", marca:"KOO", nombre:"Hype", precio:"$750.000", antes:"$950.000",
+      foto:"img/productos/koo-hype-1.jpg",
+      fotos:["img/productos/koo-hype-1.jpg","img/productos/koo-hype-2.jpg","img/productos/koo-hype-3.jpg","img/productos/koo-hype-4.jpg","img/productos/koo-hype-5.jpg","img/productos/koo-hype-6.jpg","img/productos/koo-hype-7.jpg","img/productos/koo-hype-8.jpg","img/productos/koo-hype-9.jpg"],
+      resumen:"Lente tórico Zeiss de doble curvatura y estilo único. ¡En oferta!",
+      wa:"Hola Veloce, me interesan las gafas KOO Hype en oferta. ¿Qué colores tienen disponibles?",
+      desc:"Las Hype son la colección más innovadora de KOO, la marca de gafas de Kask, pensadas para ciclistas de competencia que también quieren verse distintos. Su lente Zeiss tórico de doble curvatura parece dos lentes, pero es una sola pieza que amplía el campo de visión y mantiene la nitidez hasta los bordes, sin distorsión. Tienen tres ventilaciones (una a cada lado y una en el centro) para que no se empañen en los esfuerzos fuertes, y varillas envolventes que las mantienen firmes en cualquier ritmo. Funcionan muy bien con los cascos Kask.",
+      specs:["Lente Zeiss tórico de doble curvatura · visión amplia sin distorsión","Lente espejado con antirreflejo · antirrayones e hidrofóbico","3 ventilaciones contra el empañamiento","Varillas envolventes y almohadillas nasales intercambiables","Peso: unos 31 g · montura con 45% de polímeros de origen biológico","Compatible con clip óptico KOO para lentes formulados","Varios colores de montura y lente · precio especial: ahorra $200.000"] },
+    { cat:"Gafas", marca:"KOO", nombre:"Demos", precio:"$599.000", antes:"$799.000",
+      foto:"img/productos/koo-demos-1.jpg",
+      fotos:["img/productos/koo-demos-1.jpg","img/productos/koo-demos-2.jpg","img/productos/koo-demos-3.jpg","img/productos/koo-demos-4.jpg","img/productos/koo-demos-5.jpg","img/productos/koo-demos-6.jpg"],
+      resumen:"Lente panorámico Zeiss tipo goggle para ruta y gravel. ¡En oferta!",
+      wa:"Hola Veloce, me interesan las gafas KOO Demos en oferta. ¿Qué colores tienen disponibles?",
+      desc:"Las Demos de KOO, la marca de gafas de Kask, son atrevidas y versátiles: sirven igual para ruta, gravel o ciclocross. Su diseño inspirado en las goggles, con un solo lente panorámico Zeiss, te da cobertura total y un campo de visión muy amplio. Tienen cuatro ventilaciones para que no se empañen, varillas con insertos antideslizantes que no se mueven aunque sudes, y un puente nasal ajustable para que queden perfectas.",
+      specs:["Lente panorámico Zeiss en policarbonato · espejado con antirreflejo","Diseño tipo goggle con cobertura total","4 ventilaciones contra el empañamiento","Varillas con insertos antideslizantes Megol","Puente nasal ajustable · montura en Grilamid TR90","Compatible con clip óptico KOO para lentes formulados","Varios colores · precio especial: ahorra $200.000"] },
+    { cat:"Zapatillas", marca:"Sidi", nombre:"Shot 3", precio:"$1.990.000",
+      foto:"img/productos/sidi-shot3-crema-1.jpg",
+      variantes:[{color:"Crema",hex:"#ebe5d0",fotos:["img/productos/sidi-shot3-crema-1.jpg","img/productos/sidi-shot3-crema-2.jpg","img/productos/sidi-shot3-crema-3.jpg","img/productos/sidi-shot3-crema-4.jpg"]},{color:"Negro",hex:"#1d1d1b",fotos:["img/productos/sidi-shot3-negro-1.jpg","img/productos/sidi-shot3-negro-2.jpg","img/productos/sidi-shot3-negro-3.jpg","img/productos/sidi-shot3-negro-4.jpg"]},{color:"Blanco",hex:"#ffffff",fotos:["img/productos/sidi-shot3-blanco-1.jpg","img/productos/sidi-shot3-blanco-2.jpg","img/productos/sidi-shot3-blanco-3.jpg","img/productos/sidi-shot3-blanco-4.jpg"]}],
+      tallas:["39","40","41","42","43","44","45","46"],
+      resumen:"La zapatilla tope de gama de Sidi, con chasis de carbono. Tallas 39 a 46.",
+      desc:"La Shot 3 es la zapatilla de ruta más avanzada de Sidi, la marca italiana que lleva más de 40 años innovando en calzado de ciclismo, y la usan corredores del WorldTour como Isaac del Toro. Su chasis de carbono DUO-FIT integra la suela y el talón en una sola pieza, para una transferencia de potencia directa y una estabilidad total. La suela R1FC tiene rigidez 12 y un perfil muy bajo, y los diales NUUN de aluminio te dejan ajustarla al milímetro en segundos. Su horma Millennium es un poco más ancha en la punta, así que es cómoda desde el primer día.",
+      specs:["Chasis de carbono DUO-FIT: suela y talón en una sola pieza","Suela R1FC de carbono con Nexus Bridge · rigidez 12 y perfil bajo","Diales NUUN 001C de aluminio · ajuste rápido y preciso","Capellada de microfibra monocasco · horma Millennium","Plantilla Memory Fit y sistema de talón sin herramientas","Talonera y diales reemplazables · calas de 3 tornillos","Tallas 39 a 46 EU · 3 colores: crema, negro y blanco"] },
+    { cat:"Zapatillas", marca:"Sidi", nombre:"Wire 3", precio:"$1.890.000",
+      foto:"img/productos/sidi-wire3-arena-1.jpg",
+      variantes:[{color:"Arena / Salmón",hex:"linear-gradient(135deg,#efe6dc 50%,#f1a99a 50%)",fotos:["img/productos/sidi-wire3-arena-1.jpg","img/productos/sidi-wire3-arena-2.jpg","img/productos/sidi-wire3-arena-3.jpg","img/productos/sidi-wire3-arena-4.jpg"]},{color:"Blanco / Rosa / Fluo",hex:"linear-gradient(135deg,#f2c6dc 50%,#e6f53a 50%)",fotos:["img/productos/sidi-wire3-fluo-1.jpg","img/productos/sidi-wire3-fluo-2.jpg","img/productos/sidi-wire3-fluo-3.jpg","img/productos/sidi-wire3-fluo-4.jpg"]},{color:"Negro",hex:"#1d1d1b",fotos:["img/productos/sidi-wire3-negro-1.jpg","img/productos/sidi-wire3-negro-2.jpg","img/productos/sidi-wire3-negro-3.jpg","img/productos/sidi-wire3-negro-4.jpg"]},{color:"Blanco",hex:"#ffffff",fotos:["img/productos/sidi-wire3-blanco-1.jpg","img/productos/sidi-wire3-blanco-2.jpg","img/productos/sidi-wire3-blanco-3.jpg","img/productos/sidi-wire3-blanco-4.jpg"]}],
+      tallas:["39","40","41","42","43","44","45","46"],
+      resumen:"La zapatilla más fresca de Sidi: carbono, Kevlar® y máxima ventilación. Tallas 39 a 46.",
+      desc:"La Wire 3 es, según Sidi, la zapatilla más técnica de su historia, hecha para ciclistas que quieren potencia y frescura al mismo tiempo. Su capellada Micro Matrix® con zonas de Kevlar® deja pasar el aire y da soporte justo donde se necesita, y el refuerzo interno Firmor X envuelve el pie y une suela, diales y empeine en un ajuste firme y estable. La suela de carbono R2FC tiene rigidez 11 y canales internos de aire, y los diales NUUN de aluminio te dejan ajustarla al milímetro. Su horma Millennium, un poco más ancha en la punta, la hace cómoda desde la primera salida.",
+      specs:["Capellada Micro Matrix® y Kevlar® · liviana, muy ventilada y resistente","Refuerzo interno Firmor X y empeine flotante para un ajuste firme","Suela de carbono R2FC con Nexus Bridge · rigidez 11 y canales de aire","Diales NUUN 001C de aluminio · ajuste rápido y preciso","Talón ajustable sin herramientas · horma Millennium","Talonera y diales reemplazables · calas de 3 tornillos","Tallas 39 a 46 EU · 4 colores"] },
+  ];
+  const WA = "573052451204";
+  const grid = document.getElementById("prod-grid");
+  const lista = productos.length ? productos : Array.from({length:4},(_,i)=>({cat:["Bicicleta","Casco","Zapatillas","Gafas"][i],marca:"Marca",nombre:"Producto",precio:"",foto:""}));
+  grid.innerHTML = lista.map((p,i)=>{
+    const msg = encodeURIComponent(p.wa||`Hola Veloce, me interesa: ${p.marca} ${p.nombre}`);
+    return `<article class="prod">
+      <div class="prod-img ${p.foto?"":"vacio"}">${p.foto?`<img src="${p.foto}" alt="${p.marca} ${p.nombre}" loading="lazy">`:""}<span class="prod-cat">${p.cat}</span>${p.antes?`<span class="prod-oferta">Oferta</span>`:""}${p.test?`<span class="prod-test">Test ride</span>`:""}${p.fit?`<span class="prod-fit">+ Bike fit gratis</span>`:""}</div>
+      <div class="prod-body">
+        <div class="prod-brand">${p.marca}</div>
+        <div class="prod-name">${p.nombre}</div>${p.resumen?`<p class="prod-res">${p.resumen}</p>`:""}
+        ${p.variantes?`<div class="sw-row">${p.variantes.map((v,k)=>`<button class="sw ${k?"":"on"}" title="${v.color}" style="background:${v.hex}" data-i="${i}" data-k="${k}"></button>`).join("")}</div>`:""}
+        <div class="prod-price ${p.precio?"":"consultar"}">${p.antes?`<s>${p.antes}</s> `:""}${p.precio||"Precio según configuración"}</div>
+        ${p.desc?`<button class="prod-more" data-i="${i}">Ver detalles</button>`:""}
+        <a class="btn btn-solid" href="https://wa.me/${WA}?text=${msg}">${p.precio?"Lo quiero":"Cotizar"} · WhatsApp</a>
+        ${p.test?`<a class="btn btn-test" href="https://wa.me/${WA}?text=${encodeURIComponent(`Hola Veloce, quiero agendar un test ride de la ${p.marca} ${p.nombre}. ¿Qué días tienen disponibles?`)}">Agendar test ride</a>`:""}
+      </div></article>`;
+  }).join("");
+  const grupo=p=>/Bicicleta|E-MTB|Gravel/.test(p.cat)?"Bicicletas":p.cat.startsWith("Casco")?"Cascos":p.cat==="Gafas"?"Gafas":p.cat==="Zapatillas"?"Zapatillas":"Componentes";
+  const cats=["Todos","Bicicletas","Cascos","Gafas","Zapatillas","Componentes","Ofertas"].filter(c=>c==="Todos"||(c==="Ofertas"?lista.some(p=>p.antes):lista.some(p=>grupo(p)===c)));
+  const fbox=document.getElementById("filtros");
+  fbox.innerHTML=cats.map((c,k)=>{const n=c==="Todos"?lista.length:c==="Ofertas"?lista.filter(p=>p.antes).length:lista.filter(p=>grupo(p)===c).length;return `<button class="f-btn ${k?"":"on"} ${c==="Ofertas"?"f-of":""}" data-c="${c}">${c} <span>${n}</span></button>`}).join("");
+  fbox.querySelectorAll(".f-btn").forEach(b=>b.onclick=()=>{const c=b.dataset.c;fbox.querySelectorAll(".f-btn").forEach(x=>x.classList.toggle("on",x===b));
+    grid.querySelectorAll(".prod").forEach((el,i)=>{const p=lista[i];el.style.display=(c==="Todos"||(c==="Ofertas"?p.antes:grupo(p)===c))?"":"none"});});
+  const modal=document.getElementById("modal");
+  function abrir(i,k0){
+    const p=lista[i]; let vk=k0||0, talla=null;
+    const fotos=p.variantes?p.variantes[vk].fotos:(p.fotos||[p.foto]);
+    const msg=encodeURIComponent(p.wa?p.wa:p.precio?`Hola Veloce, me interesa la ${p.marca} ${p.nombre} (${p.precio})`:`Hola Veloce, quiero cotizar la ${p.marca} ${p.nombre}. ¿Qué configuraciones tienen?`);
+    modal.querySelector(".m-body").innerHTML=`
+      <div class="m-gal"><img id="m-main" src="${fotos[0]}" alt="${p.marca} ${p.nombre}"><div class="m-thumbs">${fotos.map((f,k)=>`<img src="${f}" data-f="${f}" class="${k?"":"on"}" alt="">`).join("")}</div></div>
+      <div class="m-info"><div class="prod-brand">${p.marca}</div><h3 class="display">${p.nombre}</h3>
+        <div class="prod-price ${p.precio?"":"consultar"}">${p.antes?`<s>${p.antes}</s> `:""}${p.precio||"Precio según configuración"}</div>
+        <p>${p.desc}</p>
+        ${p.variantes?`<div class="m-opt"><h4>Color: <span id="m-color">${p.variantes[vk].color}</span></h4><div class="sw-row">${p.variantes.map((v,k)=>`<button class="sw sw-lg ${k===vk?"on":""}" title="${v.color}" style="background:${v.hex}" data-k="${k}"></button>`).join("")}</div></div>`:""}
+        ${p.tallas?`<div class="m-opt"><h4>Talla${p.cat==="Zapatillas"?" (EU)":""}</h4><div class="t-row">${p.tallas.map(t=>`<button class="t-btn" data-t="${t}">${t}</button>`).join("")}</div></div>`:""}
+        <ul>${(p.specs||[]).map(x=>`<li>${x}</li>`).join("")}${p.fit?`<li><b style="color:#1e9be0">Incluye bike fit Retül GRATIS</b></li>`:""}</ul>
+        <div class="m-ctas"><a class="btn btn-solid" id="m-wa" href="https://wa.me/${WA}?text=${msg}">${p.precio?"Lo quiero · WhatsApp":"Cotizar mi configuración"}</a>${p.test?`<a class="btn btn-test" href="https://wa.me/${WA}?text=${encodeURIComponent(`Hola Veloce, quiero agendar un test ride de la ${p.marca} ${p.nombre}. ¿Qué días tienen disponibles?`)}">Agendar test ride</a>`:""}</div>${p.test?`<p class="m-test">🚵 Tenemos esta bici disponible para test ride. Agenda tu prueba, ven a montarla y llévate una nueva.</p>`:""}</div>`;
+    function bindThumbs(){modal.querySelectorAll(".m-thumbs img").forEach(t=>t.onclick=()=>{document.getElementById("m-main").src=t.dataset.f;modal.querySelectorAll(".m-thumbs img").forEach(x=>x.classList.remove("on"));t.classList.add("on")});}
+    bindThumbs();
+    function updWA(){ if(!p.variantes&&!p.tallas) return;
+      const txt=`Hola Veloce, me interesa: ${p.marca} ${p.nombre}`+(p.variantes?` · color ${p.variantes[vk].color}`:"")+(talla?` · talla ${talla}`:"")+`. ¿Está disponible?`;
+      document.getElementById("m-wa").href=`https://wa.me/${WA}?text=${encodeURIComponent(txt)}`; }
+    if(p.variantes){ modal.querySelectorAll(".m-opt .sw").forEach(b=>b.onclick=()=>{ vk=+b.dataset.k; const f=p.variantes[vk].fotos;
+      modal.querySelectorAll(".m-opt .sw").forEach(x=>x.classList.toggle("on",x===b));
+      document.getElementById("m-color").textContent=p.variantes[vk].color;
+      document.getElementById("m-main").src=f[0];
+      modal.querySelector(".m-thumbs").innerHTML=f.map((x,j)=>`<img src="${x}" data-f="${x}" class="${j?"":"on"}" alt="">`).join("");
+      bindThumbs(); updWA(); }); }
+    if(p.tallas){ modal.querySelectorAll(".t-btn").forEach(b=>b.onclick=()=>{ talla=b.dataset.t; modal.querySelectorAll(".t-btn").forEach(x=>x.classList.toggle("on",x===b)); updWA(); }); }
+    updWA();
+    modal.classList.add("open"); document.body.style.overflow="hidden";
+  }
+  function cerrar(){modal.classList.remove("open");document.body.style.overflow=""}
+  grid.querySelectorAll(".prod-more").forEach(b=>b.onclick=()=>{const card=b.closest(".prod");const on=card.querySelector(".sw.on");abrir(+b.dataset.i,on?+on.dataset.k:0)});
+  grid.querySelectorAll(".prod .sw").forEach(b=>b.onclick=()=>{const p=lista[+b.dataset.i];const card=b.closest(".prod");card.querySelector(".prod-img img").src=p.variantes[+b.dataset.k].fotos[0];card.querySelectorAll(".sw").forEach(x=>x.classList.toggle("on",x===b))});
+  grid.querySelectorAll(".prod-img").forEach((b,i)=>{ if(lista[i].desc){b.style.cursor="pointer";b.onclick=()=>{const on=b.closest(".prod").querySelector(".sw.on");abrir(i,on?+on.dataset.k:0)}} });
+  modal.addEventListener("click",e=>{if(e.target===modal||e.target.closest(".m-close"))cerrar()});
+  document.addEventListener("keydown",e=>{if(e.key==="Escape")cerrar()});
+</script>
+<script>
+  document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
+</script>
+</body>
+</html>
