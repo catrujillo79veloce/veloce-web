@@ -137,7 +137,30 @@
   .btn-outline:hover{background:var(--black);color:#fff}
   @media (max-width:900px){.fit-grid,.fit-benefits,.fit-steps ol{grid-template-columns:1fr}}
   .prod-fit{position:absolute;bottom:12px;right:12px;background:#1e9be0;color:#fff;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:5px 9px}
-  /* Destacados */
+  /* Productos */
+  .cat-bar{display:flex;gap:10px;flex-wrap:wrap;margin:-24px 0 18px}
+  .cat-tools{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+  .cat-search{flex:1;min-width:220px;position:relative}
+  .cat-search input{width:100%;border:1px solid var(--line);background:#fff;padding:12px 14px 12px 40px;font:inherit;font-size:15px}
+  .cat-search input:focus{outline:none;border-color:var(--black)}
+  .cat-search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%)}
+  .cat-sel{border:1px solid var(--line);background:#fff;padding:12px 14px;font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+  .sub-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+  .sub-bar:empty{display:none}
+  .s-btn{border:1px solid var(--line);background:transparent;border-radius:999px;padding:7px 14px;font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+  .s-btn:hover{border-color:var(--black)}
+  .s-btn.on{background:var(--black);color:#fff;border-color:var(--black)}
+  .cat-count{font-size:13px;color:var(--gray);margin-bottom:22px}
+  .cat-empty{display:none;text-align:center;padding:50px 20px;border:1px dashed var(--line);margin-top:10px}
+  .cat-empty p{margin:0 0 16px;color:var(--gray)}
+  .menu{align-items:center}
+  .m-drop{position:relative;display:flex}
+  @media (max-width:980px){.m-drop{display:block}.m-drop>a{display:block}}
+  @media (max-width:620px){.cat-bar,.sub-bar{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-right:-24px;padding-right:24px}.cat-bar::-webkit-scrollbar,.sub-bar::-webkit-scrollbar{display:none}.f-btn,.s-btn{flex:0 0 auto}.cat-tools .cat-sel{flex:1}}
+  .m-drop .drop{display:none;position:absolute;top:100%;left:-14px;background:#fff;border:1px solid var(--line);box-shadow:0 14px 34px rgba(0,0,0,.08);padding:8px 0;min-width:190px;z-index:60}
+  .m-drop .drop a{display:block;padding:9px 18px;font-size:13px;white-space:nowrap}
+  .m-drop .drop a:hover{background:#f4f2ee}
+  @media (min-width:981px){.m-drop:hover .drop{display:block}}
   .filtros{display:flex;gap:10px;flex-wrap:wrap;margin:-24px 0 32px}
   .f-btn{border:1px solid var(--line);background:#fff;padding:10px 18px;font:inherit;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:.15s}
   .f-btn span{color:var(--gray);font-weight:600;margin-left:4px}
@@ -296,7 +319,9 @@
     <nav class="menu" id="menu">
       <a href="#servicios">Servicios</a>
       <a href="#bikefit">Bike fit</a>
-      <a href="#destacados">Destacados</a>
+      <span class="m-drop"><a href="#productos">Productos</a><span class="drop">
+        <a href="#productos/bicicletas">Bicicletas</a><a href="#productos/cascos">Cascos</a><a href="#productos/gafas">Gafas</a><a href="#productos/zapatillas">Zapatillas</a><a href="#productos/componentes">Componentes</a><a href="#productos/ofertas">Ofertas</a>
+      </span></span>
       <a href="#marcas">Marcas</a>
       <a href="#rides">Veloce Rides</a>
       <a href="#visitanos">Visítanos</a>
@@ -415,22 +440,30 @@
       </ol>
       <div class="fit-ctas">
         <a class="btn btn-solid" href="https://wa.me/573052451204?text=Hola%20Veloce%2C%20quiero%20agendar%20un%20bike%20fit%20Ret%C3%BCl">Agendar bike fit</a>
-        <a class="btn btn-outline" href="#destacados">Ver bicicletas</a>
+        <a class="btn btn-outline" href="#productos/bicicletas">Ver bicicletas</a>
       </div>
       <p class="fit-note">¿Vas a comprar bici y no sabes qué talla o modelo? Hacer el bike fit primero es la mejor forma de acertar.</p>
     </div>
   </div>
 </section>
 
-<!-- DESTACADOS -->
-<section id="destacados">
+<!-- PRODUCTOS -->
+<section id="productos"><span id="destacados"></span>
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="tri"><i></i><i></i><i></i></div><h2 class="display">Destacados.</h2></div>
-      <p>Algunos de los productos que tenemos en tienda. Escríbenos y te asesoramos.</p>
+      <div><div class="tri"><i></i><i></i><i></i></div><h2 class="display">Productos.</h2></div>
+      <p>Busca por categoría, tipo o marca. ¿No ves lo que buscas? Escríbenos: tenemos más en tienda y lo conseguimos.</p>
     </div>
-    <div class="filtros" id="filtros"></div>
+    <div class="cat-bar" id="filtros"></div>
+    <div class="sub-bar" id="subs"></div>
+    <div class="cat-tools">
+      <label class="cat-search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8a857c" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Buscar: casco, Colnago, gafas fotocromáticas…" aria-label="Buscar productos"></label>
+      <select class="cat-sel" id="f-marca" aria-label="Marca"></select>
+      <select class="cat-sel" id="f-orden" aria-label="Ordenar"><option value="">Recomendados</option><option value="asc">Menor precio</option><option value="desc">Mayor precio</option></select>
+    </div>
+    <div class="cat-count" id="cat-count"></div>
     <div class="prod-grid" id="prod-grid"></div>
+    <div class="cat-empty" id="cat-empty"><p>No encontramos productos con esa búsqueda, pero seguro lo tenemos o lo conseguimos.</p><a class="btn btn-solid" id="cat-empty-wa" href="https://wa.me/573052451204">Pregúntanos por WhatsApp</a></div>
   </div>
 </section>
 
@@ -678,11 +711,43 @@
       </div></article>`;
   }).join("");
   const grupo=p=>/Bicicleta|E-MTB|Gravel/.test(p.cat)?"Bicicletas":p.cat.startsWith("Casco")?"Cascos":p.cat==="Gafas"?"Gafas":p.cat==="Zapatillas"?"Zapatillas":"Componentes";
+  const sub=p=>({"Bicicleta":"Ruta","Bicicleta aero":"Aero","Gravel":"Gravel","E-MTB":"E-MTB / Eléctricas","Casco":"Ruta","Casco aero":"Aero","Ciclocomputador":"Ciclocomputadores","Potenciómetro":"Potenciómetros"})[p.cat]||p.cat;
+  const extra=p=>({Bicicletas:"bici bicicleta bicicletas",Cascos:"casco cascos",Gafas:"gafas lentes anteojos",Zapatillas:"zapatillas zapatos calzado",Componentes:"componentes accesorios"})[grupo(p)]+(/photochrom/i.test(p.nombre+p.desc)?" fotocromatica fotocromaticas":"")+(p.fit?" bike fit retul":"")+(p.antes?" oferta descuento promocion":"");
+  const valor=p=>{const n=parseInt((p.precio||"").replace(/\D/g,""),10);return isNaN(n)?Infinity:n};
+  const norm=t=>(t||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
   const cats=["Todos","Bicicletas","Cascos","Gafas","Zapatillas","Componentes","Ofertas"].filter(c=>c==="Todos"||(c==="Ofertas"?lista.some(p=>p.antes):lista.some(p=>grupo(p)===c)));
-  const fbox=document.getElementById("filtros");
-  fbox.innerHTML=cats.map((c,k)=>{const n=c==="Todos"?lista.length:c==="Ofertas"?lista.filter(p=>p.antes).length:lista.filter(p=>grupo(p)===c).length;return `<button class="f-btn ${k?"":"on"} ${c==="Ofertas"?"f-of":""}" data-c="${c}">${c} <span>${n}</span></button>`}).join("");
-  fbox.querySelectorAll(".f-btn").forEach(b=>b.onclick=()=>{const c=b.dataset.c;fbox.querySelectorAll(".f-btn").forEach(x=>x.classList.toggle("on",x===b));
-    grid.querySelectorAll(".prod").forEach((el,i)=>{const p=lista[i];el.style.display=(c==="Todos"||(c==="Ofertas"?p.antes:grupo(p)===c))?"":"none"});});
+  const enCat=(p,c)=>c==="Todos"||(c==="Ofertas"?!!p.antes:grupo(p)===c);
+  const st={c:"Todos",s:"",m:"",q:"",o:""};
+  const fbox=document.getElementById("filtros"),sbox=document.getElementById("subs"),qIn=document.getElementById("q"),mSel=document.getElementById("f-marca"),oSel=document.getElementById("f-orden"),cnt=document.getElementById("cat-count"),empty=document.getElementById("cat-empty");
+  fbox.innerHTML=cats.map(c=>`<button class="f-btn ${c==="Ofertas"?"f-of":""}" data-c="${c}">${c} <span>${lista.filter(p=>enCat(p,c)).length}</span></button>`).join("");
+  const cards=[...grid.querySelectorAll(".prod")];
+  function pintar(){
+    fbox.querySelectorAll(".f-btn").forEach(b=>b.classList.toggle("on",b.dataset.c===st.c));
+    const base=lista.filter(p=>enCat(p,st.c));
+    const subs=[...new Set(base.map(sub))];
+    sbox.innerHTML=(st.c!=="Todos"&&st.c!=="Ofertas"&&subs.length>1)?[`<button class="s-btn ${st.s?"":"on"}" data-s="">Todos</button>`,...subs.map(x=>`<button class="s-btn ${st.s===x?"on":""}" data-s="${x}">${x} (${base.filter(p=>sub(p)===x).length})</button>`)].join(""):"";
+    sbox.querySelectorAll(".s-btn").forEach(b=>b.onclick=()=>{st.s=b.dataset.s;pintar()});
+    const marcas=[...new Set(base.map(p=>p.marca))].sort();
+    if(st.m&&!marcas.includes(st.m))st.m="";
+    mSel.innerHTML=`<option value="">Todas las marcas</option>`+marcas.map(m=>`<option ${m===st.m?"selected":""}>${m}</option>`).join("");
+    const q=norm(st.q).trim();
+    const vis=lista.map((p,i)=>({p,i})).filter(({p})=>enCat(p,st.c)&&(!st.s||sub(p)===st.s)&&(!st.m||p.marca===st.m)&&(!q||q.split(/\s+/).every(w=>norm([p.marca,p.nombre,p.cat,sub(p),grupo(p),extra(p),p.resumen,p.desc,(p.variantes||[]).map(v=>v.color).join(" ")].join(" ")).includes(w))));
+    if(st.o)vis.sort((a,b)=>st.o==="asc"?valor(a.p)-valor(b.p):(valor(b.p)===Infinity?-1:valor(a.p)===Infinity?1:valor(b.p)-valor(a.p)));
+    cards.forEach(el=>el.style.display="none");
+    vis.forEach(({i},k)=>{cards[i].style.display="";cards[i].style.order=k});
+    cnt.textContent=vis.length+(vis.length===1?" producto":" productos")+(st.c!=="Todos"?` en ${st.c}${st.s?" · "+st.s:""}`:"");
+    empty.style.display=vis.length?"none":"block";
+    document.getElementById("cat-empty-wa").href=`https://wa.me/${WA}?text=${encodeURIComponent("Hola Veloce, estoy buscando: "+(st.q||st.c))}`;
+  }
+  fbox.querySelectorAll(".f-btn").forEach(b=>b.onclick=()=>{st.c=b.dataset.c;st.s="";history.replaceState(null,"",st.c==="Todos"?"#productos":"#productos/"+norm(st.c));pintar()});
+  qIn.oninput=()=>{st.q=qIn.value;pintar()};
+  mSel.onchange=()=>{st.m=mSel.value;pintar()};
+  oSel.onchange=()=>{st.o=oSel.value;pintar()};
+  function desdeHash(){const h=decodeURIComponent(location.hash.slice(1));if(!h.startsWith("productos"))return;
+    const c=cats.find(x=>norm(x)===norm(h.split("/")[1]||""))||"Todos";st.c=c;st.s="";pintar();
+    if(h.includes("/"))document.getElementById("productos").scrollIntoView({behavior:"smooth"});}
+  window.addEventListener("hashchange",desdeHash);
+  pintar();desdeHash();
   const modal=document.getElementById("modal");
   function abrir(i,k0){
     const p=lista[i]; let vk=k0||0, talla=null;
