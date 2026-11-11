@@ -241,7 +241,7 @@ paginas = [
      "Centro de entrenamiento", "Centro de<br>entrenamiento.",
      "Clases de ciclismo indoor de una hora en simulador inteligente, entrenando por potencia. Lunes a viernes desde las 5:00 AM en El Poblado, Medellín.",
      "Reservar clase", "Hola Veloce, quiero reservar una clase en el centro de entrenamiento",
-     c_cuerpo, c_faq, c_lat, "Clases de ciclismo indoor"),
+     c_cuerpo, c_faq, c_lat, "Clases de ciclismo indoor", "img/centro-entrenamiento.jpg", "Centro de entrenamiento de ciclismo indoor de Veloce en Medellín"),
 ]
 
 if __name__ == "__main__":
