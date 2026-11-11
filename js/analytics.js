@@ -1,8 +1,9 @@
-/* Google Analytics 4 · Veloce */
+/* Google Analytics 4 + Google Ads · Veloce */
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-BCTKZM82SJ');
+gtag('config', 'AW-11029871865'); /* Google Ads */
 
 /* Mide cada clic a WhatsApp con el producto o la sección de donde viene */
 document.addEventListener('click', function (e) {
