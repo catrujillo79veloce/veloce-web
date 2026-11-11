@@ -238,7 +238,7 @@ MARCAS = [
   dict(slug="zapatillas-sidi-medellin", marca="Sidi", miga="Zapatillas Sidi", corto="Zapatillas de ciclismo italianas.",
        title="Zapatillas Sidi en Medellín | Shot 3, Wire 3 · Veloce",
        desc="Zapatillas de ciclismo Sidi en Medellín: Shot 3 y Wire 3 con precios en pesos, tallas 39 a 46 y varios colores. Tienda en El Poblado. Pide las tuyas por WhatsApp.",
-       h1="Zapatillas Sidi<br>en Medellín.", og="img/productos/sidi-shot3-negro-1.jpg",
+       h1="Zapatillas Sidi<br>en Medellín.", og="img/productos/sidi-shot3-blanco-1.jpg",
        intro="Zapatillas de ciclismo italianas hechas para durar. Shot 3 y Wire 3 en tallas 39 a 46 y varios colores.",
        cta="Pedir mis Sidi", cta_msg="Hola Veloce, me interesan unas zapatillas Sidi. ¿Qué tallas y colores tienen?",
        titulo_prod="Zapatillas Sidi.", sin_prod="",
