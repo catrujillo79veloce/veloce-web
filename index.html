@@ -352,45 +352,45 @@
 <script>
   /* ===== PRODUCTOS DESTACADOS =====
      Para agregar un producto, copia una línea:
-     { cat:"Bicicleta", marca:"Colnago", nombre:"V4Rs", precio:"$00.000.000", foto:"img/productos/archivo.jpg" },
+     { cat:"Ruta", marca:"Colnago", nombre:"V4Rs", precio:"$00.000.000", foto:"img/productos/archivo.jpg" },
      Si precio queda vacío ("") se muestra "Consultar precio". */
   const productos = [
-    { cat:"Bicicleta", marca:"Colnago", nombre:"V5Rs", fit:true, precio:"",
+    { cat:"Ruta", marca:"Colnago", nombre:"V5Rs", fit:true, precio:"",
       foto:"img/productos/v5rs-1.jpg",
       fotos:["img/productos/v5rs-1.jpg","img/productos/v5rs-2.jpg","img/productos/v5rs-4.jpg","img/productos/v5rs-3.jpg"],
       resumen:"La Colnago más liviana de la historia. La bici de Pogačar.",
       desc:"La V5Rs es la nueva generación de la serie V de Colnago y la bicicleta con la que Tadej Pogačar y el UAE Team Emirates corren el WorldTour. Es una todoterreno de competencia: liviana para la montaña, rápida en el llano y precisa en los descensos. Con nuevas técnicas de laminación del carbono, Colnago logró su cuadro más liviano hasta hoy, y además más aerodinámico que su antecesora, la V4Rs.",
       specs:["Cuadro de carbono monocasco de unos 685 g (sin pintar), el más liviano de Colnago","Unos 9 vatios más eficiente que la V4Rs a 50 km/h","Cabina integrada Colnago CC.01","Espacio para llantas de hasta 32 mm","Disponible en varias configuraciones y colores: pregúntanos por la tuya"] },
-    { cat:"Bicicleta aero", marca:"Colnago", nombre:"Y1Rs", fit:true, precio:"",
+    { cat:"Ruta", marca:"Colnago", nombre:"Y1Rs", fit:true, precio:"",
       foto:"img/productos/y1rs-1.jpg",
       fotos:["img/productos/y1rs-1.jpg","img/productos/y1rs-2.jpg","img/productos/y1rs-3.jpg","img/productos/y1rs-4.jpg"],
       resumen:"La aero de Colnago. Con ella Pogačar ganó el Tour 2025.",
       desc:"La Y1Rs es la bicicleta aerodinámica más radical que ha hecho Colnago, fruto de tres años de desarrollo junto al UAE Team Emirates. Su diseño rompe con el cuadro tradicional para cortar el viento como ninguna otra Colnago, sin perder la rigidez y el manejo que se esperan de una bici de competencia. Es la bici con la que Tadej Pogačar ganó el Tour de Francia 2025: pensada para ir rápido en el llano, en los ataques y en los finales.",
       specs:["Unos 20 vatios menos que la V4Rs para rodar a 50 km/h","Diseño aerodinámico desarrollado en túnel de viento","Horquilla integrada y cabina Colnago CC.Y1","Ganadora del Tour de Francia 2025 con Pogačar","Disponible en varias configuraciones y colores: pregúntanos por la tuya"] },
-    { cat:"Bicicleta", marca:"Colnago", nombre:"V3 Black Edition", fit:true, precio:"$21.900.000",
+    { cat:"Ruta", marca:"Colnago", nombre:"V3 Black Edition", fit:true, precio:"$21.900.000",
       foto:"img/productos/v3-1.jpg",
       fotos:["img/productos/v3-1.jpg","img/productos/v3-2.jpg","img/productos/v3-3.jpg","img/productos/v3-4.jpg","img/productos/v3-5.jpg"],
       resumen:"Ultegra Di2 12v, manubrio integrado y ruedas Fulcrum Wind.",
       desc:"La V3 lleva el ADN de competencia de Colnago a una bici para rodar todos los días. Comparte silueta y filosofía de geometría con la V3Rs, la bici con la que Pogačar ganó su primer Tour de Francia, y busca el equilibrio entre peso, rigidez y aerodinámica: sube con agilidad, es estable en el llano y precisa en los descensos. Esta Black Edition, con su acabado en carbono negro, viene lista para rodar con grupo electrónico y ruedas de perfil alto.",
       specs:["Cuadro y horquilla de carbono monocasco Colnago V3","Grupo Shimano Ultegra Di2 electrónico de 12 velocidades","Manubrio integrado","Ruedas Fulcrum Wind de carbono","Frenos de disco hidráulicos"] },
-    { cat:"Bicicleta", marca:"Colnago", nombre:"V3 105 Di2", fit:true, precio:"$14.900.000", antes:"$17.900.000",
+    { cat:"Ruta", marca:"Colnago", nombre:"V3 105 Di2", fit:true, precio:"$14.900.000", antes:"$17.900.000",
       foto:"img/productos/v3-105-1.jpg",
       fotos:["img/productos/v3-105-1.jpg"],
       resumen:"Shimano 105 Di2 12v, ruedas Fulcrum y cabina Deda. ¡Súper precio!",
       desc:"La forma más directa de tener una Colnago de carbono con cambios electrónicos. La V3 comparte silueta y filosofía de geometría con la V3Rs, la bici con la que Pogačar ganó su primer Tour de Francia: liviana y ágil para subir, estable en el llano y segura en los descensos. Con el Shimano 105 Di2 de 12 velocidades tienes cambios precisos con un botón, y las ruedas Fulcrum de aluminio la hacen resistente y confiable para entrenar todos los días.",
       specs:["Cuadro y horquilla de carbono monocasco Colnago V3","Grupo Shimano 105 Di2 electrónico de 12 velocidades","Ruedas Fulcrum en aluminio","Manubrio y espiga Deda","Frenos de disco hidráulicos"] },
-    { cat:"Bicicleta", marca:"Pinarello", nombre:"F7 Ultegra Di2", fit:true, precio:"$24.900.000", antes:"$34.900.000",
+    { cat:"Ruta", marca:"Pinarello", nombre:"F7 Ultegra Di2", fit:true, precio:"$24.900.000", antes:"$34.900.000",
       foto:"img/productos/pinarello-f7-roja-1.jpg",
       variantes:[{color:"Rojo y negro",hex:"linear-gradient(135deg,#111 50%,#e3201b 50%)",fotos:["img/productos/pinarello-f7-roja-1.jpg","img/productos/pinarello-f7-roja-2.jpg","img/productos/pinarello-f7-roja-4.jpg","img/productos/pinarello-f7-roja-3.jpg"]},{color:"Azul y negro",hex:"linear-gradient(135deg,#111 50%,#1f4fbf 50%)",fotos:["img/productos/pinarello-f7-azul-1.jpg","img/productos/pinarello-f7-azul-3.jpg","img/productos/pinarello-f7-azul-4.jpg","img/productos/pinarello-f7-azul-2.jpg"]},{color:"Negro mate",hex:"#1d1d1b",fotos:["img/productos/pinarello-f7-negra-1.jpg"]}],
       resumen:"La hermana de la Dogma, en carbono T900 con Shimano Ultegra Di2 12v. ¡$10 millones de descuento!",
       desc:"La F7 es la bici de carreras de Pinarello que hereda el ADN de la legendaria Dogma F: el mismo diseño asimétrico, la geometría de competencia y la horquilla Onda que le da ese manejo tan seguro en las bajadas. Su cuadro de carbono Toray T900 UD logra el equilibrio entre rigidez, absorción de vibraciones y bajo peso, y el cableado va totalmente oculto para que sea más aerodinámica y limpia. Con el grupo electrónico Shimano Ultegra Di2 de 12 velocidades los cambios son precisos en cualquier condición, y los frenos de disco hidráulicos te dan control total. Es una bici para rodar rápido, entrenar en serio y competir, ahora con $10.000.000 de descuento.",
       specs:["Cuadro de carbono Toray T900 UD con diseño asimétrico Pinarello","Horquilla de carbono Onda y cableado interno total TiCR","Grupo Shimano Ultegra Di2 electrónico de 2x12 velocidades","Frenos de disco hidráulicos Shimano Ultegra","Ruedas de carbono de perfil alto y llantas Pirelli","Tija aero de carbono y caja de pedalier roscada italiana","3 colores: rojo y negro, azul y negro, negro mate"] },
-    { cat:"Bicicleta gravel", marca:"Pinarello", nombre:"Grevil Record 13v", fit:true, precio:"$29.990.000",
+    { cat:"Gravel", marca:"Pinarello", nombre:"Grevil Record 13v", fit:true, precio:"$29.990.000",
       foto:"img/productos/pinarello-grevil-1.jpg", fotos:["img/productos/pinarello-grevil-1.jpg","img/productos/pinarello-grevil-2.jpg","img/productos/pinarello-grevil-3.jpg","img/productos/pinarello-grevil-4.jpg"],
       resumen:"La gravel de carreras de Pinarello, con el nuevo Campagnolo Record de 13 velocidades y rines Princeton.",
       desc:"La Grevil es la bici de gravel de Pinarello, hecha para rodar rápido en destapado, aventura y fondos largos. Su cuadro de carbono TorayCa T700 UD tiene el diseño asimétrico de la marca y combina rigidez para transmitir la potencia con buena absorción de las vibraciones del terreno. La horquilla Onda Grevil, toda en carbono, le da un manejo seguro en bajadas y curvas sueltas, y el cockpit MOST con integración TiCR deja los cables ocultos para un frente limpio. Viene con el nuevo grupo Campagnolo Record de 13 velocidades, con cadena Record 13 y eslabón C-Link, que te da cambios más cercanos entre piñones para mantener la cadencia en subidas largas y terreno ondulado, y frenos de disco hidráulicos Campagnolo flat mount con frenada potente y fácil de dosificar. Monta rines de carbono Princeton CarbonWorks Grit 4540, con perfil ondulado de 40 a 45 mm que le da estabilidad con viento cruzado, sin huecos en la cama del rin para montar tubeless sin cinta, y llantas Pirelli Cinturato Gravel RH. Geometría gravel performance: ágil y eficiente, pero cómoda para muchas horas.",
       specs:["Cuadro de carbono TorayCa T700 UD con diseño asimétrico Pinarello","Horquilla Onda Grevil full carbono","Grupo Campagnolo Record de 13 velocidades","Frenos de disco hidráulicos Campagnolo flat mount","Rines de carbono Princeton CarbonWorks Grit 4540 · perfil ondulado 40-45 mm, tubeless","Cockpit MOST con integración TiCR · cables ocultos","Cadena Campagnolo Record 13 con C-Link · llantas Pirelli Cinturato Gravel RH","Uso: gravel, aventura y endurance · geometría gravel performance"] },
-    { cat:"Bicicleta MTB", marca:"Orbea", nombre:"Oiz H30", fit:true, precio:"$10.499.000",
+    { cat:"MTB", marca:"Orbea", nombre:"Oiz H30", fit:true, precio:"$10.499.000",
       foto:"img/productos/orbea-oiz-h30-azul-v2.jpg", tallas:["S","M","L","XL"],
       wa:"Hola Veloce, me interesa la Orbea Oiz H30. ¿Qué disponibilidad tienen en color y talla?",
       guia:{cols:["S","M","L","XL"], filas:[["Estatura del ciclista","155-170 cm","165-180 cm","178-190 cm","185-198 cm"],["Reach","425","450","472","496"],["Stack","596","600","610","619"],["Tubo superior (efectivo)","568","594","619","645"],["Tubo de sillín (C-T)","410","432","460","510"],["Altura al tubo (standover)","729","743","746","743"],["Distancia entre ejes","1142","1169","1195","1223"],["Ángulo dirección / sillín","67° / 76,5°","67° / 76,5°","67° / 76,5°","67° / 76,5°"],["Potencia","45","55","55","55"],["Bielas","170","170","175","175"],["Manubrio","780","780","780","780"],["Tija telescópica (largo/recorrido)","408/125","408/125","458/150","458/150"]],
@@ -399,7 +399,7 @@
       resumen:"Doble suspensión XC de 120 mm en aluminio, con Shimano Deore 12v, tija telescópica y bloqueo al manubrio.",
       desc:"La Oiz H30 es la puerta de entrada a la Oiz, la bici de cross country con la que Orbea compite en la Copa del Mundo. Tiene la misma geometría y cinemática de la familia Oiz, pero con cuadro de aluminio Orbea Hydro de acabado pulido, para tener una doble suspensión de carreras a un precio más accesible. Recorre 120 mm adelante y atrás: la horquilla RockShox Reba RL DebonAir+ de 3 posiciones y el amortiguador Fox Float SL Performance con ajuste a la medida de Orbea, que va integrado en el cuadro (sistema I-Line) y se bloquea desde el manubrio. Con el sistema Squidlock manejas el bloqueo de la suspensión y la tija telescópica con solo dos palancas, sin soltar el manubrio. La transmisión es Shimano Deore M6100 de 12 velocidades con plato de 32 y cassette 11-51, frenos de disco hidráulicos Shimano MT201, ruedas de 29\" tubeless ready y llantas Maxxis Rekon de 2,4\". El cableado va por dentro del cuadro. Es una bici para entrenar en serio, hacer travesías rápidas y correr tus primeras carreras de XC.",
       specs:["Cuadro de aluminio Orbea Oiz Hydro pulido · Boost, caja BSA, cableado interno","Horquilla RockShox Reba RL DebonAir+ 120 mm · 3 posiciones, eje 15x110","Amortiguador Fox Float SL Performance 120 mm · custom tune, bloqueo remoto I-Line","Transmisión Shimano Deore M6100 12v · plato 32, cassette 11-51","Frenos de disco hidráulicos Shimano MT201","Tija telescópica OC MC22 y control Squidlock al manubrio","Ruedas 29\" tubeless ready · llantas Maxxis Rekon 2,4\"","2 colores: Blue Stone y Armor Black · tallas S, M, L y XL en ambos","Consulta la disponibilidad de color y talla por WhatsApp"] },
-    { cat:"Bicicleta", marca:"Orbea", nombre:"Orca M30", fit:true, precio:"$10.299.000",
+    { cat:"Ruta", marca:"Orbea", nombre:"Orca M30", fit:true, precio:"$10.299.000",
       foto:"img/productos/orca-m30-1.jpg",
       fotos:["img/productos/orca-m30-1.jpg"],
       resumen:"Carbono, Shimano 105 de 12v, sillín Fizik y cableado interno.",
@@ -581,8 +581,8 @@
         ${p.test?`<a class="btn btn-test" href="https://wa.me/${WA}?text=${encodeURIComponent(`Hola Veloce, quiero agendar un test ride de la ${p.marca} ${p.nombre}. ¿Qué días tienen disponibles?`)}">Agendar test ride</a>`:""}
       </div></article>`;
   }).join("");
-  const grupo=p=>/Bicicleta|E-MTB|Gravel/.test(p.cat)?"Bicicletas":p.cat.startsWith("Casco")?"Cascos":p.cat==="Gafas"?"Gafas":p.cat==="Zapatillas"?"Zapatillas":p.cat==="Accesorios"?"Accesorios":"Componentes";
-  const sub=p=>({"Bicicleta":"Ruta","Bicicleta aero":"Aero","Gravel":"Gravel","E-MTB":"E-MTB / Eléctricas","Casco":"Ruta","Casco aero":"Aero","Ciclocomputador":"Ciclocomputadores","Potenciómetro":"Potenciómetros"})[p.cat]||p.cat;
+  const grupo=p=>/^(Ruta|Gravel|MTB|E-MTB)$/.test(p.cat)?"Bicicletas":p.cat.startsWith("Casco")?"Cascos":p.cat==="Gafas"?"Gafas":p.cat==="Zapatillas"?"Zapatillas":p.cat==="Accesorios"?"Accesorios":"Componentes";
+  const sub=p=>({"Ruta":"Ruta","Gravel":"Gravel","MTB":"MTB","E-MTB":"E-MTB / Eléctricas","Casco":"Ruta","Casco aero":"Aero","Ciclocomputador":"Ciclocomputadores","Potenciómetro":"Potenciómetros"})[p.cat]||p.cat;
   const extra=p=>({Bicicletas:"bici bicicleta bicicletas",Cascos:"casco cascos",Gafas:"gafas lentes anteojos",Zapatillas:"zapatillas zapatos calzado",Componentes:"componentes accesorios"})[grupo(p)]+(/photochrom/i.test(p.nombre+p.desc)?" fotocromatica fotocromaticas":"")+(p.fit?" bike fit retul":"")+(p.antes?" oferta descuento promocion":"");
   const valor=p=>{const n=parseInt((p.precio||"").replace(/\D/g,""),10);return isNaN(n)?Infinity:n};
   const norm=t=>(t||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
