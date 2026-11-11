@@ -41,6 +41,18 @@ def tarjeta(p):
 def ld_producto(p, url):
     lo, hi = valor(p.get("precio")), valor(p.get("hasta"))
     desde = (p.get("precio") or "").lower().startswith("desde")
+    extra = {"hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": "CO",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow", "merchantReturnDays": 30,
+        "returnMethod": ["https://schema.org/ReturnInStore", "https://schema.org/ReturnByMail"],
+        "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility",
+        "merchantReturnLink": f"{SITE}/envios-y-devoluciones"}}
+    if lo and lo > 399000:
+        extra["shippingDetails"] = {"@type": "OfferShippingDetails",
+            "shippingRate": {"@type": "MonetaryAmount", "value": 0, "currency": "COP"},
+            "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "CO"},
+            "deliveryTime": {"@type": "ShippingDeliveryTime",
+                "handlingTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY"},
+                "transitTime": {"@type": "QuantitativeValue", "minValue": 2, "maxValue": 6, "unitCode": "DAY"}}}
     if desde and hi:
         offers = {"@type": "AggregateOffer", "lowPrice": lo, "highPrice": hi, "offerCount": len(p.get("variantes") or [1]),
                   "priceCurrency": "COP", "availability": "https://schema.org/InStock"}
@@ -48,6 +60,7 @@ def ld_producto(p, url):
         offers = {"@type": "Offer", "price": lo, "priceCurrency": "COP", "availability": "https://schema.org/InStock",
                   "itemCondition": "https://schema.org/NewCondition", "url": url,
                   "seller": {"@type": "BicycleStore", "name": "Veloce"}}
+    offers.update(extra)
     return {"@type": "Product", "name": f'{p["marca"]} {p["nombre"]}', "brand": {"@type": "Brand", "name": p["marca"]},
             "category": p["cat"], "image": f'{SITE}/{p.get("foto","")}', "description": p.get("resumen") or p.get("desc", ""),
             "offers": offers}
@@ -125,6 +138,7 @@ def pagina(m):
         <li><b>Asesoría de ciclistas:</b> te ayudamos a elegir según cómo y dónde montas.</li>
         <li><b>Taller propio</b> en la misma tienda para el armado, ajustes y mantenimiento.</li>
         <li><b>Tienda física en El Poblado</b>, en el Mall Campestre Drive Inn: ven a ver y probar antes de comprar.</li>
+        <li><b>Envío gratis a toda Colombia</b> en compras superiores a $399.000. <a href="/envios-y-devoluciones">Ver envíos y devoluciones</a>.</li>
       </ul>
       <h2>Preguntas frecuentes</h2>
       <div class="faq">{faq_html}</div>

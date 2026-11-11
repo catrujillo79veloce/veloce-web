@@ -26,8 +26,8 @@
 
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track">
-    <span>Colnago · Pinarello · Wilier</span><span>Distribuidores oficiales Chapter 2 en Colombia</span><span>Distribuidor autorizado Orbea</span><span>Bike fit Retül GRATIS con tu bici de más de $8.000.000</span><span>Centro de entrenamiento</span><span>Mall Campestre Drive Inn · El Poblado</span>
-    <span>Colnago · Pinarello · Wilier</span><span>Distribuidores oficiales Chapter 2 en Colombia</span><span>Distribuidor autorizado Orbea</span><span>Bike fit Retül GRATIS con tu bici de más de $8.000.000</span><span>Centro de entrenamiento</span><span>Mall Campestre Drive Inn · El Poblado</span>
+    <span>Colnago · Pinarello · Wilier</span><span>Distribuidores oficiales Chapter 2 en Colombia</span><span>Distribuidor autorizado Orbea</span><span>Envío gratis a toda Colombia en compras superiores a $399.000</span><span>Bike fit Retül GRATIS con tu bici de más de $8.000.000</span><span>Centro de entrenamiento</span><span>Mall Campestre Drive Inn · El Poblado</span>
+    <span>Colnago · Pinarello · Wilier</span><span>Distribuidores oficiales Chapter 2 en Colombia</span><span>Distribuidor autorizado Orbea</span><span>Envío gratis a toda Colombia en compras superiores a $399.000</span><span>Bike fit Retül GRATIS con tu bici de más de $8.000.000</span><span>Centro de entrenamiento</span><span>Mall Campestre Drive Inn · El Poblado</span>
   </div>
 </div>
 
@@ -316,10 +316,10 @@
       <div><a class="flogo" href="#inicio"><img src="img/logo-blanco.png" alt="Veloce"></a><p style="margin-top:18px;max-width:300px">Bicicletas, taller, bike fit y entrenamiento en El Poblado, Medellín.</p></div>
       <div><h4>Servicios</h4><ul><li><a href="#productos">Venta de bicicletas</a></li><li><a href="/taller-de-bicicletas-medellin">Taller de bicicletas</a></li><li><a href="/bike-fit-retul-medellin">Bike fit Retül</a></li><li><a href="/centro-de-entrenamiento-ciclismo-medellin">Centro de entrenamiento</a></li></ul></div>
       <div><h4>Marcas</h4><ul><li><a href="/colnago-medellin">Bicicletas Colnago</a></li><li><a href="/pinarello-medellin">Bicicletas Pinarello</a></li><li><a href="/cascos-kask-medellin">Cascos Kask</a></li><li><a href="/gafas-koo-medellin">Gafas KOO</a></li><li><a href="/zapatillas-sidi-medellin">Zapatillas Sidi</a></li></ul></div>
-      <div><h4>Veloce</h4><ul><li><a href="#marcas">Marcas</a></li><li><a href="#rides">Veloce Rides</a></li><li><a href="#visitanos">Visítanos</a></li></ul></div>
+      <div><h4>Veloce</h4><ul><li><a href="#marcas">Marcas</a></li><li><a href="#rides">Veloce Rides</a></li><li><a href="#visitanos">Visítanos</a></li><li><a href="/envios-y-devoluciones">Envíos y devoluciones</a></li></ul></div>
       <div><h4>Contacto</h4><ul><li><a href="https://wa.me/573052451204">WhatsApp +57 305 245 1204</a></li><li><a href="https://www.instagram.com/velocecycling/">Instagram</a></li><li>Calle 16A Sur #32B-38, Local 101</li></ul></div>
     </div>
-    <div class="foot-bottom"><span>© 2026 Bicicletas Veloce S.A.S. · Medellín, Colombia</span><span>Tienda en línea próximamente</span></div>
+    <div class="foot-bottom"><span>© 2026 Bicicletas Veloce S.A.S. · Medellín, Colombia</span><span><a href="/envios-y-devoluciones">Envío gratis a toda Colombia en compras superiores a $399.000</a></span></div>
   </div>
 </footer>
 
@@ -537,8 +537,10 @@
     const conPrecio=lista.filter(p=>p.marca!=="Marca"&&num(p.precio)!==null);
     const ld={"@context":"https://schema.org","@type":"ItemList","name":"Productos Veloce","itemListElement":conPrecio.map((p,k)=>{
       const lo=num(p.precio),hi=num(p.hasta),desde=/^desde/i.test(p.precio||"");
-      const offers=(desde&&hi)?{"@type":"AggregateOffer","lowPrice":lo,"highPrice":hi,"offerCount":(p.variantes||[1]).length,"priceCurrency":"COP","availability":"https://schema.org/InStock"}
-        :{"@type":"Offer","price":lo,"priceCurrency":"COP","availability":"https://schema.org/InStock","itemCondition":"https://schema.org/NewCondition","url":location.origin+"/","seller":{"@type":"BicycleStore","name":"Veloce"}};
+      const envio=lo>399000?{"shippingDetails":{"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","value":0,"currency":"COP"},"shippingDestination":{"@type":"DefinedRegion","addressCountry":"CO"},"deliveryTime":{"@type":"ShippingDeliveryTime","handlingTime":{"@type":"QuantitativeValue","minValue":0,"maxValue":1,"unitCode":"DAY"},"transitTime":{"@type":"QuantitativeValue","minValue":2,"maxValue":6,"unitCode":"DAY"}}}}:{};
+      const devol={"hasMerchantReturnPolicy":{"@type":"MerchantReturnPolicy","applicableCountry":"CO","returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow","merchantReturnDays":30,"returnMethod":["https://schema.org/ReturnInStore","https://schema.org/ReturnByMail"],"returnFees":"https://schema.org/ReturnFeesCustomerResponsibility","merchantReturnLink":location.origin+"/envios-y-devoluciones"}};
+      const offers=(desde&&hi)?{"@type":"AggregateOffer","lowPrice":lo,"highPrice":hi,"offerCount":(p.variantes||[1]).length,"priceCurrency":"COP","availability":"https://schema.org/InStock",...envio,...devol}
+        :{"@type":"Offer","price":lo,"priceCurrency":"COP","availability":"https://schema.org/InStock","itemCondition":"https://schema.org/NewCondition","url":location.origin+"/","seller":{"@type":"BicycleStore","name":"Veloce"},...envio,...devol};
       return {"@type":"ListItem","position":k+1,"item":{"@type":"Product","name":`${p.marca} ${p.nombre}`,"brand":{"@type":"Brand","name":p.marca},"category":p.cat,"image":new URL(p.foto,location.origin+"/").href,"description":p.resumen||p.desc||"","offers":offers}}})};
     const sc=document.createElement("script");sc.type="application/ld+json";sc.textContent=JSON.stringify(ld);document.head.appendChild(sc);}catch(e){}
   const modal=document.getElementById("modal");
