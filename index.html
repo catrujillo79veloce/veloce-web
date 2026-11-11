@@ -40,7 +40,7 @@
       <a href="#servicios">Servicios</a>
       <a href="#bikefit">Bike fit</a>
       <span class="m-drop"><a href="#productos">Productos</a><span class="drop">
-        <a href="#productos/bicicletas">Bicicletas</a><a href="#productos/cascos">Cascos</a><a href="#productos/gafas">Gafas</a><a href="#productos/zapatillas">Zapatillas</a><a href="#productos/componentes">Componentes</a><a href="#productos/ofertas">Ofertas</a>
+        <a href="#productos/bicicletas">Bicicletas</a><a href="#productos/cascos">Cascos</a><a href="#productos/gafas">Gafas</a><a href="#productos/zapatillas">Zapatillas</a><a href="#productos/componentes">Componentes</a><a href="#productos/accesorios">Accesorios</a><a href="#productos/ofertas">Ofertas</a>
       </span></span>
       <span class="m-drop"><a href="#marcas">Marcas</a><span class="drop">
         <a href="/colnago-medellin">Colnago</a><a href="/pinarello-medellin">Pinarello</a><a href="/cascos-kask-medellin">Cascos Kask</a><a href="/gafas-koo-medellin">Gafas KOO</a><a href="/zapatillas-sidi-medellin">Zapatillas Sidi</a>
@@ -462,6 +462,11 @@
       wa:"Hola Veloce, me interesa el casco Kask Utopia Y. ¿Qué colores y tallas tienen disponibles?",
       desc:"El Utopia Y es el casco aerodinámico de Kask, desarrollado con el Team Sky (hoy INEOS Grenadiers), que lo usa en las etapas donde cada vatio cuenta. Su forma compacta, probada en túnel de viento, corta el aire sin parecer un casco de contrarreloj, y sus entradas de aire tipo NACA con canales internos lo mantienen sorprendentemente fresco para ser un casco aero. Esta versión Y suma el ajuste OCTOFIT+, más estable y fácil de girar, y acolchado frontal Resistex Carbon que seca rápido.",
       specs:["Casco aero desarrollado con el INEOS Grenadiers","Forma probada en túnel de viento con entradas de aire tipo NACA","Ajuste OCTOFIT+ con rueda de goma","Acolchado frontal Resistex Carbon de secado rápido","Protocolo de seguridad Kask WG11 · detalles reflectivos","Peso aproximado: 260 g (talla M) · tallas S, M y L","Hecho en Italia · precio según el color"] },
+    { cat:"Accesorios", marca:"XXF", nombre:"Maleta para bicicleta", precio:"$1.290.000",
+      foto:"img/productos/maleta-xxf-1.jpg", fotos:["img/productos/maleta-xxf-1.jpg","img/productos/maleta-xxf-2.jpg"],
+      resumen:"Maleta semirrígida de EVA con ruedas para viajar en avión con tu bici de ruta o MTB.",
+      desc:"La maleta XXF es la forma segura de viajar con tu bicicleta en avión, bus o carro. Su carcasa es de EVA moldeada al calor, de 1 cm de grosor y alta dureza, resistente a golpes, rasgaduras y roces. Abre por completo como una concha para guardar la bici fácil, y trae compartimientos externos para las dos ruedas, así ruedas y marco no se golpean entre sí; por dentro, una capa gruesa de espuma y varias correas con hebillas mantienen todo en su lugar. Cierra con cremalleras YKK reforzadas con hebillas de cierre rápido, y se mueve fácil por el aeropuerto con dos ruedas delanteras que giran 360° y ruedas traseras de caucho. Sirve para bicicletas de ruta 700c y MTB de 26\" y 27,5\".",
+      specs:["Carcasa de EVA moldeada al calor · 1 cm de grosor, alta resistencia a golpes","Apertura total tipo concha · compartimientos externos para las 2 ruedas","Espuma interior gruesa y correas con hebillas para fijar la bici","Cremalleras YKK con hebillas de cierre rápido","2 ruedas delanteras giratorias 360° y ruedas traseras de caucho","Medidas: 115 x 25 x 84 cm · peso: 8,3 kg","Para bicis de ruta 700c y MTB de 26\" y 27,5\""] },
     { cat:"Gafas", marca:"KOO", nombre:"Supernova", precio:"$699.000", antes:"$899.000",
       foto:"img/productos/koo-supernova-amarillo-1.jpg",
       variantes:[{color:"Amarillo fluo · lente rojo espejado",hex:"linear-gradient(135deg,#e6f24a 50%,#e8461e 50%)",fotos:["img/productos/koo-supernova-amarillo-1.jpg","img/productos/koo-supernova-amarillo-2.jpg","img/productos/koo-supernova-amarillo-3.jpg"]},{color:"Azul mate · lente turquesa espejado",hex:"linear-gradient(135deg,#1f4fa8 50%,#3fc4c9 50%)",fotos:["img/productos/koo-supernova-azul-1.jpg","img/productos/koo-supernova-azul-2.jpg","img/productos/koo-supernova-azul-3.jpg"]}],
@@ -562,12 +567,12 @@
         ${p.test?`<a class="btn btn-test" href="https://wa.me/${WA}?text=${encodeURIComponent(`Hola Veloce, quiero agendar un test ride de la ${p.marca} ${p.nombre}. ¿Qué días tienen disponibles?`)}">Agendar test ride</a>`:""}
       </div></article>`;
   }).join("");
-  const grupo=p=>/Bicicleta|E-MTB|Gravel/.test(p.cat)?"Bicicletas":p.cat.startsWith("Casco")?"Cascos":p.cat==="Gafas"?"Gafas":p.cat==="Zapatillas"?"Zapatillas":"Componentes";
+  const grupo=p=>/Bicicleta|E-MTB|Gravel/.test(p.cat)?"Bicicletas":p.cat.startsWith("Casco")?"Cascos":p.cat==="Gafas"?"Gafas":p.cat==="Zapatillas"?"Zapatillas":p.cat==="Accesorios"?"Accesorios":"Componentes";
   const sub=p=>({"Bicicleta":"Ruta","Bicicleta aero":"Aero","Gravel":"Gravel","E-MTB":"E-MTB / Eléctricas","Casco":"Ruta","Casco aero":"Aero","Ciclocomputador":"Ciclocomputadores","Potenciómetro":"Potenciómetros"})[p.cat]||p.cat;
   const extra=p=>({Bicicletas:"bici bicicleta bicicletas",Cascos:"casco cascos",Gafas:"gafas lentes anteojos",Zapatillas:"zapatillas zapatos calzado",Componentes:"componentes accesorios"})[grupo(p)]+(/photochrom/i.test(p.nombre+p.desc)?" fotocromatica fotocromaticas":"")+(p.fit?" bike fit retul":"")+(p.antes?" oferta descuento promocion":"");
   const valor=p=>{const n=parseInt((p.precio||"").replace(/\D/g,""),10);return isNaN(n)?Infinity:n};
   const norm=t=>(t||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
-  const cats=["Todos","Bicicletas","Cascos","Gafas","Zapatillas","Componentes","Ofertas"].filter(c=>c==="Todos"||(c==="Ofertas"?lista.some(p=>p.antes):lista.some(p=>grupo(p)===c)));
+  const cats=["Todos","Bicicletas","Cascos","Gafas","Zapatillas","Componentes","Accesorios","Ofertas"].filter(c=>c==="Todos"||(c==="Ofertas"?lista.some(p=>p.antes):lista.some(p=>grupo(p)===c)));
   const enCat=(p,c)=>c==="Todos"||(c==="Ofertas"?!!p.antes:grupo(p)===c);
   const st={c:"Todos",s:"",m:"",q:"",o:""};
   const fbox=document.getElementById("filtros"),sbox=document.getElementById("subs"),qIn=document.getElementById("q"),mSel=document.getElementById("f-marca"),oSel=document.getElementById("f-orden"),cnt=document.getElementById("cat-count"),empty=document.getElementById("cat-empty");
