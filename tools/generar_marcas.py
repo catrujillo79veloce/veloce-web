@@ -242,9 +242,9 @@ MARCAS = [
              ("¿Tienen todos los colores?", "Cada modelo tiene varios colores. Escríbenos por WhatsApp y te confirmamos cuáles tenemos disponibles en tu talla.")]),
   dict(slug="gafas-koo-medellin", marca="KOO", miga="Gafas KOO", corto="Gafas de ciclismo de Kask.",
        title="Veloce | Gafas KOO en Medellín · Gafas de ciclismo fotocromáticas",
-       desc="Gafas de ciclismo KOO, la marca de gafas de Kask, en Medellín: Alibi Photochromic, Alibi, Hype y Demos con precios en pesos. Tienda en El Poblado.",
+       desc="Gafas de ciclismo KOO, la marca de gafas de Kask, en Medellín: Supernova, Alibi Photochromic, Alibi, Hype y Demos con precios en pesos. Tienda en El Poblado.",
        h1="Gafas KOO<br>en Medellín.", og="img/productos/koo-alibi-1.jpg",
-       intro="Las gafas de ciclismo de Kask con diseño italiano. Alibi Photochromic, Alibi, Hype y Demos.",
+       intro="Las gafas de ciclismo de Kask con diseño italiano. Supernova, Alibi Photochromic, Alibi, Hype y Demos.",
        cta="Pedir mis gafas KOO", cta_msg="Hola Veloce, me interesan unas gafas KOO. ¿Qué modelos tienen?",
        titulo_prod="Gafas KOO.", sin_prod="",
        cuerpo="""      <h2>KOO: gafas de ciclismo de Kask</h2>
@@ -253,6 +253,7 @@ MARCAS = [
       <ul>
         <li><b>Alibi Photochromic:</b> el lente se oscurece o aclara solo según la luz, ideal para salir temprano o rodar entre sol y nubes.</li>
         <li><b>Alibi:</b> gran campo de visión con un diseño limpio.</li>
+        <li><b>Supernova:</b> sin marco y de solo 21 g, con lente panorámico Zeiss. En oferta a $699.000.</li>
         <li><b>Hype y Demos:</b> gafas KOO con gran relación calidad-precio.</li>
       </ul>""",
        porque=FIT_EQUIPO,
