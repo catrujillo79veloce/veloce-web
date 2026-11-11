@@ -394,3 +394,20 @@
 .buscas-grid p{font-size:.9rem;margin:0;opacity:.75;line-height:1.45}
 @media(max-width:900px){.buscas-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:520px){.buscas-grid{grid-template-columns:1fr}}
+
+.m-guia{margin:14px 0 4px;border:1px solid var(--line)}
+.m-guia summary{cursor:pointer;padding:10px 12px;font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+.m-guia .g-wrap{overflow-x:auto;padding:0 12px}
+.m-guia table{width:100%;border-collapse:collapse;font-size:.82rem}
+.m-guia th,.m-guia td{padding:6px 6px;border-bottom:1px solid var(--line);text-align:center;white-space:nowrap}
+.m-guia tbody th{text-align:left;font-weight:600;white-space:normal}
+.m-guia thead th{font-weight:800}
+.m-guia tr.g-alt{background:#f3f1ec;font-weight:700}
+.m-guia .g-nota{font-size:.78rem;color:#666;padding:8px 12px 12px;margin:0}
+.m-guia{max-width:100%;min-width:0;overflow:hidden}
+@media (max-width:600px){
+  .m-guia .g-wrap{padding:0 6px}
+  .m-guia table{font-size:.72rem}
+  .m-guia th,.m-guia td{padding:5px 3px;white-space:normal}
+  .m-guia tbody th{min-width:78px}
+}
