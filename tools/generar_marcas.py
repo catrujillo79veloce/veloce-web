@@ -76,6 +76,9 @@ def pagina(m):
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BCTKZM82SJ"></script>
+<script src="/js/analytics.js"></script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{m["title"]}</title>
 <meta name="description" content="{m["desc"]}">
