@@ -395,7 +395,7 @@
       resumen:"Potencia de ambas piernas con ±1% de precisión y 120 h de batería.",
       desc:"Entrenar por potencia es la forma más precisa de mejorar, y los P715 lo hacen accesible. Son pedales con medidor de potencia en ambos ejes, así que miden cada pierna por separado y te muestran tu balance izquierda/derecha. Tienen un giroscopio integrado para mayor precisión en sprints y subidas, cuerpo de compuesto de carbono con eje de acero inoxidable y una batería que dura hasta 120 horas con carga magnética. Se conectan por Bluetooth y ANT+ con tu ciclocomputador, reloj o simulador, y se instalan en minutos como cualquier pedal.",
       specs:["Medición de potencia en ambas piernas · precisión ±1%","Balance izquierda/derecha y métricas avanzadas de pedaleo","Giroscopio integrado para mayor precisión","Batería de hasta 120 horas con carga magnética","Bluetooth y ANT+ · resistentes al agua IPX7","Versiones para calas Shimano SPD-SL y Look KEO"] },
-    { cat:"Casco", marca:"Kask", nombre:"Protone Icon", precio:"Desde $899.000",
+    { cat:"Casco", marca:"Kask", nombre:"Protone Icon", precio:"Desde $899.000", hasta:"$1.100.000",
       foto:"img/productos/kask-protone-9.jpg",
       variantes:[{color:"Gris claro",hex:"#c9c8d0",fotos:["img/productos/kask-protone-9.jpg"]},{color:"Negro",hex:"#1d1d1b",fotos:["img/productos/kask-protone-1.jpg"]},{color:"Durazno",hex:"#f2b48c",fotos:["img/productos/kask-protone-2.jpg"]},{color:"Gris azulado",hex:"#9aa6b3",fotos:["img/productos/kask-protone-3.jpg"]},{color:"Café",hex:"#6b4a45",fotos:["img/productos/kask-protone-4.jpg"]},{color:"Rosa",hex:"#efd4d6",fotos:["img/productos/kask-protone-5.jpg"]},{color:"Blanco",hex:"#f4f4f4",fotos:["img/productos/kask-protone-6.jpg"]},{color:"Naranja",hex:"#f26a1b",fotos:["img/productos/kask-protone-7.jpg"]},{color:"Amarillo",hex:"#e6dc9a",fotos:["img/productos/kask-protone-8.jpg"]}],
       tallas:["S","M","L"],
@@ -403,7 +403,7 @@
       wa:"Hola Veloce, me interesa el casco Kask Protone Icon. ¿Qué colores y tallas tienen disponibles?",
       desc:"El Protone Icon es la evolución del Protone, el casco con el que Kask ha ganado en las carreras más importantes del mundo. Combina aerodinámica probada en túnel de viento con una ventilación excelente para los días de calor y las subidas largas. Tiene un marco interno de refuerzo para mayor seguridad, el ajuste OCTOFIT+ con rueda de goma fácil de girar y un acolchado CoolMax que se seca rápido y se puede lavar. Como todos los cascos Kask, cumple el protocolo WG11 de impactos rotacionales. El precio va de $899.000 a $1.100.000 según el color.",
       specs:["Diseñado y hecho en Italia","Aerodinámica probada en túnel de viento y 17 entradas de aire","Marco interno de refuerzo y protocolo de seguridad Kask WG11","Ajuste OCTOFIT+ con estabilizador para la nuca","Acolchado CoolMax removible y lavable · correa en cuero sintético","Peso aproximado: 230 g (talla M) · tallas S, M y L","Disponible en 9 colores · precio entre $899.000 y $1.100.000 según el color"] },
-    { cat:"Casco", marca:"Kask", nombre:"Elemento", precio:"Desde $1.090.000",
+    { cat:"Casco", marca:"Kask", nombre:"Elemento", precio:"Desde $1.090.000", hasta:"$1.590.000",
       foto:"img/productos/kask-elemento-6.jpg",
       variantes:[{color:"Blanco",hex:"#f4f4f4",fotos:["img/productos/kask-elemento-6.jpg"]},{color:"Negro",hex:"#1d1d1b",fotos:["img/productos/kask-elemento-1.jpg"]},{color:"Azul",hex:"#1f3a6e",fotos:["img/productos/kask-elemento-2.jpg"]},{color:"Rojo",hex:"#e31b23",fotos:["img/productos/kask-elemento-3.jpg"]},{color:"Verde",hex:"#1f8a3a",fotos:["img/productos/kask-elemento-4.jpg"]},{color:"Beige",hex:"#cfcbbf",fotos:["img/productos/kask-elemento-5.jpg"]},{color:"Plateado",hex:"#b9bbbe",fotos:["img/productos/kask-elemento-7.jpg"]}],
       tallas:["S","M","L"],
@@ -533,7 +533,13 @@
     if(h.includes("/"))document.getElementById("productos").scrollIntoView({behavior:"smooth"});}
   window.addEventListener("hashchange",desdeHash);
   pintar();desdeHash();
-  try{const ld={"@context":"https://schema.org","@type":"ItemList","name":"Productos Veloce","itemListElement":lista.filter(p=>p.marca!=="Marca").map((p,k)=>{const it={"@type":"Product","name":`${p.marca} ${p.nombre}`,"brand":{"@type":"Brand","name":p.marca},"category":p.cat,"image":new URL(p.foto,location.origin+"/").href,"description":p.resumen||p.desc||""};const v=valor(p);if(v!==Infinity)it.offers={"@type":"Offer","price":v,"priceCurrency":"COP","availability":"https://schema.org/InStock","seller":{"@type":"BicycleStore","name":"Veloce"}};return {"@type":"ListItem","position":k+1,"item":it}})};
+  try{const num=t=>{const n=parseInt((t||"").replace(/\D/g,""),10);return isNaN(n)?null:n};
+    const conPrecio=lista.filter(p=>p.marca!=="Marca"&&num(p.precio)!==null);
+    const ld={"@context":"https://schema.org","@type":"ItemList","name":"Productos Veloce","itemListElement":conPrecio.map((p,k)=>{
+      const lo=num(p.precio),hi=num(p.hasta),desde=/^desde/i.test(p.precio||"");
+      const offers=(desde&&hi)?{"@type":"AggregateOffer","lowPrice":lo,"highPrice":hi,"offerCount":(p.variantes||[1]).length,"priceCurrency":"COP","availability":"https://schema.org/InStock"}
+        :{"@type":"Offer","price":lo,"priceCurrency":"COP","availability":"https://schema.org/InStock","itemCondition":"https://schema.org/NewCondition","url":location.origin+"/","seller":{"@type":"BicycleStore","name":"Veloce"}};
+      return {"@type":"ListItem","position":k+1,"item":{"@type":"Product","name":`${p.marca} ${p.nombre}`,"brand":{"@type":"Brand","name":p.marca},"category":p.cat,"image":new URL(p.foto,location.origin+"/").href,"description":p.resumen||p.desc||"","offers":offers}}})};
     const sc=document.createElement("script");sc.type="application/ld+json";sc.textContent=JSON.stringify(ld);document.head.appendChild(sc);}catch(e){}
   const modal=document.getElementById("modal");
   function abrir(i,k0){

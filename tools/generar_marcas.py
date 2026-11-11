@@ -38,17 +38,19 @@ def tarjeta(p):
         {test}
       </div></article>"""
 
-def ld_producto(p):
-    it = {"@type": "Product", "name": f'{p["marca"]} {p["nombre"]}', "brand": {"@type": "Brand", "name": p["marca"]},
-          "category": p["cat"], "image": f'{SITE}/{p.get("foto","")}', "description": p.get("resumen") or p.get("desc", "")}
-    v = valor(p.get("precio"))
-    if v:
-        tipo_desde = (p.get("precio") or "").lower().startswith("desde")
-        it["offers"] = ({"@type": "AggregateOffer", "lowPrice": v, "priceCurrency": "COP", "availability": "https://schema.org/InStock"}
-                        if tipo_desde else
-                        {"@type": "Offer", "price": v, "priceCurrency": "COP", "availability": "https://schema.org/InStock",
-                         "seller": {"@type": "BicycleStore", "name": "Veloce"}})
-    return it
+def ld_producto(p, url):
+    lo, hi = valor(p.get("precio")), valor(p.get("hasta"))
+    desde = (p.get("precio") or "").lower().startswith("desde")
+    if desde and hi:
+        offers = {"@type": "AggregateOffer", "lowPrice": lo, "highPrice": hi, "offerCount": len(p.get("variantes") or [1]),
+                  "priceCurrency": "COP", "availability": "https://schema.org/InStock"}
+    else:
+        offers = {"@type": "Offer", "price": lo, "priceCurrency": "COP", "availability": "https://schema.org/InStock",
+                  "itemCondition": "https://schema.org/NewCondition", "url": url,
+                  "seller": {"@type": "BicycleStore", "name": "Veloce"}}
+    return {"@type": "Product", "name": f'{p["marca"]} {p["nombre"]}', "brand": {"@type": "Brand", "name": p["marca"]},
+            "category": p["cat"], "image": f'{SITE}/{p.get("foto","")}', "description": p.get("resumen") or p.get("desc", ""),
+            "offers": offers}
 
 def pagina(m):
     prods = [p for p in productos if p["marca"] == m["marca"]]
@@ -67,9 +69,10 @@ def pagina(m):
               {"@type": "ListItem", "position": 2, "name": m["miga"], "item": f'{SITE}/{m["slug"]}'}]},
           {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
               {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": re.sub("<[^>]+>", "", a)}} for q, a in m["faqs"]]}]
-    if prods:
+    con_precio = [p for p in prods if valor(p.get("precio"))]
+    if con_precio:
         ld.append({"@context": "https://schema.org", "@type": "ItemList", "name": m["miga"],
-                   "itemListElement": [{"@type": "ListItem", "position": k + 1, "item": ld_producto(p)} for k, p in enumerate(prods)]})
+                   "itemListElement": [{"@type": "ListItem", "position": k + 1, "item": ld_producto(p, f'{SITE}/{m["slug"]}')} for k, p in enumerate(con_precio)]})
     hero = "" if m.get("sin_foto") else f'<img class="ph-img" src="/{m["og"]}" alt="{m["miga"]} en Veloce, Medellín" style="object-fit:contain;object-position:center;background:#fff">'
     otras = "".join(f'<a href="/{o["slug"]}"><b>{o["miga"]}</b><span>{o["corto"]}</span></a>' for o in MARCAS if o["slug"] != m["slug"])
     return f"""<!DOCTYPE html>
