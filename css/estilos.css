@@ -365,3 +365,6 @@
   .m-ref{font-size:11px;color:#8a857c;margin:6px 0 0;text-align:right}
   .slide-ref{position:absolute;right:40px;bottom:110px;font-size:11px;color:#8a857c}
   @media (max-width:900px){.slide-ref{bottom:16%;right:16px}}
+  .fig{margin:28px 0 8px}
+  .fig img{width:100%;max-height:560px;object-fit:cover;object-position:center 55%;display:block}
+  .fig figcaption{font-size:13px;color:var(--gray);margin-top:8px}
