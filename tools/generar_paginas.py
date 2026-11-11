@@ -57,6 +57,9 @@ def pagina(slug, title, desc, kicker, h1, intro, cta_txt, cta_msg, cuerpo, faqs,
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BCTKZM82SJ"></script>
 <script src="/js/analytics.js"></script>
 <meta name="description" content="{desc}">
@@ -227,21 +230,21 @@ c_lat = f"""      <h3>Reserva tu clase</h3>
 
 paginas = [
     ("bike-fit-retul-medellin",
-     "Bike fit en Medellín | Retül 3D en El Poblado · Veloce",
+     "Veloce | Bike fit en Medellín · Retül 3D en El Poblado",
      "Bike fit Retül con captura 3D en El Poblado, Medellín. Más comodidad, menos lesiones y más potencia. Gratis con tu bicicleta de más de $8.000.000.",
      "Bike fit Retül", "Bike fit Retül<br>en Medellín.",
      "Ajustamos tu bicicleta a tu cuerpo con captura de movimiento 3D. Más comodidad, menos lesiones y más potencia, con datos y no a ojo.",
      "Agendar bike fit", "Hola Veloce, quiero agendar un bike fit Retül",
      bf_cuerpo, bf_faq, bf_lat, "Bike fit Retül", "img/retul-fit.jpg", "Bike fit Retül con captura de movimiento 3D en Veloce, Medellín"),
     ("taller-de-bicicletas-medellin",
-     "Taller de bicicletas en Medellín | Mantenimiento y reparación · Veloce",
+     "Veloce | Taller de bicicletas en Medellín · Mantenimiento y reparación",
      "Taller de bicicletas en El Poblado, Medellín: mantenimiento, alistada y lavada de ruta, MTB y eléctricas, suspensiones, sangrada de frenos, tubelizada, armada y Shimano Di2, SRAM AXS y Campagnolo.",
      "Taller de bicicletas", "Taller de bicicletas<br>en Medellín.",
      "Mantenimiento, alistada y lavada para bicicletas de ruta, MTB y eléctricas. Suspensiones, frenos de disco, tubeless, armado, potenciómetros y grupos electrónicos Di2, AXS y Campagnolo.",
      "Agendar taller", "Hola Veloce, quiero agendar mi bici en el taller",
      t_cuerpo, t_faq, t_lat, "Taller de bicicletas", "img/taller.jpg", "Mecánicos trabajando en el taller de bicicletas de Veloce en Medellín"),
     ("centro-de-entrenamiento-ciclismo-medellin",
-     "Ciclismo indoor en Medellín | Centro de entrenamiento por potencia · Veloce",
+     "Veloce | Ciclismo indoor en Medellín · Centro de entrenamiento por potencia",
      "Clases de ciclismo indoor por potencia en simulador inteligente, en El Poblado, Medellín. Lunes a viernes desde las 5:00 AM. Planes con seguimiento en TrainingPeaks.",
      "Centro de entrenamiento", "Centro de<br>entrenamiento.",
      "Clases de ciclismo indoor de una hora en simulador inteligente, entrenando por potencia. Lunes a viernes desde las 5:00 AM en El Poblado, Medellín.",

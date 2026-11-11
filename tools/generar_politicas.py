@@ -6,7 +6,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from generar_paginas import HEADER, FOOTER, WA_FLOAT, FONTS, SITE, wa
 
 SLUG = "envios-y-devoluciones"
-TITLE = "Envíos, cambios y devoluciones | Veloce"
+TITLE = "Veloce | Envíos, cambios y devoluciones"
 DESC = "Envío gratis a toda Colombia en compras desde $399.000. Entrega de 2 a 6 días hábiles. Cambios hasta 30 días y derecho de retracto de 5 días hábiles."
 
 cuerpo = """      <h2>Envíos a toda Colombia</h2>
@@ -68,6 +68,9 @@ html = f"""<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{TITLE}</title>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BCTKZM82SJ"></script>
 <script src="/js/analytics.js"></script>
 <meta name="description" content="{DESC}">
