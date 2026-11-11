@@ -54,11 +54,11 @@ def pagina(slug, title, desc, kicker, h1, intro, cta_txt, cta_msg, cuerpo, faqs,
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BCTKZM82SJ"></script>
-<script src="/js/analytics.js"></script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BCTKZM82SJ"></script>
+<script src="/js/analytics.js"></script>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{SITE}/{slug}">
 <meta property="og:type" content="website">
