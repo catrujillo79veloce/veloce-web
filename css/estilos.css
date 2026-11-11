@@ -361,3 +361,7 @@
     .hs-arrow{display:none}
   }
   @media (prefers-reduced-motion:reduce){.hero-slider .slide,.hero-slider .slide .hero-content,.slide-media img{transition:none}}
+  .prod-ref{position:absolute;right:12px;bottom:44px;font-size:10px;color:#8a857c;letter-spacing:.02em}
+  .m-ref{font-size:11px;color:#8a857c;margin:6px 0 0;text-align:right}
+  .slide-ref{position:absolute;right:40px;bottom:110px;font-size:11px;color:#8a857c}
+  @media (max-width:900px){.slide-ref{bottom:16%;right:16px}}

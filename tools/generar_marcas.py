@@ -19,6 +19,7 @@ def tarjeta(p):
     if p.get("antes"): badges += '<span class="prod-oferta">Oferta</span>'
     if p.get("test"): badges += '<span class="prod-test">Test ride</span>'
     if p.get("fit"): badges += '<span class="prod-fit">+ Bike fit gratis</span>'
+    if p.get("ref"): badges += '<span class="prod-ref">*Imagen de referencia</span>'
     precio = p.get("precio") or ""
     precio_html = (f'<s>{p["antes"]}</s> ' if p.get("antes") else "") + (precio or "Precio según configuración")
     colores = f'<p class="prod-res">{len(p["variantes"])} colores disponibles</p>' if p.get("variantes") else ""

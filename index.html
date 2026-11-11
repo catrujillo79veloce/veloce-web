@@ -75,7 +75,7 @@
     </div>
   </article>
   <article class="slide pslide" style="--bg:#ffffff" aria-roledescription="slide" aria-hidden="true">
-    <div class="slide-media"><img src="img/productos/wild-1.jpg" alt="Bicicleta eléctrica Orbea Wild" loading="lazy"></div>
+    <div class="slide-media"><img src="img/productos/wild-1.jpg" alt="Bicicleta eléctrica Orbea Wild" loading="lazy"><span class="slide-ref">*Imagen de referencia</span></div>
     <div class="hero-content">
       <div class="tri on-dark"><i></i><i></i><i></i></div>
       <span class="slide-tag">Orbea · distribuidor autorizado</span>
@@ -365,7 +365,7 @@
       resumen:"Carbono, Shimano 105 de 12v, sillín Fizik y cableado interno.",
       desc:"La Orca es la bici escaladora de Orbea: liviana, rígida donde importa y con una respuesta inmediata cada vez que te paras en los pedales. La M30 lleva el mismo cuadro de carbono de la familia Orca, diseñado para transmitir toda tu potencia sin peso de más, y la combina con el confiable Shimano 105 de 12 velocidades. Es una puerta de entrada ideal al carbono para subir las montañas de Colombia, con espacio para llantas anchas y la confianza de los frenos de disco.",
       specs:["Cuadro de carbono Orbea OMR monocasco y horquilla full carbon","Grupo Shimano 105 mecánico de 12 velocidades (2x12)","Frenos de disco hidráulicos Shimano","Sillín Fizik y tija de carbono","Cableado interno y compatible con potenciómetro","Espacio para llantas de hasta 32 mm"] },
-    { cat:"E-MTB", marca:"Orbea", nombre:"Wild H20", fit:true, precio:"$24.499.000", antes:"$29.999.000", test:true,
+    { cat:"E-MTB", marca:"Orbea", nombre:"Wild H20", ref:true, fit:true, precio:"$24.499.000", antes:"$29.999.000", test:true,
       foto:"img/productos/wild-1.jpg",
       fotos:["img/productos/wild-1.jpg","img/productos/wild-2.jpg"],
       resumen:"E-enduro con motor Bosch de 120 Nm y batería de 750 Wh. ¡Ven a probarla!",
@@ -478,7 +478,7 @@
   grid.innerHTML = lista.map((p,i)=>{
     const msg = encodeURIComponent(p.wa||`Hola Veloce, me interesa: ${p.marca} ${p.nombre}`);
     return `<article class="prod">
-      <div class="prod-img ${p.foto?"":"vacio"}">${p.foto?`<img src="${p.foto}" alt="${p.marca} ${p.nombre}" loading="lazy">`:""}<span class="prod-cat">${p.cat}</span>${p.antes?`<span class="prod-oferta">Oferta</span>`:""}${p.test?`<span class="prod-test">Test ride</span>`:""}${p.fit?`<span class="prod-fit">+ Bike fit gratis</span>`:""}</div>
+      <div class="prod-img ${p.foto?"":"vacio"}">${p.foto?`<img src="${p.foto}" alt="${p.marca} ${p.nombre}" loading="lazy">`:""}<span class="prod-cat">${p.cat}</span>${p.antes?`<span class="prod-oferta">Oferta</span>`:""}${p.test?`<span class="prod-test">Test ride</span>`:""}${p.fit?`<span class="prod-fit">+ Bike fit gratis</span>`:""}${p.ref?`<span class="prod-ref">*Imagen de referencia</span>`:""}</div>
       <div class="prod-body">
         <div class="prod-brand">${p.marca}</div>
         <div class="prod-name">${p.nombre}</div>${p.resumen?`<p class="prod-res">${p.resumen}</p>`:""}
@@ -535,7 +535,7 @@
     const fotos=p.variantes?p.variantes[vk].fotos:(p.fotos||[p.foto]);
     const msg=encodeURIComponent(p.wa?p.wa:p.precio?`Hola Veloce, me interesa la ${p.marca} ${p.nombre} (${p.precio})`:`Hola Veloce, quiero cotizar la ${p.marca} ${p.nombre}. ¿Qué configuraciones tienen?`);
     modal.querySelector(".m-body").innerHTML=`
-      <div class="m-gal"><img id="m-main" src="${fotos[0]}" alt="${p.marca} ${p.nombre}"><div class="m-thumbs">${fotos.map((f,k)=>`<img src="${f}" data-f="${f}" class="${k?"":"on"}" alt="">`).join("")}</div></div>
+      <div class="m-gal"><img id="m-main" src="${fotos[0]}" alt="${p.marca} ${p.nombre}">${p.ref?`<p class="m-ref">*Imagen de referencia</p>`:""}<div class="m-thumbs">${fotos.map((f,k)=>`<img src="${f}" data-f="${f}" class="${k?"":"on"}" alt="">`).join("")}</div></div>
       <div class="m-info"><div class="prod-brand">${p.marca}</div><h3 class="display">${p.nombre}</h3>
         <div class="prod-price ${p.precio?"":"consultar"}">${p.antes?`<s>${p.antes}</s> `:""}${p.precio||"Precio según configuración"}</div>
         <p>${p.desc}</p>
