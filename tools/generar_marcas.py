@@ -255,11 +255,11 @@ MARCAS = [
        faqs=[("¿Dónde comprar gafas KOO en Medellín?", "En Veloce, en el Mall Campestre Drive Inn, El Poblado. También puedes pedirlas por WhatsApp al +57 305 245 1204."),
              ("¿Qué son unas gafas fotocromáticas?", "Son gafas cuyo lente se oscurece con el sol y se aclara cuando hay poca luz, así no tienes que cambiar de lente durante la salida."),
              ("¿KOO es de Kask?", "Sí. KOO es la marca de gafas de Kask y sus gafas están diseñadas para usarse con cascos Kask.")]),
-  dict(slug="zapatillas-sidi-medellin", marca="Sidi", miga="Zapatillas Sidi", corto="Zapatillas de ciclismo italianas.",
-       title="Zapatillas Sidi en Medellín | Zapatillas de ciclismo de ruta · Veloce",
-       desc="Zapatillas de ciclismo de ruta Sidi en Medellín: Shot 3 y Wire 3 con precios en pesos, tallas 39 a 46 y varios colores. Tienda en El Poblado. Pide las tuyas por WhatsApp.",
+  dict(slug="zapatillas-sidi-medellin", marca="Sidi", miga="Zapatillas Sidi", corto="Zapatillas de ruta y MTB italianas.",
+       title="Zapatillas Sidi en Medellín | Ruta y MTB · Veloce",
+       desc="Zapatillas de ciclismo Sidi en Medellín: Shot 3 y Wire 3 para ruta y MTB Speed para montaña, desde $699.000. Tallas 37 a 46. Tienda en El Poblado. Pide las tuyas por WhatsApp.",
        h1="Zapatillas Sidi<br>en Medellín.", og="img/productos/sidi-shot3-blanco-1.jpg",
-       intro="Zapatillas de ciclismo italianas hechas para durar. Shot 3 y Wire 3 en tallas 39 a 46 y varios colores.",
+       intro="Zapatillas de ciclismo italianas hechas para durar. Shot 3 y Wire 3 para ruta, y MTB Speed para montaña y gravel, en tallas 37 a 46.",
        cta="Pedir mis Sidi", cta_msg="Hola Veloce, me interesan unas zapatillas Sidi. ¿Qué tallas y colores tienen?",
        titulo_prod="Zapatillas Sidi.", sin_prod="",
        cuerpo="""      <h2>Sidi: zapatillas de ciclismo italianas desde 1960</h2>
@@ -268,11 +268,13 @@ MARCAS = [
       <ul>
         <li><b>Shot 3:</b> la zapatilla de competencia de Sidi, rígida, liviana y con ajuste preciso.</li>
         <li><b>Wire 3:</b> la Sidi más técnica, con capellada ventilada y suela de carbono con rigidez 11.</li>
+        <li><b>MTB Speed:</b> zapatilla de MTB y gravel con dial Tecno-3 y suela reforzada con carbono, ahora en $699.000 (antes $899.000).</li>
       </ul>
       <p>Si cambias de zapatillas, revisar la posición de las calas es clave. En Veloce podemos ajustarlas con el <a href="/bike-fit-retul-medellin">bike fit Retül</a>.</p>""",
        porque=FIT_EQUIPO,
        faqs=[("¿Dónde comprar zapatillas Sidi en Medellín?", "En Veloce, en el Mall Campestre Drive Inn, El Poblado. También puedes pedirlas por WhatsApp al +57 305 245 1204."),
-             ("¿Qué tallas tienen?", "Manejamos tallas 39 a 46 (EU). Escríbenos y te confirmamos disponibilidad en tu talla y color."),
+             ("¿Qué tallas tienen?", "En ruta (Shot 3 y Wire 3) manejamos tallas 39 a 46 y en MTB Speed tallas 37 a 46 (EU). Escríbenos y te confirmamos disponibilidad en tu talla y color."),
+             ("¿Tienen zapatillas Sidi de MTB?", "Sí. La Sidi MTB Speed, para montaña y gravel, en negro y en blanco con negro, tallas 37 a 46, a $699.000."),
              ("¿Las Sidi son anchas o angostas?", "La horma de Sidi es más bien ajustada. Lo mejor es venir a probártelas a la tienda.")]),
 ]
 
