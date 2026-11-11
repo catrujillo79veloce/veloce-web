@@ -199,10 +199,10 @@ MARCAS = [
              ("¿La bicicleta incluye bike fit?", "Sí. Toda bicicleta de más de $8.000.000 que compres en Veloce incluye bike fit Retül gratis."),
              ("¿Qué talla de Colnago necesito?", "Con el bike fit Retül medimos tu cuerpo y tu posición para elegir la talla exacta antes de comprar.")]),
   dict(slug="pinarello-medellin", marca="Pinarello", miga="Pinarello", corto="Bicicletas de ruta de Treviso.",
-       title="Veloce | Bicicletas Pinarello en Medellín · Bicicleta de ruta F7 en oferta",
-       desc="Pinarello F7 Ultegra Di2 en Medellín: antes $34.900.000, ahora $24.900.000, en 3 colores. Bike fit Retül gratis con tu bici. Tienda en El Poblado. Cotiza por WhatsApp.",
+       title="Veloce | Bicicletas Pinarello en Medellín · F7 de ruta y Grevil gravel",
+       desc="Pinarello en Medellín: F7 Ultegra Di2 a $24.900.000 (antes $34.900.000) y Grevil gravel con Campagnolo Record 13v. Bike fit Retül gratis con tu bici. Tienda en El Poblado. Cotiza por WhatsApp.",
        h1="Bicicletas Pinarello<br>en Medellín.", og="img/productos/pinarello-f7-roja-1.jpg",
-       intro="Desde Treviso, Italia, las bicicletas que han ganado las carreras más grandes del mundo. Llévate la F7 Ultegra Di2 con $10 millones de descuento en nuestra tienda de El Poblado.",
+       intro="Desde Treviso, Italia, las bicicletas que han ganado las carreras más grandes del mundo. Llévate la F7 Ultegra Di2 con $10 millones de descuento o la Grevil de gravel con Campagnolo Record 13v en nuestra tienda de El Poblado.",
        cta="Cotizar mi Pinarello", cta_msg="Hola Veloce, quiero cotizar una bicicleta Pinarello",
        titulo_prod="Modelos Pinarello.",
        sin_prod="Te cotizamos el modelo y la configuración de Pinarello que quieras, desde la Dogma hasta las opciones de gravel. Escríbenos y te contamos disponibilidad, tiempos de entrega y precio.",
@@ -211,11 +211,13 @@ MARCAS = [
       <p>Una Pinarello se distingue por su diseño asimétrico, su rigidez y su manejo preciso en las bajadas. Es una bici para quien quiere sentir el ciclismo de alto nivel en cada salida.</p>
       <h3>Pinarello F7: el ADN de la Dogma</h3>
       <p>La F7 hereda de la Dogma F el diseño asimétrico, la geometría de competencia y la horquilla Onda. Con cuadro de carbono T900, Shimano Ultegra Di2 de 12 velocidades y frenos de disco, es la forma más directa de tener una Pinarello de carreras, y ahora está a <b>$24.900.000</b> (antes $34.900.000) en rojo y negro, azul y negro o negro mate.</p>
+      <h3>Pinarello Grevil: gravel de carreras</h3>
+      <p>La Grevil es la bici de gravel de Pinarello, para destapado rápido, aventura y fondos largos. Cuadro de carbono TorayCa T700, horquilla Onda Grevil, el nuevo Campagnolo Record de 13 velocidades con frenos hidráulicos, rines de carbono Princeton Grit 4540 y cockpit MOST con cables ocultos. Está a <b>$29.990.000</b>.</p>
       <h3>Te ayudamos a elegir</h3>
       <p>Cuéntanos cómo montas, qué rutas haces y qué presupuesto tienes, y te recomendamos el modelo y la configuración. Con el bike fit Retül elegimos la talla exacta antes de pedirla.</p>""",
        porque=FIT_BICI,
        faqs=[("¿Dónde comprar una Pinarello en Medellín?", "En Veloce, en el Mall Campestre Drive Inn, El Poblado (Calle 16A Sur #32B-38, Local 101). Escríbenos por WhatsApp al +57 305 245 1204."),
-             ("¿Cuánto cuesta una Pinarello en Colombia?", "Depende del modelo y la configuración. La Pinarello F7 Ultegra Di2 está en $24.900.000 (antes $34.900.000). Para otros modelos, escríbenos y te cotizamos."),
+             ("¿Cuánto cuesta una Pinarello en Colombia?", "Depende del modelo y la configuración. La Pinarello F7 Ultegra Di2 está en $24.900.000 (antes $34.900.000) y la Grevil Record 13v de gravel en $29.990.000. Para otros modelos, escríbenos y te cotizamos."),
              ("¿La bicicleta incluye bike fit?", "Sí. Toda bicicleta de más de $8.000.000 que compres en Veloce incluye bike fit Retül gratis."),
              ("¿Qué talla de Pinarello necesito?", "Con el bike fit Retül medimos tu cuerpo y tu posición para elegir la talla exacta antes de pedir tu bici.")]),
   dict(slug="cascos-kask-medellin", marca="Kask", miga="Cascos Kask", corto="Cascos italianos de ruta y aero.",
