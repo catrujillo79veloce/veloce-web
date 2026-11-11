@@ -220,9 +220,9 @@ MARCAS = [
              ("¿Qué talla de Pinarello necesito?", "Con el bike fit Retül medimos tu cuerpo y tu posición para elegir la talla exacta antes de pedir tu bici.")]),
   dict(slug="cascos-kask-medellin", marca="Kask", miga="Cascos Kask", corto="Cascos italianos de ruta y aero.",
        title="Veloce | Cascos Kask en Medellín · Casco de bicicleta y ciclismo",
-       desc="Cascos de bicicleta Kask en Medellín con precios en pesos: Protone Icon, Elemento, Mojito³, Sintesi y Utopia Y. Varios colores y tallas. Tienda en El Poblado. Pide el tuyo por WhatsApp.",
+       desc="Cascos de bicicleta Kask en Medellín con precios en pesos: Protone Icon, Elemento, Mojito³, Sintesi, Utopia Y y Bambino Pro Evo. Varios colores y tallas. Tienda en El Poblado. Pide el tuyo por WhatsApp.",
        h1="Cascos Kask<br>en Medellín.", og="img/productos/kask-protone-1.jpg",
-       intro="Los cascos italianos que usa el INEOS Grenadiers. Protone Icon, Elemento, Mojito³, Sintesi y Utopia Y en varios colores y tallas.",
+       intro="Los cascos italianos que usa el INEOS Grenadiers. Protone Icon, Elemento, Mojito³, Sintesi, Utopia Y y el Bambino Pro Evo de contrarreloj.",
        cta="Pedir mi casco Kask", cta_msg="Hola Veloce, me interesa un casco Kask. ¿Qué modelos, colores y tallas tienen?",
        titulo_prod="Cascos Kask.", sin_prod="",
        cuerpo="""      <h2>¿Por qué un casco de bicicleta Kask?</h2>
@@ -234,6 +234,7 @@ MARCAS = [
         <li><b>Mojito³:</b> liviano, fresco y versátil para ruta, gravel o el día a día.</li>
         <li><b>Sintesi:</b> un Kask de calidad a un precio de entrada.</li>
         <li><b>Utopia Y:</b> el casco aerodinámico para ir lo más rápido posible.</li>
+        <li><b>Bambino Pro Evo:</b> el casco de contrarreloj y triatlón con visor magnético, el mismo con el que Filippo Ganna batió el récord de la hora.</li>
       </ul>""",
        porque=FIT_EQUIPO,
        faqs=[("¿Dónde comprar cascos Kask en Medellín?", "En Veloce, en el Mall Campestre Drive Inn, El Poblado. También puedes pedirlo por WhatsApp al +57 305 245 1204."),
