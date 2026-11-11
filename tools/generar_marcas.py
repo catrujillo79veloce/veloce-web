@@ -46,7 +46,7 @@ def ld_producto(p, url):
         "returnMethod": ["https://schema.org/ReturnInStore", "https://schema.org/ReturnByMail"],
         "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility",
         "merchantReturnLink": f"{SITE}/envios-y-devoluciones"}}
-    if lo and lo > 399000:
+    if lo and lo >= 399000:
         extra["shippingDetails"] = {"@type": "OfferShippingDetails",
             "shippingRate": {"@type": "MonetaryAmount", "value": 0, "currency": "COP"},
             "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "CO"},
@@ -138,7 +138,7 @@ def pagina(m):
         <li><b>Asesoría de ciclistas:</b> te ayudamos a elegir según cómo y dónde montas.</li>
         <li><b>Taller propio</b> en la misma tienda para el armado, ajustes y mantenimiento.</li>
         <li><b>Tienda física en El Poblado</b>, en el Mall Campestre Drive Inn: ven a ver y probar antes de comprar.</li>
-        <li><b>Envío gratis a toda Colombia</b> en compras superiores a $399.000. <a href="/envios-y-devoluciones">Ver envíos y devoluciones</a>.</li>
+        <li><b>Envío gratis a toda Colombia</b> en compras desde $399.000. <a href="/envios-y-devoluciones">Ver envíos y devoluciones</a>.</li>
       </ul>
       <h2>Preguntas frecuentes</h2>
       <div class="faq">{faq_html}</div>

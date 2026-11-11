@@ -7,12 +7,12 @@ from generar_paginas import HEADER, FOOTER, WA_FLOAT, FONTS, SITE, wa
 
 SLUG = "envios-y-devoluciones"
 TITLE = "Envíos, cambios y devoluciones | Veloce"
-DESC = "Envío gratis a toda Colombia en compras superiores a $399.000. Entrega de 2 a 6 días hábiles. Cambios hasta 30 días y derecho de retracto de 5 días hábiles."
+DESC = "Envío gratis a toda Colombia en compras desde $399.000. Entrega de 2 a 6 días hábiles. Cambios hasta 30 días y derecho de retracto de 5 días hábiles."
 
 cuerpo = """      <h2>Envíos a toda Colombia</h2>
       <ul>
-        <li><b>Envío gratis</b> en compras superiores a <b>$399.000</b>.</li>
-        <li>En compras de menor valor, el envío se paga <b>contra entrega</b> a la transportadora, según la ciudad de destino y el tamaño del paquete.</li>
+        <li><b>Envío gratis</b> en compras desde <b>$399.000</b>.</li>
+        <li>En compras de menos de $399.000, el envío se paga <b>contra entrega</b> a la transportadora, según la ciudad de destino y el tamaño del paquete.</li>
         <li>Una vez confirmes tu compra, preparamos tu pedido y te enviamos la guía de la transportadora.</li>
       </ul>
       <h3>Tiempos de entrega</h3>
@@ -54,7 +54,7 @@ cuerpo = """      <h2>Envíos a toda Colombia</h2>
       <p>Todos nuestros productos tienen la garantía legal del fabricante. Si un producto presenta un defecto de fábrica, escríbenos y te ayudamos con el proceso de garantía ante la marca.</p>"""
 
 lateral = """      <h3>¿Tienes dudas?</h3>
-      <p><b>Envío gratis</b> a toda Colombia en compras superiores a $399.000.</p>
+      <p><b>Envío gratis</b> a toda Colombia en compras desde $399.000.</p>
       <p><b>Cambios:</b> hasta 30 días, producto sin uso y con empaques.</p>
       <p><b>Retracto:</b> 5 días hábiles desde la entrega.</p>"""
 
@@ -84,7 +84,7 @@ html = f"""<!DOCTYPE html>
     <div class="crumbs"><a href="/">Inicio</a> / Envíos y devoluciones</div>
     <div class="tri on-dark"><i></i><i></i><i></i></div>
     <h1 class="display">Envíos, cambios<br>y devoluciones.</h1>
-    <p>Envío gratis a toda Colombia en compras superiores a $399.000. Cambios hasta 30 días con el producto sin uso y en su empaque.</p>
+    <p>Envío gratis a toda Colombia en compras desde $399.000. Cambios hasta 30 días con el producto sin uso y en su empaque.</p>
     <div class="hero-ctas"><a class="btn btn-light" href="{wa('Hola Veloce, tengo una pregunta sobre envíos o devoluciones')}">Preguntar por WhatsApp</a></div>
   </div>
 </section>
