@@ -175,8 +175,8 @@ FIT_EQUIPO = '        <li><b>Pruébatelo en la tienda:</b> ven y elige la talla 
 
 MARCAS = [
   dict(slug="colnago-medellin", marca="Colnago", miga="Colnago", corto="Bicicletas de ruta italianas.",
-       title="Bicicletas Colnago en Medellín | V5Rs, Y1Rs, V3 · Veloce",
-       desc="Compra tu bicicleta Colnago en Medellín: V5Rs, Y1Rs y V3 con precios en pesos. Bike fit Retül gratis con tu bici. Tienda en El Poblado. Cotiza por WhatsApp.",
+       title="Bicicletas Colnago en Medellín | Bicicletas de ruta V5Rs, Y1Rs, V3 · Veloce",
+       desc="Compra tu bicicleta de ruta Colnago en Medellín: V5Rs, Y1Rs y V3 con precios en pesos. Bike fit Retül gratis con tu bici. Tienda en El Poblado. Cotiza por WhatsApp.",
        h1="Bicicletas Colnago<br>en Medellín.", og="img/productos/v5rs-3.jpg",
        intro="La marca italiana con la que Tadej Pogačar ha ganado el Tour de Francia. Ven a conocer la V5Rs, la Y1Rs y la V3 en nuestra tienda de El Poblado.",
        cta="Cotizar mi Colnago", cta_msg="Hola Veloce, quiero cotizar una bicicleta Colnago",
@@ -196,7 +196,7 @@ MARCAS = [
              ("¿La bicicleta incluye bike fit?", "Sí. Toda bicicleta de más de $8.000.000 que compres en Veloce incluye bike fit Retül gratis."),
              ("¿Qué talla de Colnago necesito?", "Con el bike fit Retül medimos tu cuerpo y tu posición para elegir la talla exacta antes de comprar.")]),
   dict(slug="pinarello-medellin", marca="Pinarello", miga="Pinarello", corto="Bicicletas de ruta de Treviso.",
-       title="Bicicletas Pinarello en Medellín | F7 Ultegra Di2 en oferta · Veloce",
+       title="Bicicletas Pinarello en Medellín | Bicicleta de ruta F7 en oferta · Veloce",
        desc="Pinarello F7 Ultegra Di2 en Medellín: antes $34.900.000, ahora $24.900.000, en 3 colores. Bike fit Retül gratis con tu bici. Tienda en El Poblado. Cotiza por WhatsApp.",
        h1="Bicicletas Pinarello<br>en Medellín.", og="img/productos/pinarello-f7-roja-1.jpg",
        intro="Desde Treviso, Italia, las bicicletas que han ganado las carreras más grandes del mundo. Llévate la F7 Ultegra Di2 con $10 millones de descuento en nuestra tienda de El Poblado.",
@@ -216,13 +216,13 @@ MARCAS = [
              ("¿La bicicleta incluye bike fit?", "Sí. Toda bicicleta de más de $8.000.000 que compres en Veloce incluye bike fit Retül gratis."),
              ("¿Qué talla de Pinarello necesito?", "Con el bike fit Retül medimos tu cuerpo y tu posición para elegir la talla exacta antes de pedir tu bici.")]),
   dict(slug="cascos-kask-medellin", marca="Kask", miga="Cascos Kask", corto="Cascos italianos de ruta y aero.",
-       title="Cascos Kask en Medellín | Protone, Elemento, Mojito, Utopia · Veloce",
-       desc="Cascos Kask en Medellín con precios en pesos: Protone Icon, Elemento, Mojito³, Sintesi y Utopia Y. Varios colores y tallas. Tienda en El Poblado. Pide el tuyo por WhatsApp.",
+       title="Cascos Kask en Medellín | Casco de bicicleta y ciclismo · Veloce",
+       desc="Cascos de bicicleta Kask en Medellín con precios en pesos: Protone Icon, Elemento, Mojito³, Sintesi y Utopia Y. Varios colores y tallas. Tienda en El Poblado. Pide el tuyo por WhatsApp.",
        h1="Cascos Kask<br>en Medellín.", og="img/productos/kask-protone-1.jpg",
        intro="Los cascos italianos que usa el INEOS Grenadiers. Protone Icon, Elemento, Mojito³, Sintesi y Utopia Y en varios colores y tallas.",
        cta="Pedir mi casco Kask", cta_msg="Hola Veloce, me interesa un casco Kask. ¿Qué modelos, colores y tallas tienen?",
        titulo_prod="Cascos Kask.", sin_prod="",
-       cuerpo="""      <h2>¿Por qué un casco Kask?</h2>
+       cuerpo="""      <h2>¿Por qué un casco de bicicleta Kask?</h2>
       <p>Kask es una marca italiana de cascos que trabaja de la mano con equipos profesionales como el INEOS Grenadiers. Sus cascos combinan seguridad, ventilación y su ajuste Octo Fit, que se adapta a casi cualquier forma de cabeza.</p>
       <h3>¿Cuál elegir?</h3>
       <ul>
@@ -237,13 +237,13 @@ MARCAS = [
              ("¿Qué talla de casco Kask necesito?", "Se mide el contorno de la cabeza un poco por encima de las cejas. Lo mejor es venir a la tienda y probártelo, o escríbenos y te ayudamos."),
              ("¿Tienen todos los colores?", "Cada modelo tiene varios colores. Escríbenos por WhatsApp y te confirmamos cuáles tenemos disponibles en tu talla.")]),
   dict(slug="gafas-koo-medellin", marca="KOO", miga="Gafas KOO", corto="Gafas de ciclismo de Kask.",
-       title="Gafas KOO en Medellín | Alibi, Hype, Demos · Veloce",
+       title="Gafas KOO en Medellín | Gafas de ciclismo fotocromáticas · Veloce",
        desc="Gafas de ciclismo KOO, la marca de gafas de Kask, en Medellín: Alibi Photochromic, Alibi, Hype y Demos con precios en pesos. Tienda en El Poblado.",
        h1="Gafas KOO<br>en Medellín.", og="img/productos/koo-alibi-1.jpg",
        intro="Las gafas de ciclismo de Kask con diseño italiano. Alibi Photochromic, Alibi, Hype y Demos.",
        cta="Pedir mis gafas KOO", cta_msg="Hola Veloce, me interesan unas gafas KOO. ¿Qué modelos tienen?",
        titulo_prod="Gafas KOO.", sin_prod="",
-       cuerpo="""      <h2>KOO: las gafas de Kask</h2>
+       cuerpo="""      <h2>KOO: gafas de ciclismo de Kask</h2>
       <p>KOO es la marca de gafas de Kask. Lleva al ciclismo el mismo diseño y la misma calidad italiana de sus cascos, y sus gafas están pensadas para encajar perfecto con un casco Kask.</p>
       <h3>¿Cuáles elegir?</h3>
       <ul>
@@ -256,13 +256,13 @@ MARCAS = [
              ("¿Qué son unas gafas fotocromáticas?", "Son gafas cuyo lente se oscurece con el sol y se aclara cuando hay poca luz, así no tienes que cambiar de lente durante la salida."),
              ("¿KOO es de Kask?", "Sí. KOO es la marca de gafas de Kask y sus gafas están diseñadas para usarse con cascos Kask.")]),
   dict(slug="zapatillas-sidi-medellin", marca="Sidi", miga="Zapatillas Sidi", corto="Zapatillas de ciclismo italianas.",
-       title="Zapatillas Sidi en Medellín | Shot 3, Wire 3 · Veloce",
-       desc="Zapatillas de ciclismo Sidi en Medellín: Shot 3 y Wire 3 con precios en pesos, tallas 39 a 46 y varios colores. Tienda en El Poblado. Pide las tuyas por WhatsApp.",
+       title="Zapatillas Sidi en Medellín | Zapatillas de ciclismo de ruta · Veloce",
+       desc="Zapatillas de ciclismo de ruta Sidi en Medellín: Shot 3 y Wire 3 con precios en pesos, tallas 39 a 46 y varios colores. Tienda en El Poblado. Pide las tuyas por WhatsApp.",
        h1="Zapatillas Sidi<br>en Medellín.", og="img/productos/sidi-shot3-blanco-1.jpg",
        intro="Zapatillas de ciclismo italianas hechas para durar. Shot 3 y Wire 3 en tallas 39 a 46 y varios colores.",
        cta="Pedir mis Sidi", cta_msg="Hola Veloce, me interesan unas zapatillas Sidi. ¿Qué tallas y colores tienen?",
        titulo_prod="Zapatillas Sidi.", sin_prod="",
-       cuerpo="""      <h2>Sidi: zapatillas italianas desde 1960</h2>
+       cuerpo="""      <h2>Sidi: zapatillas de ciclismo italianas desde 1960</h2>
       <p>Sidi fabrica zapatillas de ciclismo en Italia desde 1960. Son conocidas por su ajuste firme, su durabilidad y porque casi todas sus piezas se pueden reemplazar, así que te duran muchos años.</p>
       <h3>¿Cuáles elegir?</h3>
       <ul>
