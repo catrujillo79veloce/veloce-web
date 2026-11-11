@@ -269,14 +269,17 @@
 
 <!-- VELOCE RIDES -->
 <section class="rides" id="rides">
-  <div class="ph" data-label="Foto · rodada Veloce Rides">
-    <img class="bike" src="img/bici-blanca.png" alt="">
-    <div class="rides-inner">
-      <div class="tri on-dark"><i></i><i></i><i></i></div>
-      <h2 class="display">Veloce<br>Rides.</h2>
-      <p>Rodadas, viajes y eventos para salir a montar en grupo por las mejores rutas de Colombia.</p>
-      <a class="btn btn-light" href="https://www.instagram.com/velocecycling/">Próximas rodadas en Instagram</a>
-    </div>
+  <div class="rides-bg">
+    <img class="on" src="img/rides-1.jpg" alt="Grupo de Veloce Rides con la camiseta Veloce antes de una rodada" style="object-position:center 68%">
+    <img src="img/rides-2.jpg" alt="Grupo de Veloce Rides en el Alto de Letras, 3.680 msnm" loading="lazy" style="object-position:center 62%">
+    <img src="img/rides-3.jpg" alt="Rodada de Veloce Rides por las montañas de Antioquia" loading="lazy" style="object-position:center 72%">
+    <img src="img/rides-4.jpg" alt="Rodada de Veloce Rides junto al río" loading="lazy" style="object-position:center 60%">
+  </div>
+  <div class="rides-inner">
+    <div class="tri on-dark"><i></i><i></i><i></i></div>
+    <h2 class="display">Veloce<br>Rides.</h2>
+    <p>Rodadas, viajes y eventos para salir a montar en grupo por las mejores rutas de Colombia.</p>
+    <a class="btn btn-light" href="https://www.instagram.com/velocecycling/">Próximas rodadas en Instagram</a>
   </div>
 </section>
 
@@ -590,6 +593,10 @@
   h.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>45){ir(dx<0?i+1:i-1);reiniciar()}x0=null});
   ir(0);play();
 })();
+</script>
+<script>
+(function(){const im=[...document.querySelectorAll('.rides-bg img')];if(im.length<2||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+let i=0;setInterval(()=>{if(document.hidden)return;im[i].classList.remove('on');i=(i+1)%im.length;im[i].loading='eager';im[i].classList.add('on')},5000);})();
 </script>
 </body>
 </html>
