@@ -179,20 +179,19 @@ t_cuerpo = """      <h2>Taller especializado en Medellín</h2>
       </ul>
 
       <h2>Arreglo y reparación de bicicletas</h2>
-      <p>¿Los cambios saltan, los frenos suenan o no frenan, la bici hace un ruido raro o la transmisión se siente pesada? Tráela. Revisamos tu bicicleta, te decimos qué necesita y cuánto cuesta antes de hacer el trabajo, para que no haya sorpresas.</p>
+      <p>¿Los cambios saltan, la transmisión se siente pesada o ya es hora de cambiar llantas, cadena o pastas? Tráela. Revisamos tu bicicleta de ruta, MTB, cross o eléctrica, te decimos qué necesita y cuánto cuesta antes de hacer el trabajo, para que no haya sorpresas.</p>
       <ul>
-        <li>Ajuste de cambios y frenos.</li>
-        <li>Cambio de cadena, piñones, platos, pastillas y discos.</li>
-        <li>Cambio de llantas, neumáticos y cintas de manubrio.</li>
-        <li>Centrado de ruedas y revisión de rodamientos.</li>
-        <li>Revisión de ruidos en la caja de pedalier, la dirección y las ruedas.</li>
+        <li>Ajuste de cambios.</li>
+        <li>Cambio de repuestos: llantas, cadenas, piñones y pastas de freno.</li>
+        <li>Centrado de ruedas.</li>
+        <li>Actualización de grupos electrónicos.</li>
       </ul>
 
       <h2>Ruta, MTB y bicicletas eléctricas</h2>
       <p>Trabajamos con bicicletas de ruta, de montaña y eléctricas. Cada tipo tiene sus necesidades: desde la sincronización de un grupo electrónico en una bici de ruta hasta el mantenimiento de suspensiones en una MTB.</p>
 
       <h2>Taller para bicicletas eléctricas</h2>
-      <p>Una bicicleta eléctrica pesa más y exige más de los frenos, la cadena y las suspensiones, así que necesita mantenimiento con más frecuencia. En Veloce le hacemos el mantenimiento a tu e-bike de montaña o de ciudad: frenos, transmisión, suspensiones, ruedas y alistada general. Si tu consulta es sobre el motor o la batería, escríbenos con la marca y el modelo y te decimos cómo podemos ayudarte.</p>
+      <p>Una bicicleta eléctrica pesa más y exige más de los frenos, la cadena y las suspensiones, así que necesita mantenimiento con más frecuencia. En Veloce le hacemos el mantenimiento y la alistada a tu bicicleta eléctrica, y le cambiamos los repuestos que se desgastan, como llantas, cadena, piñones y pastas. Si tu consulta es sobre el motor o la batería, escríbenos con la marca y el modelo y te decimos cómo podemos ayudarte.</p>
 
       <h2>Un taller de bicicletas cerca de ti</h2>
       <p>Estamos en el Mall Campestre Drive Inn, en El Poblado, a pocos minutos de Envigado y Sabaneta. Puedes dejar tu bici de lunes a viernes de 10:00 AM a 7:00 PM y los sábados de 11:00 AM a 5:00 PM. Escríbenos antes por WhatsApp para darte un cupo y el tiempo de entrega.</p>
@@ -202,7 +201,7 @@ t_cuerpo = """      <h2>Taller especializado en Medellín</h2>
 t_faq = [
     ("¿Cómo agendo mi bici en el taller?", "Escríbenos por WhatsApp al +57 305 245 1204 y te damos la disponibilidad."),
     ("¿Cuánto cuesta el mantenimiento de una bicicleta?", "Depende del servicio y del estado de la bici. Escríbenos por WhatsApp con el tipo de bicicleta y lo que necesita, y te damos el precio antes de traerla."),
-    ("¿Arreglan bicicletas eléctricas?", "Sí. Hacemos mantenimiento y reparación de frenos, transmisión, suspensiones y ruedas de bicicletas eléctricas. Para temas de motor o batería, escríbenos con la marca y el modelo."),
+    ("¿Arreglan bicicletas eléctricas?", "Sí. Hacemos mantenimiento, alistada y cambio de repuestos a bicicletas eléctricas. Para temas de motor o batería, escríbenos con la marca y el modelo."),
     ("¿Qué horario tiene el taller?", "Lunes a viernes de 10:00 AM a 7:00 PM y sábados de 11:00 AM a 5:00 PM. Los domingos no abrimos."),
     ("¿Trabajan con grupos electrónicos?", "Sí. Instalamos y actualizamos grupos Shimano Di2, SRAM AXS y Campagnolo."),
     ("¿Hacen sangrada de frenos de disco?", "Sí. Sangramos frenos de disco hidráulicos para que vuelvan a frenar firme y parejo."),

@@ -273,7 +273,7 @@ MARCAS = [
              ("¿Cuánto cuesta una Pinarello en Colombia?", "Depende del modelo y la configuración. La Pinarello F7 Ultegra Di2 está en $24.900.000 (antes $34.900.000) y la Grevil Record 13v de gravel en $29.990.000. Para otros modelos, escríbenos y te cotizamos."),
              ("¿La bicicleta incluye bike fit?", "Sí. Toda bicicleta de más de $8.000.000 que compres en Veloce incluye bike fit Retül gratis."),
              ("¿Qué talla de Pinarello necesito?", "Con el bike fit Retül medimos tu cuerpo y tu posición para elegir la talla exacta antes de pedir tu bici."),
-             ("¿Tienen la Pinarello Dogma?", "Te cotizamos la Dogma y otros modelos de Pinarello por encargo. Escríbenos por WhatsApp y te contamos disponibilidad, tiempos de entrega y precio."),
+             ("¿Tienen la Pinarello Dogma?", "Te cotizamos la Dogma y otros modelos de Pinarello según la configuración que quieras. Escríbenos por WhatsApp y te contamos disponibilidad, tiempos de entrega y precio."),
              ("¿Envían bicicletas Pinarello a otras ciudades?", "Sí. Hacemos envíos a toda Colombia, gratis en compras desde $399.000.")]),
   dict(slug="cascos-kask-medellin", marca="Kask", miga="Cascos Kask", corto="Cascos italianos de ruta y aero.",
        title="Cascos Kask en Medellín · Protone Icon, Elemento y Mojito³ | Veloce",
@@ -363,13 +363,13 @@ MARCAS = [
              ("¿Envían zapatillas Sidi a otras ciudades?", "Sí. Hacemos envíos a toda Colombia, gratis en compras desde $399.000.")]),
   dict(slug="orbea-medellin", marca="Orbea", miga="Orbea", corto="MTB, ruta y eléctricas de montaña.",
        title="Bicicletas Orbea en Medellín · MTB, ruta y eléctricas | Veloce",
-       desc="Bicicletas Orbea en Medellín con precios en pesos: Oiz y Alma de MTB, Orca de ruta y las eléctricas de montaña Rise y Wild, con test ride. Tienda autorizada en El Poblado. Cotiza por WhatsApp.",
+       desc="Bicicletas Orbea en Medellín con precios en pesos: Oiz y Alma de MTB, Orca de ruta y las eléctricas de montaña Rise y Wild, con test ride. Orbea en Veloce, El Poblado. Cotiza por WhatsApp.",
        h1="Bicicletas Orbea<br>en Medellín.", og="img/productos/orbea-oiz-h30-azul-v2.jpg",
        intro="Montaña, ruta y eléctricas de la marca vasca. Oiz y Alma para cross country, Orca para la carretera y las e-MTB Rise y Wild, que puedes probar en un test ride.",
        cta="Cotizar mi Orbea", cta_msg="Hola Veloce, quiero cotizar una bicicleta Orbea",
        titulo_prod="Modelos Orbea.", titulo_det="Las Orbea que tenemos, una por una", sin_prod="",
        cuerpo="""      <h2>Orbea: más de 180 años de historia</h2>
-      <p>Orbea nació en 1840 en Eibar, en el País Vasco, y hoy es una de las marcas de bicicletas más reconocidas de España. Fabrica bicis de montaña, de ruta y eléctricas, y compite al más alto nivel en cross country con su equipo de fábrica. En Veloce somos tienda autorizada Orbea en Medellín.</p>
+      <p>Orbea nació en 1840 en Eibar, en el País Vasco, y hoy es una de las marcas de bicicletas más reconocidas de España. Fabrica bicis de montaña, de ruta y eléctricas, y compite al más alto nivel en cross country con su equipo de fábrica. Encuentra Orbea en Veloce, en El Poblado, Medellín.</p>
       <h3>¿Qué Orbea es para ti?</h3>
       <ul>
         <li><b>Alma:</b> la rígida de cross country. Liviana, directa y la forma más accesible de empezar en el MTB en serio.</li>
@@ -383,7 +383,7 @@ MARCAS = [
       <h3>Tallas Orbea</h3>
       <p>En la página de cada modelo encuentras la guía de tallas con las medidas del cuadro y la estatura recomendada. Si estás entre dos tallas, te ayudamos a elegir en la tienda.</p>""",
        porque=FIT_BICI,
-       faqs=[("¿Dónde comprar una bicicleta Orbea en Medellín?", "En Veloce, tienda autorizada Orbea, en el Mall Campestre Drive Inn, El Poblado (Calle 16A Sur #32B-38, Local 101). Escríbenos por WhatsApp al +57 305 245 1204."),
+       faqs=[("¿Dónde comprar una bicicleta Orbea en Medellín?", "En Veloce, en el Mall Campestre Drive Inn, El Poblado (Calle 16A Sur #32B-38, Local 101). Escríbenos por WhatsApp al +57 305 245 1204."),
              ("¿Puedo probar una Orbea eléctrica antes de comprarla?", "Sí. Tenemos la Orbea Rise SL y la Wild disponibles para test ride. Escríbenos por WhatsApp para agendar tu prueba."),
              ("¿La bicicleta incluye bike fit?", "Sí. Toda bicicleta de más de $8.000.000 que compres en Veloce incluye bike fit Retül gratis."),
              ("¿Qué talla de Orbea necesito?", "Cada modelo tiene su guía de tallas según tu estatura. Si estás entre dos tallas, ven a la tienda o escríbenos y te ayudamos a elegir."),
