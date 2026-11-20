@@ -426,6 +426,49 @@ MARCAS = [
              ("¿Qué tallas tienen?", "La Fizik Tempo R5 viene en tallas 38 a 45 (EU). Escríbenos y te confirmamos disponibilidad en tu talla y color."),
              ("¿Qué calas usan las Fizik Tempo R5?", "Son zapatillas de ruta, para calas de tres tornillos."),
              ("¿Envían zapatillas Fizik a otras ciudades?", "Sí. Hacemos envíos a toda Colombia, gratis en compras desde $399.000.")]),
+  dict(slug="wilier-medellin", marca="Wilier", miga="Wilier", corto="Bicicletas de ruta italianas desde 1906.",
+       title="Bicicletas Wilier en Medellín · Garda 105 de ruta en carbono | Veloce",
+       desc="Bicicletas Wilier en Medellín: Garda 105 de ruta endurance en carbono, con Shimano 105 de 12v, 4 colores y tallas XS a XXL, con precio en pesos y bike fit Retül gratis. Tienda en El Poblado.",
+       h1="Bicicletas Wilier<br>en Medellín.", og="img/productos/wilier-garda-roja-1.jpg",
+       intro="Carbono italiano con más de un siglo de historia. Conoce la Wilier Garda, la bici de ruta para fondos largos, en nuestra tienda de El Poblado.",
+       cta="Cotizar mi Wilier", cta_msg="Hola Veloce, quiero cotizar una bicicleta Wilier",
+       titulo_prod="Modelos Wilier.", titulo_det="La Wilier que tenemos", sin_prod="",
+       cuerpo="""      <h2>Wilier: ciclismo italiano desde 1906</h2>
+      <p>Wilier Triestina es una marca italiana fundada en 1906, una de las más antiguas del ciclismo. Sus bicicletas de ruta se reconocen por el trabajo en carbono, el cuidado en los acabados y un diseño muy italiano.</p>
+      <h3>Wilier Garda: carbono para rodar muchas horas</h3>
+      <p>La Garda es la bici de ruta endurance de Wilier. Su geometría es un poco más alta y relajada que la de una bici de carreras, así que cargas menos la espalda y el cuello en los fondos largos, sin perder eficiencia. El cuadro y la horquilla son de carbono monocasco, el cableado va oculto y le caben llantas de 28 a 32 mm para más comodidad y agarre.</p>
+      <h3>¿Para quién es?</h3>
+      <p>Para quien quiere su primera bici de carbono, para entrenar entre semana y para los gran fondos y las salidas largas del fin de semana. Si buscas una posición más agresiva de competencia, mira también <a href="/colnago-medellin">Colnago</a> y <a href="/pinarello-medellin">Pinarello</a>.</p>
+      <h3>Tallas Wilier</h3>
+      <p>La Garda viene en seis tallas, de XS a XXL. En la página del modelo encuentras la guía de tallas según tu estatura, y con el bike fit Retül elegimos la talla exacta.</p>""",
+       porque=FIT_BICI,
+       faqs=[("¿Dónde comprar una bicicleta Wilier en Medellín?", "En Veloce, en el Mall Campestre Drive Inn, El Poblado (Calle 16A Sur #32B-38, Local 101). Escríbenos por WhatsApp al +57 305 245 1204."),
+             ("¿Qué talla de Wilier necesito?", "La Wilier Garda viene en tallas XS a XXL. En la página del modelo está la guía de tallas según tu estatura, y con el bike fit Retül elegimos la talla exacta."),
+             ("¿La bicicleta incluye bike fit?", "Sí. Toda bicicleta de más de $8.000.000 que compres en Veloce incluye bike fit Retül gratis."),
+             ("¿Envían bicicletas Wilier a otras ciudades?", "Sí. Hacemos envíos a toda Colombia, gratis en compras desde $399.000.")]),
+  dict(slug="magene-medellin", marca="Magene", miga="Magene", corto="Ciclocomputadores y pedales de potencia.",
+       title="Magene en Medellín · Ciclocomputador C706 y pedales de potencia P715 | Veloce",
+       desc="Magene en Medellín: ciclocomputador GPS C706 y pedales de potencia P715 para entrenar por vatios, con precios en pesos. Instalación en nuestro taller. Tienda en El Poblado. Pídelos por WhatsApp.",
+       h1="Magene<br>en Medellín.", og="img/productos/magene-p715-1.jpg",
+       intro="Tecnología para entrenar por potencia: el ciclocomputador GPS C706 y los pedales de potencia P715, en nuestra tienda de El Poblado.",
+       cta="Preguntar por Magene", cta_msg="Hola Veloce, me interesan los productos Magene. ¿Qué tienen disponible?",
+       titulo_prod="Productos Magene.", titulo_det="Cada producto Magene en detalle", sin_prod="",
+       cuerpo="""      <h2>Magene: entrenar con datos</h2>
+      <p>Magene hace ciclocomputadores, potenciómetros y sensores para ciclismo, y equipa al equipo WorldTour Astana. Su propuesta es tecnología de gama alta a un precio muy competitivo.</p>
+      <h3>¿Qué necesitas para entrenar por potencia?</h3>
+      <ul>
+        <li><b>Un potenciómetro:</b> los pedales P715 miden la potencia de cada pierna por separado y se instalan como cualquier pedal.</li>
+        <li><b>Un ciclocomputador:</b> el C706 muestra tus vatios en vivo, guarda tus salidas y te guía con GPS e indicaciones por voz.</li>
+      </ul>
+      <p>La potencia, medida en vatios, no depende del viento ni de la pendiente, y por eso es la forma más confiable de saber si estás mejorando.</p>
+      <h3>Entrena con nosotros</h3>
+      <p>Si quieres sacarle provecho a tus datos, en nuestro <a href="/centro-de-entrenamiento-ciclismo-medellin">centro de entrenamiento</a> hacemos clases por potencia en simulador.</p>""",
+       porque='        <li><b>Instalación en nuestro taller:</b> instalamos tu potenciómetro y lo configuramos con tu ciclocomputador. <a href="/taller-de-bicicletas-medellin">Ver el taller</a>.</li>',
+       faqs=[("¿Dónde comprar productos Magene en Medellín?", "En Veloce, en el Mall Campestre Drive Inn, El Poblado. También puedes pedirlos por WhatsApp al +57 305 245 1204."),
+             ("¿Los pedales Magene P715 sirven para mi bicicleta?", "Se instalan como cualquier pedal y hay versiones para calas Shimano SPD-SL y Look KEO. Escríbenos y te confirmamos cuál tenemos disponible."),
+             ("¿El Magene C706 funciona con otros potenciómetros y sensores?", "Sí. Es compatible con potenciómetros y sensores, y también con los segmentos de Strava."),
+             ("¿Instalan el potenciómetro?", "Sí. En nuestro taller instalamos potenciómetros y los configuramos con tu ciclocomputador."),
+             ("¿Envían productos Magene a otras ciudades?", "Sí. Hacemos envíos a toda Colombia, gratis en compras desde $399.000.")]),
 ]
 
 if __name__ == "__main__":
