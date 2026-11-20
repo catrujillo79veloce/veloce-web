@@ -9,15 +9,15 @@ gtag('config', 'AW-11029871865'); /* Google Ads */
 document.addEventListener('click', function (e) {
   var a = e.target.closest && e.target.closest('a[href*="wa.me"]');
   if (a) {
-    var card = a.closest('.prod'), modal = a.closest('.m-box'), slide = a.closest('.slide'), feature = a.closest('.feature');
+    var card = a.closest('.prod'), modal = a.closest('.m-box, .pp'), slide = a.closest('.slide'), feature = a.closest('.feature');
     var producto = '', marca = '', origen = '';
     if (card) {
       marca = (card.querySelector('.prod-brand') || {}).textContent || '';
       producto = (card.querySelector('.prod-name') || {}).textContent || '';
       origen = 'tarjeta_producto';
     } else if (modal) {
-      marca = (modal.querySelector('.prod-brand') || {}).textContent || '';
-      producto = (modal.querySelector('h3') || {}).textContent || '';
+      marca = ((modal.querySelector('.prod-brand') || {}).textContent || '').split('·')[0];
+      producto = (modal.querySelector('h1, h3') || {}).textContent || '';
       origen = 'detalle_producto';
     } else if (slide) {
       origen = 'banner_' + (((slide.querySelector('.slide-tag') || {}).textContent || 'principal').split('·')[0].trim().toLowerCase());

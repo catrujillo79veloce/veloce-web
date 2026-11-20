@@ -411,3 +411,23 @@
   .m-guia th,.m-guia td{padding:5px 3px;white-space:normal}
   .m-guia tbody th{min-width:78px}
 }
+
+/* ---------- Página de producto ---------- */
+.pp{padding:36px 0 70px}
+.pp-crumbs{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);margin-bottom:22px}
+.pp-crumbs a:hover{color:var(--black)}
+.pp-grid{display:grid;grid-template-columns:1.15fr 1fr;border:1px solid var(--line);align-items:start}
+.pp .m-info h1{font-size:clamp(44px,5.5vw,68px);margin:6px 0 10px}
+.pp .m-thumbs{grid-template-columns:repeat(5,1fr)}
+.pp-specs{list-style:none;padding-left:0!important}
+.pp-specs li{padding:10px 0;border-bottom:1px solid var(--line);font-weight:600;display:flex;gap:10px}
+.pp-specs li::before{content:"—";color:var(--rojo)}
+a.prod{color:inherit}
+a.prod-more{display:inline-block}
+.prod-name a:hover{text-decoration:underline;text-decoration-color:var(--rojo);text-underline-offset:4px}
+.prose a{text-decoration:underline;text-decoration-color:var(--rojo);text-underline-offset:4px}
+.sec-head .btn{align-self:flex-end}
+@media (max-width:800px){.pp{padding:22px 0 50px}.pp-grid{grid-template-columns:1fr}.pp .m-thumbs{grid-template-columns:repeat(4,1fr)}}
+.page-grid>*{min-width:0}
+.pp-specs li{min-width:0;overflow-wrap:anywhere}
+.prose h2{overflow-wrap:anywhere}

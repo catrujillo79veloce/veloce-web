@@ -23,6 +23,7 @@ FONTS = re.search(r'<link rel="preconnect" href="https://fonts.googleapis.com">.
 NEGOCIO = {
     "@type": "BicycleStore", "name": "Veloce", "url": SITE + "/",
     "telephone": "+57 305 245 1204",
+    "openingHours": ["Mo-Fr 10:00-19:00", "Sa 11:00-17:00"],
     "address": {"@type": "PostalAddress", "streetAddress": "Calle 16A Sur #32B-38, Local 101, Mall Campestre Drive Inn",
                 "addressLocality": "Medellín", "addressRegion": "Antioquia", "addressCountry": "CO"},
 }
@@ -177,13 +178,32 @@ t_cuerpo = """      <h2>Taller especializado en Medellín</h2>
         <li><b>Mantenimiento de simuladores</b> (rodillos inteligentes).</li>
       </ul>
 
+      <h2>Arreglo y reparación de bicicletas</h2>
+      <p>¿Los cambios saltan, los frenos suenan o no frenan, la bici hace un ruido raro o la transmisión se siente pesada? Tráela. Revisamos tu bicicleta, te decimos qué necesita y cuánto cuesta antes de hacer el trabajo, para que no haya sorpresas.</p>
+      <ul>
+        <li>Ajuste de cambios y frenos.</li>
+        <li>Cambio de cadena, piñones, platos, pastillas y discos.</li>
+        <li>Cambio de llantas, neumáticos y cintas de manubrio.</li>
+        <li>Centrado de ruedas y revisión de rodamientos.</li>
+        <li>Revisión de ruidos en la caja de pedalier, la dirección y las ruedas.</li>
+      </ul>
+
       <h2>Ruta, MTB y bicicletas eléctricas</h2>
       <p>Trabajamos con bicicletas de ruta, de montaña y eléctricas. Cada tipo tiene sus necesidades: desde la sincronización de un grupo electrónico en una bici de ruta hasta el mantenimiento de suspensiones en una MTB.</p>
+
+      <h2>Taller para bicicletas eléctricas</h2>
+      <p>Una bicicleta eléctrica pesa más y exige más de los frenos, la cadena y las suspensiones, así que necesita mantenimiento con más frecuencia. En Veloce le hacemos el mantenimiento a tu e-bike de montaña o de ciudad: frenos, transmisión, suspensiones, ruedas y alistada general. Si tu consulta es sobre el motor o la batería, escríbenos con la marca y el modelo y te decimos cómo podemos ayudarte.</p>
+
+      <h2>Un taller de bicicletas cerca de ti</h2>
+      <p>Estamos en el Mall Campestre Drive Inn, en El Poblado, a pocos minutos de Envigado y Sabaneta. Puedes dejar tu bici de lunes a viernes de 10:00 AM a 7:00 PM y los sábados de 11:00 AM a 5:00 PM. Escríbenos antes por WhatsApp para darte un cupo y el tiempo de entrega.</p>
 
       <h2>¿Por qué traer tu bici a Veloce?</h2>
       <p>Somos ciclistas atendiendo ciclistas. Además del taller tenemos <a href="/bike-fit-retul-medellin">bike fit Retül</a>, así que si cambias un componente que afecta tu posición, como el sillín, el manubrio o las calas, podemos dejarte bien ajustado en el mismo lugar.</p>"""
 t_faq = [
     ("¿Cómo agendo mi bici en el taller?", "Escríbenos por WhatsApp al +57 305 245 1204 y te damos la disponibilidad."),
+    ("¿Cuánto cuesta el mantenimiento de una bicicleta?", "Depende del servicio y del estado de la bici. Escríbenos por WhatsApp con el tipo de bicicleta y lo que necesita, y te damos el precio antes de traerla."),
+    ("¿Arreglan bicicletas eléctricas?", "Sí. Hacemos mantenimiento y reparación de frenos, transmisión, suspensiones y ruedas de bicicletas eléctricas. Para temas de motor o batería, escríbenos con la marca y el modelo."),
+    ("¿Qué horario tiene el taller?", "Lunes a viernes de 10:00 AM a 7:00 PM y sábados de 11:00 AM a 5:00 PM. Los domingos no abrimos."),
     ("¿Trabajan con grupos electrónicos?", "Sí. Instalamos y actualizamos grupos Shimano Di2, SRAM AXS y Campagnolo."),
     ("¿Hacen sangrada de frenos de disco?", "Sí. Sangramos frenos de disco hidráulicos para que vuelvan a frenar firme y parejo."),
     ("¿Tubelizan ruedas?", "Sí. Tubelizamos tus ruedas para que ruedes con menos pinchazos y mejor agarre."),
@@ -237,10 +257,10 @@ paginas = [
      "Agendar bike fit", "Hola Veloce, quiero agendar un bike fit Retül",
      bf_cuerpo, bf_faq, bf_lat, "Bike fit Retül", "img/retul-fit.jpg", "Bike fit Retül con captura de movimiento 3D en Veloce, Medellín"),
     ("taller-de-bicicletas-medellin",
-     "Veloce | Taller de bicicletas en Medellín · Mantenimiento y reparación",
-     "Taller de bicicletas en El Poblado, Medellín: mantenimiento, alistada y lavada de ruta, MTB y eléctricas, suspensiones, sangrada de frenos, tubelizada, armada y Shimano Di2, SRAM AXS y Campagnolo.",
+     "Taller de bicicletas en Medellín (El Poblado) · Mantenimiento y arreglo | Veloce",
+     "Taller de bicicletas en El Poblado, Medellín. Mantenimiento, arreglo y alistada de ruta, MTB y eléctricas: frenos, suspensiones, Di2 y AXS. Agenda por WhatsApp.",
      "Taller de bicicletas", "Taller de bicicletas<br>en Medellín.",
-     "Mantenimiento, alistada y lavada para bicicletas de ruta, MTB y eléctricas. Suspensiones, frenos de disco, tubeless, armado, potenciómetros y grupos electrónicos Di2, AXS y Campagnolo.",
+     "Mantenimiento, arreglo y alistada para bicicletas de ruta, MTB y eléctricas en El Poblado. Suspensiones, frenos de disco, tubeless, armado, potenciómetros y grupos electrónicos Di2, AXS y Campagnolo.",
      "Agendar taller", "Hola Veloce, quiero agendar mi bici en el taller",
      t_cuerpo, t_faq, t_lat, "Taller de bicicletas", "img/taller.jpg", "Mecánicos trabajando en el taller de bicicletas de Veloce en Medellín"),
     ("centro-de-entrenamiento-ciclismo-medellin",
