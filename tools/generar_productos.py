@@ -14,7 +14,7 @@ PAG_MARCA = {m["marca"]: m for m in MARCAS}
 
 TIPO = {"Ruta": "Bicicleta de ruta", "Gravel": "Bicicleta gravel", "MTB": "Bicicleta MTB",
         "E-MTB": "Bicicleta eléctrica de montaña", "E-Ruta": "Bicicleta eléctrica de ruta", "Casco": "Casco", "Casco aero": "Casco aero",
-        "Gafas": "Gafas", "Zapatillas": "Zapatillas", "Ciclocomputador": "Ciclocomputador"}
+        "Gafas": "Gafas", "Zapatillas": "Zapatillas", "Ciclocomputador": "Ciclocomputador", "Pedales": "Pedales de ruta"}
 
 def nombre_largo(p):
     """'Bicicleta de ruta Colnago V3 Black Edition', 'Casco Kask Mojito³', 'Zapatillas Sidi MTB Speed'..."""
