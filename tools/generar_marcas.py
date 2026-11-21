@@ -427,23 +427,25 @@ MARCAS = [
              ("¿Qué calas usan las Fizik Tempo R5?", "Son zapatillas de ruta, para calas de tres tornillos."),
              ("¿Envían zapatillas Fizik a otras ciudades?", "Sí. Hacemos envíos a toda Colombia, gratis en compras desde $399.000.")]),
   dict(slug="wilier-medellin", marca="Wilier", miga="Wilier", corto="Bicicletas de ruta italianas desde 1906.",
-       title="Bicicletas Wilier en Medellín · Garda 105 de ruta en carbono | Veloce",
-       desc="Bicicletas Wilier en Medellín: Garda 105 de ruta endurance en carbono, con Shimano 105 de 12v, 4 colores y tallas XS a XXL, con precio en pesos y bike fit Retül gratis. Tienda en El Poblado.",
+       title="Bicicletas Wilier en Medellín · Filante SL aero y Garda 105 | Veloce",
+       desc="Bicicletas Wilier en Medellín: Filante SL aero con Campagnolo Record 13v y Garda 105 endurance con Shimano 105 de 12v. Precios en pesos, tallas XS a XXL y bike fit Retül gratis. Tienda en El Poblado.",
        h1="Bicicletas Wilier<br>en Medellín.", og="img/productos/wilier-garda-roja-1.jpg",
-       intro="Carbono italiano con más de un siglo de historia. Conoce la Wilier Garda, la bici de ruta para fondos largos, en nuestra tienda de El Poblado.",
+       intro="Carbono italiano con más de un siglo de historia. Conoce la Filante SL, la aero de competencia, y la Garda, la bici de ruta para fondos largos, en nuestra tienda de El Poblado.",
        cta="Cotizar mi Wilier", cta_msg="Hola Veloce, quiero cotizar una bicicleta Wilier",
-       titulo_prod="Modelos Wilier.", titulo_det="La Wilier que tenemos", sin_prod="",
+       titulo_prod="Modelos Wilier.", titulo_det="Las Wilier que tenemos, una por una", sin_prod="",
        cuerpo="""      <h2>Wilier: ciclismo italiano desde 1906</h2>
       <p>Wilier Triestina es una marca italiana fundada en 1906, una de las más antiguas del ciclismo. Sus bicicletas de ruta se reconocen por el trabajo en carbono, el cuidado en los acabados y un diseño muy italiano.</p>
+      <h3>Wilier Filante SL: aerodinámica de competencia</h3>
+      <p>La Filante SL hereda las formas de la Filante SLR que usan los profesionales. Tiene cuadro de carbono monocasco NHU MOD, cableado totalmente oculto y geometría de carreras. La tenemos con Campagnolo Record electrónico de 13 velocidades y ruedas Campagnolo Zonda de carbono, a <b>$29.900.000</b>.</p>
       <h3>Wilier Garda: carbono para rodar muchas horas</h3>
       <p>La Garda es la bici de ruta endurance de Wilier. Su geometría es un poco más alta y relajada que la de una bici de carreras, así que cargas menos la espalda y el cuello en los fondos largos, sin perder eficiencia. El cuadro y la horquilla son de carbono monocasco, el cableado va oculto y le caben llantas de 28 a 32 mm para más comodidad y agarre.</p>
       <h3>¿Para quién es?</h3>
-      <p>Para quien quiere su primera bici de carbono, para entrenar entre semana y para los gran fondos y las salidas largas del fin de semana. Si buscas una posición más agresiva de competencia, mira también <a href="/colnago-medellin">Colnago</a> y <a href="/pinarello-medellin">Pinarello</a>.</p>
+      <p>Para quien quiere su primera bici de carbono, para entrenar entre semana y para los gran fondos y las salidas largas del fin de semana. Si buscas una posición más agresiva de competencia, mira la Filante SL, y también <a href="/colnago-medellin">Colnago</a> y <a href="/pinarello-medellin">Pinarello</a>.</p>
       <h3>Tallas Wilier</h3>
-      <p>La Garda viene en seis tallas, de XS a XXL. En la página del modelo encuentras la guía de tallas según tu estatura, y con el bike fit Retül elegimos la talla exacta.</p>""",
+      <p>La Garda y la Filante SL vienen en seis tallas, de XS a XXL. En la página de cada modelo encuentras la guía de tallas según tu estatura, y con el bike fit Retül elegimos la talla exacta.</p>""",
        porque=FIT_BICI,
        faqs=[("¿Dónde comprar una bicicleta Wilier en Medellín?", "En Veloce, en el Mall Campestre Drive Inn, El Poblado (Calle 16A Sur #32B-38, Local 101). Escríbenos por WhatsApp al +57 305 245 1204."),
-             ("¿Qué talla de Wilier necesito?", "La Wilier Garda viene en tallas XS a XXL. En la página del modelo está la guía de tallas según tu estatura, y con el bike fit Retül elegimos la talla exacta."),
+             ("¿Qué talla de Wilier necesito?", "La Wilier Garda y la Filante SL vienen en tallas XS a XXL. En la página de cada modelo está la guía de tallas según tu estatura, y con el bike fit Retül elegimos la talla exacta."),
              ("¿La bicicleta incluye bike fit?", "Sí. Toda bicicleta de más de $8.000.000 que compres en Veloce incluye bike fit Retül gratis."),
              ("¿Envían bicicletas Wilier a otras ciudades?", "Sí. Hacemos envíos a toda Colombia, gratis en compras desde $399.000.")]),
   dict(slug="magene-medellin", marca="Magene", miga="Magene", corto="Ciclocomputadores y pedales de potencia.",
