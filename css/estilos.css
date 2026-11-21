@@ -431,3 +431,5 @@ a.prod-more{display:inline-block}
 .page-grid>*{min-width:0}
 .pp-specs li{min-width:0;overflow-wrap:anywhere}
 .prose h2{overflow-wrap:anywhere}
+.m-info,.pp-grid>*{min-width:0}
+.m-guia .g-wrap{max-width:100%;-webkit-overflow-scrolling:touch}
