@@ -13,7 +13,7 @@ HEADER, FOOTER = (re.sub(r'(src|href)="img/', r'\1="/img/', h) for h in (HEADER,
 PAG_MARCA = {m["marca"]: m for m in MARCAS}
 
 TIPO = {"Ruta": "Bicicleta de ruta", "Gravel": "Bicicleta gravel", "MTB": "Bicicleta MTB",
-        "E-MTB": "Bicicleta eléctrica de montaña", "Casco": "Casco", "Casco aero": "Casco aero",
+        "E-MTB": "Bicicleta eléctrica de montaña", "E-Ruta": "Bicicleta eléctrica de ruta", "Casco": "Casco", "Casco aero": "Casco aero",
         "Gafas": "Gafas", "Zapatillas": "Zapatillas", "Ciclocomputador": "Ciclocomputador"}
 
 def nombre_largo(p):
@@ -23,7 +23,7 @@ def nombre_largo(p):
     return f"{t} {base}" if t else base
 
 def articulo(p):
-    return "la" if p["cat"] in ("Ruta", "Gravel", "MTB", "E-MTB") else ""
+    return "la" if p["cat"] in ("Ruta", "Gravel", "MTB", "E-MTB", "E-Ruta") else ""
 
 def fotos_de(p):
     if p.get("variantes"):
