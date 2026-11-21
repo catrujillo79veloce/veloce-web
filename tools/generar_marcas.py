@@ -389,13 +389,13 @@ MARCAS = [
              ("¿Qué talla de Orbea necesito?", "Cada modelo tiene su guía de tallas según tu estatura. Si estás entre dos tallas, ven a la tienda o escríbenos y te ayudamos a elegir."),
              ("¿Hacen mantenimiento a bicicletas Orbea eléctricas?", "Sí. En nuestro taller atendemos bicicletas de ruta, MTB y eléctricas, incluido el mantenimiento de suspensiones."),
              ("¿Envían bicicletas Orbea a otras ciudades?", "Sí. Hacemos envíos a toda Colombia, gratis en compras desde $399.000.")]),
-  dict(slug="look-medellin", marca="Look", miga="Look", corto="Gravel de carbono francesa.",
-       title="Bicicletas Look en Medellín · Gravel 765 Optimum+ de carbono | Veloce",
-       desc="Bicicleta Look 765 Optimum+ en Medellín: gravel de carbono con Shimano GRX, con precio en pesos y bike fit Retül gratis. Tienda en El Poblado. Cotiza por WhatsApp.",
+  dict(slug="look-medellin", marca="Look", miga="Look", corto="Gravel de carbono y pedales con potenciómetro.",
+       title="Look en Medellín · Gravel 765 Optimum+ y pedales Keo Blade Power | Veloce",
+       desc="Look en Medellín: gravel 765 Optimum+ de carbono con Shimano GRX y pedales Keo Blade Power Dual con potenciómetro a $3.690.000. Tienda en El Poblado. Cotiza por WhatsApp.",
        h1="Bicicletas Look<br>en Medellín.", og="img/productos/look765-1.jpg",
-       intro="La marca francesa que inventó el pedal automático y fue pionera del carbono. Conoce la 765 Optimum+ de gravel en nuestra tienda de El Poblado.",
+       intro="La marca francesa que inventó el pedal automático y fue pionera del carbono. Conoce la 765 Optimum+ de gravel y los pedales Keo Blade Power Dual con potenciómetro en nuestra tienda de El Poblado.",
        cta="Cotizar mi Look", cta_msg="Hola Veloce, quiero cotizar una bicicleta Look",
-       titulo_prod="Modelos Look.", titulo_det="La Look que tenemos", sin_prod="",
+       titulo_prod="Modelos Look.", titulo_det="Lo que tenemos de Look", sin_prod="",
        cuerpo="""      <h2>Look: innovación francesa</h2>
       <p>Look es una marca francesa con sede en Nevers. En los años ochenta cambió el ciclismo dos veces: primero con el pedal automático, que reemplazó las correas, y después con los primeros cuadros de carbono que ganaron en el pelotón profesional. Hoy sigue haciendo bicicletas de carbono y pedales para ruta, gravel y pista.</p>
       <h3>Look 765 Optimum+: gravel para las vías de Antioquia</h3>
