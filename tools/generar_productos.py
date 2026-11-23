@@ -107,6 +107,7 @@ def pagina(p):
         ventajas.append('<li><b>Envío gratis a toda Colombia.</b> <a href="/envios-y-devoluciones">Ver envíos y devoluciones</a>.</li>')
     else:
         ventajas.append('<li><b>Envíos a toda Colombia.</b> <a href="/envios-y-devoluciones">Ver envíos y devoluciones</a>.</li>')
+    ventajas.append('<li><b>Paga como prefieras:</b> efectivo, transferencia y tarjetas de crédito o débito.</li>')
     ventajas.append('<li><b>Tienda física en El Poblado:</b> Mall Campestre Drive Inn, Calle 16A Sur #32B-38, Local 101. Ven a verlo y probarlo antes de comprar.</li>')
     ventajas.append('<li><b>Taller propio</b> en la misma tienda para el armado, los ajustes y el mantenimiento. <a href="/taller-de-bicicletas-medellin">Ver el taller</a>.</li>')
 

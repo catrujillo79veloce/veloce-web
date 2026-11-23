@@ -17,7 +17,8 @@ def rutas(html):
 
 HEADER = rutas(bloque("header"))
 FOOTER = rutas(bloque("footer"))
-WA_FLOAT = re.search(r'<a class="wa".*?</a>', idx, re.S).group(0)
+_barra = re.search(r'<nav class="barra-cel".*?</nav>', idx, re.S)
+WA_FLOAT = (_barra.group(0) + "\n" if _barra else "") + re.search(r'<a class="wa".*?</a>', idx, re.S).group(0)
 FONTS = re.search(r'<link rel="preconnect" href="https://fonts.googleapis.com">.*?display=swap" rel="stylesheet">', idx, re.S).group(0)
 
 NEGOCIO = {

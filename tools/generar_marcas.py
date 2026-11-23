@@ -183,6 +183,7 @@ def pagina(m):
         <li><b>Asesoría de ciclistas:</b> te ayudamos a elegir según cómo y dónde montas.</li>
         <li><b>Taller propio</b> en la misma tienda para el armado, ajustes y mantenimiento.</li>
         <li><b>Tienda física en El Poblado</b>, en el Mall Campestre Drive Inn: ven a ver y probar antes de comprar.</li>
+        <li><b>Paga como prefieras:</b> efectivo, transferencia y tarjetas de crédito o débito.</li>
         <li><b>Envío gratis a toda Colombia</b> en compras desde $399.000. <a href="/envios-y-devoluciones">Ver envíos y devoluciones</a>.</li>
       </ul>
       <h2>Preguntas frecuentes</h2>
