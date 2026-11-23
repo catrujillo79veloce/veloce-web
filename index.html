@@ -62,9 +62,9 @@
   <div class="hero-content">
     <div class="tri on-dark"><i></i><i></i><i></i></div>
     <h1 class="display"><span class="h1-kicker">Tienda de bicicletas en Medellín</span>El ciclismo<br>a la italiana.</h1>
-    <p>Bicicletas de alta gama, taller especializado, bike fit Retül y centro de entrenamiento. Todo en un solo lugar, en El Poblado.</p>
+    <p>Colnago, Pinarello, Wilier y Orbea con precio en pesos. Bike fit Retül gratis con tu bici, taller especializado y tienda en El Poblado.</p>
     <div class="hero-ctas">
-      <a class="btn btn-light" href="#servicios">Ver servicios</a>
+      <a class="btn btn-light" href="#productos/bicicletas">Ver bicicletas</a>
       <a class="btn btn-ghost" href="https://wa.me/573052451204?text=Hola%20Veloce%2C%20quiero%20asesor%C3%ADa">Asesoría por WhatsApp</a>
     </div>
   </div>
@@ -124,14 +124,69 @@
   <div class="hs-dots" role="tablist"></div>
 </section>
 
+<!-- CATEGORÍAS -->
+<section class="atajos" id="categorias" aria-label="Categorías">
+  <div class="wrap">
+    <h2 class="atajos-t">¿Qué estás buscando?</h2>
+    <div class="atajos-grid" id="atajos"></div>
+  </div>
+</section>
+
+<!-- DESTACADOS -->
+<section class="dest" id="ofertas">
+  <div class="wrap">
+    <div class="dest-head">
+      <div><div class="tri"><i></i><i></i><i></i></div><h2 class="display">Ofertas y destacados.</h2></div>
+      <a class="btn btn-solid" href="#productos">Ver todo el catálogo</a>
+    </div>
+    <div class="dest-row" id="dest-row"></div>
+  </div>
+</section>
+
 <div class="trust">
   <div class="wrap">
-    <div><strong>Alta gama</strong>Colnago, Pinarello, Wilier y Orbea</div>
-    <div><strong>Chapter 2</strong>Distribuidores oficiales en Colombia</div>
-    <div><strong>Retül</strong>Bike fit con medición 3D</div>
-    <div><strong>Entrenamiento</strong>Clases por potencia en simulador</div>
+    <div><strong>Distribuidor oficial</strong>Colnago, Pinarello, Wilier, Orbea y Chapter 2</div>
+    <div><strong>Bike fit gratis</strong>Retül 3D con bicis desde $8.000.000</div>
+    <div><strong>Envío gratis</strong>A toda Colombia desde $399.000</div>
+    <div><strong>Tienda física</strong>El Poblado, Medellín · ven y pruébala</div>
   </div>
 </div>
+
+<!-- PRODUCTOS -->
+<section id="productos"><span id="destacados"></span>
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="tri"><i></i><i></i><i></i></div><h2 class="display">Productos.</h2></div>
+      <p>Busca por categoría, tipo o marca. ¿No ves lo que buscas? Escríbenos: tenemos más en tienda y lo conseguimos.</p>
+    </div>
+    <div class="cat-bar" id="filtros"></div>
+    <div class="sub-bar" id="subs"></div>
+    <div class="cat-tools">
+      <label class="cat-search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8a857c" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Buscar: casco, Colnago, gafas fotocromáticas…" aria-label="Buscar productos"></label>
+      <select class="cat-sel" id="f-marca" aria-label="Marca"></select>
+      <select class="cat-sel" id="f-orden" aria-label="Ordenar"><option value="">Recomendados</option><option value="asc">Menor precio</option><option value="desc">Mayor precio</option></select>
+    </div>
+    <div class="cat-count" id="cat-count"></div>
+    <div class="prod-grid" id="prod-grid"></div>
+    <div class="cat-mas" id="cat-mas"><button class="btn btn-solid" id="cat-mas-btn"></button></div>
+    <div class="cat-empty" id="cat-empty"><p>No encontramos productos con esa búsqueda, pero seguro lo tenemos o lo conseguimos.</p><a class="btn btn-solid" id="cat-empty-wa" href="https://wa.me/573052451204">Pregúntanos por WhatsApp</a></div>
+  </div>
+</section>
+
+<!-- FRANJA VISITA -->
+<section class="cta-visita" aria-label="Contáctanos o visítanos">
+  <div class="wrap">
+    <div>
+      <h2 class="display">Ven a verla<br>en persona.</h2>
+      <p>Mall Campestre Drive Inn, Local 101 · El Poblado, Medellín.<br>Lunes a viernes 10:00 AM – 7:00 PM · Sábados 11:00 AM – 5:00 PM.</p>
+    </div>
+    <div class="cta-btns">
+      <a class="btn btn-light" href="https://wa.me/573052451204?text=Hola%20Veloce%2C%20quiero%20asesor%C3%ADa%20para%20comprar%20una%20bicicleta">Escribir por WhatsApp</a>
+      <a class="btn btn-ghost" href="tel:+573052451204">Llamar · 305 245 1204</a>
+      <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Veloce+Mall+Campestre+Drive+Inn+Calle+16A+Sur+32B-38+Medell%C3%ADn">Cómo llegar</a>
+    </div>
+  </div>
+</section>
 
 <!-- SERVICIOS -->
 <section id="servicios" style="padding-bottom:0">
@@ -221,26 +276,6 @@
       </div>
       <p class="fit-note">¿Vas a comprar bici y no sabes qué talla o modelo? Hacer el bike fit primero es la mejor forma de acertar.</p>
     </div>
-  </div>
-</section>
-
-<!-- PRODUCTOS -->
-<section id="productos"><span id="destacados"></span>
-  <div class="wrap">
-    <div class="sec-head">
-      <div><div class="tri"><i></i><i></i><i></i></div><h2 class="display">Productos.</h2></div>
-      <p>Busca por categoría, tipo o marca. ¿No ves lo que buscas? Escríbenos: tenemos más en tienda y lo conseguimos.</p>
-    </div>
-    <div class="cat-bar" id="filtros"></div>
-    <div class="sub-bar" id="subs"></div>
-    <div class="cat-tools">
-      <label class="cat-search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8a857c" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Buscar: casco, Colnago, gafas fotocromáticas…" aria-label="Buscar productos"></label>
-      <select class="cat-sel" id="f-marca" aria-label="Marca"></select>
-      <select class="cat-sel" id="f-orden" aria-label="Ordenar"><option value="">Recomendados</option><option value="asc">Menor precio</option><option value="desc">Mayor precio</option></select>
-    </div>
-    <div class="cat-count" id="cat-count"></div>
-    <div class="prod-grid" id="prod-grid"></div>
-    <div class="cat-empty" id="cat-empty"><p>No encontramos productos con esa búsqueda, pero seguro lo tenemos o lo conseguimos.</p><a class="btn btn-solid" id="cat-empty-wa" href="https://wa.me/573052451204">Pregúntanos por WhatsApp</a></div>
   </div>
 </section>
 
@@ -345,6 +380,11 @@
 
 <div class="modal" id="modal"><div class="m-box"><button class="m-close" aria-label="Cerrar">×</button><div class="m-body"></div></div></div>
 
+<nav class="barra-cel" aria-label="Contacto rápido">
+  <a href="https://wa.me/573052451204?text=Hola%20Veloce%2C%20quiero%20asesor%C3%ADa"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.400 1.300-2 1.400-.5.1-1.200.1-1.900-.1-.4-.1-1-.3-1.700-.6-3-1.300-4.900-4.300-5-4.500-.2-.2-1.200-1.600-1.200-3s.8-2.200 1-2.500c.300-.3.600-.3.800-.3h.6c.2 0 .4 0 .6.500l.900 2.100c.1.2.1.400 0 .600l-.3.500-.5.500c-.2.2-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.400 2.400 1.500.3.100.5.100.600-.1l.900-1c.2-.300.400-.200.600-.100l2 1c.3.100.500.200.500.300.100.100.100.600-.100 1.100z"/></svg>WhatsApp</a>
+  <a href="tel:+573052451204"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.200 2 19.800 19.800 0 0 1-8.600-3.100 19.500 19.500 0 0 1-6-6A19.800 19.800 0 0 1 2.100 4.200 2 2 0 0 1 4.100 2h3a2 2 0 0 1 2 1.700c.1 1 .4 1.900.7 2.800a2 2 0 0 1-.500 2.100L8.100 9.900a16 16 0 0 0 6 6l1.300-1.300a2 2 0 0 1 2.100-.400c.900.300 1.800.600 2.800.700A2 2 0 0 1 22 16.900z"/></svg>Llamar</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=Veloce+Mall+Campestre+Drive+Inn+Calle+16A+Sur+32B-38+Medell%C3%ADn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.200 7-12a7 7 0 1 0-14 0c0 5.800 7 12 7 12z"/><circle cx="12" cy="10" r="2.600"/></svg>Cómo llegar</a>
+</nav>
 <a class="wa" href="https://wa.me/573052451204?text=Hola%20Veloce" aria-label="Escríbenos por WhatsApp">
   <svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg>
 </a>
@@ -779,7 +819,8 @@
   const norm=t=>(t||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
   const cats=["Todos","Bicicletas","Cascos","Gafas","Zapatillas","Componentes","Accesorios","Ofertas"].filter(c=>c==="Todos"||(c==="Ofertas"?lista.some(p=>p.antes):lista.some(p=>grupo(p)===c)));
   const enCat=(p,c)=>c==="Todos"||(c==="Ofertas"?!!p.antes:grupo(p)===c);
-  const st={c:"Todos",s:"",m:"",q:"",o:""};
+  const st={c:"Todos",s:"",m:"",q:"",o:"",all:false};
+  const TOPE=12,masBox=document.getElementById("cat-mas"),masBtn=document.getElementById("cat-mas-btn");
   const fbox=document.getElementById("filtros"),sbox=document.getElementById("subs"),qIn=document.getElementById("q"),mSel=document.getElementById("f-marca"),oSel=document.getElementById("f-orden"),cnt=document.getElementById("cat-count"),empty=document.getElementById("cat-empty");
   fbox.innerHTML=cats.map(c=>`<button class="f-btn ${c==="Ofertas"?"f-of":""}" data-c="${c}">${c} <span>${lista.filter(p=>enCat(p,c)).length}</span></button>`).join("");
   const cards=[...grid.querySelectorAll(".prod")];
@@ -794,14 +835,18 @@
     mSel.innerHTML=`<option value="">Todas las marcas</option>`+marcas.map(m=>`<option ${m===st.m?"selected":""}>${m}</option>`).join("");
     const q=norm(st.q).trim();
     const vis=lista.map((p,i)=>({p,i})).filter(({p})=>enCat(p,st.c)&&(!st.s||sub(p)===st.s)&&(!st.m||p.marca===st.m)&&(!q||q.split(/\s+/).every(w=>norm([p.marca,p.nombre,p.cat,sub(p),grupo(p),extra(p),p.resumen,p.desc,(p.variantes||[]).map(v=>v.color).join(" ")].join(" ")).includes(w))));
+    if(!st.o)vis.sort((a,b)=>(a.p.precio?0:1)-(b.p.precio?0:1));
     if(st.o)vis.sort((a,b)=>st.o==="asc"?valor(a.p)-valor(b.p):(valor(b.p)===Infinity?-1:valor(a.p)===Infinity?1:valor(b.p)-valor(a.p)));
     cards.forEach(el=>el.style.display="none");
-    vis.forEach(({i},k)=>{cards[i].style.display="";cards[i].style.order=k});
+    const corto=!st.all&&st.c==="Todos"&&!q&&!st.m&&!st.o&&vis.length>TOPE;
+    vis.forEach(({i},k)=>{cards[i].style.display=(corto&&k>=TOPE)?"none":"";cards[i].style.order=k});
+    masBox.style.display=corto?"flex":"none";masBtn.textContent=`Ver los ${vis.length} productos`;
     cnt.textContent=vis.length+(vis.length===1?" producto":" productos")+(st.c!=="Todos"?` en ${st.c}${st.s?" · "+st.s:""}`:"");
     empty.style.display=vis.length?"none":"block";
     document.getElementById("cat-empty-wa").href=`https://wa.me/${WA}?text=${encodeURIComponent("Hola Veloce, estoy buscando: "+(st.q||st.c))}`;
   }
   fbox.querySelectorAll(".f-btn").forEach(b=>b.onclick=()=>{st.c=b.dataset.c;st.s="";history.replaceState(null,"",st.c==="Todos"?"#productos":"#productos/"+norm(st.c));pintar()});
+  masBtn.onclick=()=>{st.all=true;pintar()};
   qIn.oninput=()=>{st.q=qIn.value;pintar()};
   mSel.onchange=()=>{st.m=mSel.value;pintar()};
   oSel.onchange=()=>{st.o=oSel.value;pintar()};
@@ -810,6 +855,33 @@
     if(h.includes("/"))document.getElementById("productos").scrollIntoView({behavior:"smooth"});}
   window.addEventListener("hashchange",desdeHash);
   pintar();desdeHash();
+  // Atajos por categoría
+  const ATAJOS=[
+    {t:"Ruta",c:"Bicicletas",s:"Ruta",f:p=>p.cat==="Ruta"},
+    {t:"MTB",c:"Bicicletas",s:"MTB",f:p=>p.cat==="MTB"},
+    {t:"Gravel",c:"Bicicletas",s:"Gravel",f:p=>p.cat==="Gravel"},
+    {t:"Eléctricas",c:"Bicicletas",q:"electricas",f:p=>/^E-/.test(p.cat)},
+    {t:"Cascos",c:"Cascos",f:p=>p.cat.startsWith("Casco")},
+    {t:"Gafas",c:"Gafas",f:p=>p.cat==="Gafas"},
+    {t:"Zapatillas",c:"Zapatillas",f:p=>p.cat==="Zapatillas"},
+    {t:"Pedales",c:"Componentes",f:p=>/^(Pedales|Calas|Potenciómetro)$/.test(p.cat),foto:p=>p.cat==="Pedales"}
+  ].map(a=>({...a,n:lista.filter(a.f).length,img:(lista.find(a.foto||a.f)||{}).foto})).filter(a=>a.n);
+  const abox=document.getElementById("atajos");
+  if(abox){abox.innerHTML=ATAJOS.map((a,k)=>`<button class="atajo" data-k="${k}"><span class="atajo-img"><img src="${a.img}" alt="" loading="lazy"></span><span class="atajo-t">${a.t}</span><span class="atajo-n">${a.n} ${a.n===1?"producto":"productos"}</span></button>`).join("");
+    abox.querySelectorAll(".atajo").forEach(b=>b.onclick=()=>{const a=ATAJOS[b.dataset.k];st.c=a.c;st.s=a.s||"";st.q=a.q||"";qIn.value=st.q;st.m="";st.all=true;pintar();document.getElementById("productos").scrollIntoView({behavior:"smooth"})});}
+  // Ofertas y destacados
+  const drow=document.getElementById("dest-row");
+  if(drow){const esBici=p=>/^(Ruta|Gravel|MTB|E-MTB|E-Ruta)$/.test(p.cat);
+    const ofertas=lista.filter(p=>p.antes);
+    const bicis=lista.filter(p=>esBici(p)&&p.precio&&p.foto&&!p.antes).sort((a,b)=>valor(a)-valor(b));
+    const porCat={};bicis.forEach(p=>(porCat[p.cat]=porCat[p.cat]||[]).push(p));
+    const mezcla=[];for(let k=0;mezcla.length<bicis.length&&k<20;k++)Object.values(porCat).forEach(l=>{if(l[k])mezcla.push(l[k])});
+    const dest=[...ofertas,...mezcla].slice(0,10);
+    drow.innerHTML=dest.map(p=>{const msg=encodeURIComponent(p.wa||`Hola Veloce, me interesa: ${p.marca} ${p.nombre}`);
+      return `<article class="dcard"><a class="dcard-img" href="${urlP(p)}"><img src="${p.foto}" alt="${p.marca} ${p.nombre}" loading="lazy">${p.antes?`<span class="prod-oferta">Oferta</span>`:""}<span class="prod-cat">${p.cat}</span></a>
+        <div class="dcard-body"><div class="prod-brand">${p.marca}</div><a class="prod-name" href="${urlP(p)}">${p.nombre}</a>
+        <div class="prod-price">${p.antes?`<s>${p.antes}</s> `:""}${p.precio}</div>${p.fit?`<div class="dcard-fit">+ Bike fit Retül gratis</div>`:""}
+        <a class="btn btn-solid" href="https://wa.me/${WA}?text=${msg}">Lo quiero · WhatsApp</a></div></article>`}).join("");}
   try{const num=t=>{const n=parseInt((t||"").replace(/\D/g,""),10);return isNaN(n)?null:n};
     const conPrecio=lista.filter(p=>p.marca!=="Marca"&&num(p.precio)!==null);
     const ld={"@context":"https://schema.org","@type":"ItemList","name":"Productos Veloce","itemListElement":conPrecio.map((p,k)=>{
