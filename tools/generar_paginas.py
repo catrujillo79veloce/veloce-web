@@ -127,6 +127,16 @@ bf_cuerpo = """      <h2>¿Qué es un bike fit Retül?</h2>
       <p>Un bike fit es el ajuste de tu bicicleta a tu cuerpo. Con el sistema <b>Retül</b> lo hacemos con datos y no a ojo: ponemos marcadores LED en 8 puntos de tu cuerpo y una cámara de captura 3D registra cada pedalada en tiempo real. Así vemos ángulos y movimientos que no se notan a simple vista y ajustamos tu posición con precisión milimétrica.</p>
       <p>En Veloce hacemos el bike fit Retül en nuestra tienda de El Poblado, Medellín, con ciclistas que entienden lo que sientes en la bici.</p>
 
+      <h2>Un servicio para todos los ciclistas</h2>
+      <p>El bike fit no es solo para profesionales ni solo para quien compra su bici con nosotros. <b>Trae tu bicicleta de cualquier marca</b>, sea de ruta, MTB, gravel o eléctrica, la hayas comprado donde sea y sin importar tu nivel.</p>
+      <ul>
+        <li><b>Te duele algo al montar:</b> rodilla, espalda, cuello, manos dormidas o molestias en el sillín.</li>
+        <li><b>Estrenas bici o vas a comprar una:</b> para dejarla a tu medida, o para saber qué talla y modelo te sirven antes de pagar.</li>
+        <li><b>Quieres rendir más:</b> entrenas con plan, compites o preparas un gran fondo.</li>
+        <li><b>Cambiaste algo:</b> sillín, zapatillas, calas o manubrio nuevos piden revisar la posición.</li>
+        <li><b>Apenas empiezas:</b> arrancar bien sentado evita lesiones y hace que montar sea más cómodo desde el primer día.</li>
+      </ul>
+
       <h2>Beneficios</h2>
       <ul>
         <li><b>Más comodidad:</b> menos molestias en espalda, cuello, manos y sillín para rodar más horas.</li>
@@ -143,20 +153,20 @@ bf_cuerpo = """      <h2>¿Qué es un bike fit Retül?</h2>
       <h3>3. Ajustes con datos</h3>
       <p>Ajustamos sillín, manubrio y calas según la información del software y, si hace falta, te recomendamos cambios de componentes.</p>
       <h3>4. Medición final y reporte</h3>
-      <p>Medimos tu bici con la herramienta Zin de Retül y te entregamos un reporte con tus medidas, para que siempre puedas volver a tu posición o replicarla en una bici nueva.</p>
-
-      <h2>Bike fit gratis con tu bicicleta nueva</h2>
-      <p>Si compras en Veloce una bicicleta de más de <b>$8.000.000</b>, el bike fit Retül va incluido sin costo. Puedes ver las bicicletas disponibles en la sección de <a href="/#productos/bicicletas">productos</a>.</p>"""
+      <p>Medimos tu bici con la herramienta Zin de Retül y te entregamos un reporte con tus medidas, para que siempre puedas volver a tu posición o replicarla en una bici nueva.</p>"""
 bf_faq = [
-    ("¿Cuánto cuesta un bike fit Retül en Medellín?", "Escríbenos por WhatsApp y te damos el precio actualizado. Si compras en Veloce una bicicleta de más de $8.000.000, el bike fit Retül es gratis."),
+    ("¿Cuánto cuesta un bike fit Retül en Medellín?", "Escríbenos por WhatsApp y te damos el precio actualizado y los horarios disponibles."),
+    ("¿Puedo hacer el bike fit si no compré mi bici en Veloce?", "Sí. El servicio es para cualquier ciclista y cualquier bicicleta, de la marca que sea y comprada donde sea."),
+    ("¿Sirve para MTB, gravel o bici eléctrica?", "Sí. Hacemos bike fit en bicicletas de ruta, MTB, gravel y eléctricas."),
     ("¿Necesito llevar mi bicicleta?", "Sí. El bike fit se hace sobre tu propia bicicleta, con tus zapatillas y tu ropa de montar, para que el ajuste sea real."),
     ("¿El bike fit sirve si no compito?", "Sí. Cualquier ciclista que monte seguido se beneficia: más comodidad y menos molestias, sin importar tu nivel."),
     ("¿Qué me entregan al final?", "Un reporte con todas tus medidas tomadas con la herramienta Zin de Retül, para que puedas volver a tu posición cuando lo necesites."),
     ("¿Conviene hacer el bike fit antes de comprar bici?", "Sí. Es la mejor forma de acertar con la talla y el modelo. Escríbenos y te asesoramos."),
+    ("¿El bike fit viene incluido si compro mi bici en Veloce?", "En algunas bicicletas sí: las que lo incluyen lo indican en su ficha del catálogo."),
 ]
 bf_lat = f"""      <h3>Agenda tu bike fit</h3>
       <p>Sistema Retül con captura 3D.</p>
-      <p><b style="color:var(--rojo)">Gratis con tu bici de más de $8.000.000.</b></p>
+      <p><b>Para cualquier ciclista y cualquier bicicleta.</b></p>
 {DIR}
       <p><b>Tienda:</b> lunes a viernes 10:00 AM – 7:00 PM · sábados 11:00 AM – 5:00 PM.</p>"""
 
@@ -251,9 +261,9 @@ c_lat = f"""      <h3>Reserva tu clase</h3>
 paginas = [
     ("bike-fit-retul-medellin",
      "Veloce | Bike fit en Medellín · Retül 3D en El Poblado",
-     "Bike fit Retül con captura 3D en El Poblado, Medellín. Más comodidad, menos lesiones y más potencia. Gratis con tu bicicleta de más de $8.000.000.",
+     "Bike fit Retül con captura 3D en El Poblado, Medellín, para cualquier ciclista y cualquier bicicleta: ruta, MTB, gravel o eléctrica. Más comodidad, menos lesiones y más potencia.",
      "Bike fit Retül", "Bike fit Retül<br>en Medellín.",
-     "Ajustamos tu bicicleta a tu cuerpo con captura de movimiento 3D. Más comodidad, menos lesiones y más potencia, con datos y no a ojo.",
+     "Ajustamos tu bicicleta a tu cuerpo con captura de movimiento 3D. Para cualquier ciclista y cualquier bici, la hayas comprado donde sea.",
      "Agendar bike fit", "Hola Veloce, quiero agendar un bike fit Retül",
      bf_cuerpo, bf_faq, bf_lat, "Bike fit Retül", "img/retul-fit.jpg", "Bike fit Retül con captura de movimiento 3D en Veloce, Medellín"),
     ("taller-de-bicicletas-medellin",

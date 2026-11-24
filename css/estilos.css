@@ -521,3 +521,20 @@ a.prod-more{display:inline-block}
   .hero-ctas .btn{padding:12px 18px;font-size:13px}
   .atajo-t{font-size:14px}
 }
+
+/* ===== Bike fit para todos ===== */
+.fit-quien{margin-top:64px}
+.fit-quien h3{font-size:clamp(34px,4vw,52px);margin-bottom:22px}
+.fit-quien ul{list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.fit-quien li{border:1px solid #3a3936;padding:18px 16px;color:#cfccc6;font-size:15px;line-height:1.45}
+.fit-quien li b{display:block;color:#fff;font-size:16px;margin-bottom:6px}
+@media (max-width:1100px){.fit-quien ul{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.fit-quien{margin-top:44px}.fit-quien ul{grid-template-columns:1fr;gap:10px}.fit-quien li{padding:14px}}
+.fit-incl{display:flex;flex-direction:column;gap:2px;border:2px solid #1e9be0;background:#eef7fd;padding:12px 14px;margin:0 0 16px;color:var(--black)}
+.fit-incl b{font-family:"Barlow Condensed",sans-serif;font-style:italic;font-weight:800;font-size:22px;text-transform:uppercase;line-height:1.1;color:#0f6fa8}
+.fit-incl span{font-size:13px;color:#45433f}
+.fit-incl:hover{background:#e0f0fb}
+.prod-fitline{font-size:12px;font-weight:700;color:#1583c2;text-transform:uppercase;letter-spacing:.06em;margin:-8px 0 12px}
+@media (max-width:520px){.prod-fitline{font-size:10px;margin:-4px 0 8px;letter-spacing:.03em}}
+.fit-quien{margin-bottom:64px}
+@media (max-width:620px){.fit-quien{margin-bottom:44px}}

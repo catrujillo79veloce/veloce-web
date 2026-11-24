@@ -12,6 +12,8 @@ HEADER, FOOTER = (re.sub(r'(src|href)="img/', r'\1="/img/', h) for h in (HEADER,
 
 PAG_MARCA = {m["marca"]: m for m in MARCAS}
 
+FITBOX = '<a class="fit-incl" href="/bike-fit-retul-medellin"><b>Bike fit Retül GRATIS con esta bicicleta</b><span>Te la entregamos ajustada a tu cuerpo con medición 3D. Ver cómo funciona</span></a>'
+
 TIPO = {"Ruta": "Bicicleta de ruta", "Gravel": "Bicicleta gravel", "MTB": "Bicicleta MTB",
         "E-MTB": "Bicicleta eléctrica de montaña", "E-Ruta": "Bicicleta eléctrica de ruta", "Casco": "Casco", "Casco aero": "Casco aero",
         "Gafas": "Gafas", "Zapatillas": "Zapatillas", "Ciclocomputador": "Ciclocomputador", "Pedales": "Pedales de ruta"}
@@ -160,7 +162,7 @@ def pagina(p):
       <div class="m-info">
         <div class="prod-brand">{p["marca"]} · {p["cat"]}</div>
         <h1 class="display">{p["nombre"]}</h1>
-        <div class="prod-price {'' if precio else 'consultar'}">{precio_html}</div>
+        <div class="prod-price {'' if precio else 'consultar'}">{precio_html}</div>{FITBOX if p.get("fit") else ""}
         <p>{p.get("desc") or p.get("resumen", "")}</p>
         {colores}{tallas}{guia_html(p)}
         <div class="m-ctas"><a class="btn btn-solid" id="m-wa" href="{wa(msg)}">{'Lo quiero · WhatsApp' if precio else 'Cotizar mi configuración'}</a>{test_btn}</div>{test_txt}
