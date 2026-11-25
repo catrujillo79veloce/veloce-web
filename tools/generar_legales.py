@@ -45,7 +45,7 @@ PAGINAS = [
       <h2>Envíos y entregas</h2>
       <ul>
         <li><b>Envío gratis</b> a toda Colombia en compras desde <b>$399.000</b>.</li>
-        <li>En compras de menos de $399.000, el envío se paga contra entrega a la transportadora, según la ciudad de destino y el tamaño del paquete.</li>
+        <li>En compras de menos de $399.000, el envío cuesta <b>$15.000</b>.</li>
         <li>Tiempos: de 2 a 4 días hábiles en ciudades principales y de 3 a 6 días hábiles en municipios y otras ciudades.</li>
         <li>En Medellín también puedes recoger tu compra en la tienda: {DIRECCION}.</li>
       </ul>
@@ -147,7 +147,7 @@ PAGINAS = [
       <p>Los costos, tiempos y condiciones de envío están en <a href="/envios-y-devoluciones">Envíos y devoluciones</a>. El riesgo del producto pasa a ti cuando lo recibes.</p>
 
       <h2>6. Derecho de retracto</h2>
-      <p>Si compraste a distancia (por la web, WhatsApp o teléfono), puedes retractarte dentro de los <b>5 días hábiles</b> siguientes a la entrega, como dice el artículo 47 de la Ley 1480 de 2011. El producto debe estar sin uso y con sus empaques. El transporte de vuelta corre por tu cuenta, y te devolvemos el dinero en máximo 30 días calendario.</p>
+      <p>Si compraste a distancia (por la web, WhatsApp o teléfono), puedes retractarte dentro de los <b>5 días hábiles</b> siguientes a la entrega, como dice el artículo 47 de la Ley 1480 de 2011. El producto debe estar sin uso y con sus empaques. El transporte de vuelta corre por tu cuenta, y te devolvemos el 100 % de lo pagado en máximo 15 días calendario.</p>
       <p>El retracto no aplica a bicicletas armadas o configuradas a tu medida, ni a servicios ya prestados como bike fit o taller.</p>
 
       <h2>7. Reversión del pago</h2>
@@ -160,8 +160,8 @@ PAGINAS = [
       </ul>
       <p>Debes avisarnos y avisar a tu banco dentro de los 5 días hábiles siguientes a cuando conociste el problema, y devolver el producto si lo recibiste.</p>
 
-      <h2>8. Cambios y garantía</h2>
-      <p>Las condiciones de cambio están en <a href="/envios-y-devoluciones">Envíos y devoluciones</a>. Todos los productos tienen la garantía legal y la garantía del fabricante. Si un producto tiene un defecto de fábrica, escríbenos y te acompañamos en el proceso ante la marca. La garantía no cubre el desgaste normal, golpes, caídas, mal uso ni arreglos hechos por terceros.</p>
+      <h2>8. Cambios, devoluciones y garantía</h2>
+      <p>Puedes pedir el cambio o la devolución de un producto sin uso dentro de los 10 días calendario siguientes a la entrega. Las condiciones completas están en <a href="/envios-y-devoluciones">Envíos y devoluciones</a>. Todos los productos tienen la garantía del fabricante; si la marca no indica otro plazo, es de 1 año desde la compra. Si un producto tiene un defecto de fábrica, escríbenos y te acompañamos en el proceso ante la marca. La garantía no cubre el desgaste normal, golpes, caídas, mal uso ni arreglos hechos por terceros.</p>
 
       <h2>9. Servicios: taller, bike fit y entrenamiento</h2>
       <p>Los servicios se agendan con cita previa. El precio de cada servicio te lo confirmamos antes de agendar. Si no puedes asistir, avísanos con al menos 24 horas de anticipación para reprogramar.</p>
