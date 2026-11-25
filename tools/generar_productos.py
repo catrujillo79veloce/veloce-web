@@ -223,7 +223,7 @@ def sitemap():
     fijas += [("bike-fit-retul-medellin", "monthly", "0.8"), ("taller-de-bicicletas-medellin", "monthly", "0.8"),
               ("centro-de-entrenamiento-ciclismo-medellin", "monthly", "0.7")]
     fijas += [(url_prod(p).lstrip("/"), "weekly", "0.8") for p in productos]
-    fijas += [("envios-y-devoluciones", "yearly", "0.4")]
+    fijas += [("envios-y-devoluciones", "yearly", "0.4"), ("como-comprar", "yearly", "0.4"), ("terminos", "yearly", "0.4"), ("privacidad", "yearly", "0.4")]
     filas = "\n".join(f"  <url><loc>{SITE}/{s}</loc><changefreq>{c}</changefreq><priority>{pr}</priority></url>" for s, c, pr in fijas)
     open("sitemap.xml", "w", encoding="utf-8").write(
         f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{filas}\n</urlset>\n')

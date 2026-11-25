@@ -155,7 +155,7 @@ bf_cuerpo = """      <h2>¿Qué es un bike fit Retül?</h2>
       <h3>4. Medición final y reporte</h3>
       <p>Medimos tu bici con la herramienta Zin de Retül y te entregamos un reporte con tus medidas, para que siempre puedas volver a tu posición o replicarla en una bici nueva.</p>"""
 bf_faq = [
-    ("¿Cuánto cuesta un bike fit Retül en Medellín?", "Escríbenos por WhatsApp y te damos el precio actualizado y los horarios disponibles."),
+    ("¿Cuánto cuesta un bike fit Retül en Medellín?", "El bike fit Retül cuesta $440.000 y lo puede agendar cualquier ciclista. Escríbenos por WhatsApp y te damos los horarios disponibles."),
     ("¿Puedo hacer el bike fit si no compré mi bici en Veloce?", "Sí. El servicio es para cualquier ciclista y cualquier bicicleta, de la marca que sea y comprada donde sea."),
     ("¿Sirve para MTB, gravel o bici eléctrica?", "Sí. Hacemos bike fit en bicicletas de ruta, MTB, gravel y eléctricas."),
     ("¿Necesito llevar mi bicicleta?", "Sí. El bike fit se hace sobre tu propia bicicleta, con tus zapatillas y tu ropa de montar, para que el ajuste sea real."),

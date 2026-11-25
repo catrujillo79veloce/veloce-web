@@ -66,4 +66,7 @@
   <url><loc>https://www.bicicletasveloce.com/producto/sidi-ruta-shot-3</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.bicicletasveloce.com/producto/sidi-ruta-wire-3</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.bicicletasveloce.com/envios-y-devoluciones</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://www.bicicletasveloce.com/como-comprar</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://www.bicicletasveloce.com/terminos</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://www.bicicletasveloce.com/privacidad</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
 </urlset>
