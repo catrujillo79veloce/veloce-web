@@ -475,8 +475,8 @@ MARCAS = [
              ("¿Instalan el potenciómetro?", "Sí. En nuestro taller instalamos potenciómetros y los configuramos con tu ciclocomputador."),
              ("¿Envían productos Magene a otras ciudades?", "Sí. Hacemos envíos a toda Colombia, gratis en compras desde $399.000.")]),
   dict(slug="giant-medellin", marca="Giant", miga="Giant", corto="Bicicletas de ruta de carbono.",
-       title="Bicicletas Giant en Medellín · TCR Advanced Pro Disc 2 y Disc 1 KOM | Veloce",
-       desc="Bicicletas Giant en Medellín: TCR Advanced Pro Disc 2 con Shimano 105 y ruedas de carbono, y TCR Advanced Disc 1 KOM con Shimano Ultegra. Últimas unidades en talla S. Precios en pesos y bike fit Retül gratis. Tienda en El Poblado.",
+       title="Bicicletas Giant TCR en Medellín · Pro Disc 2, Disc 1 KOM y Disc 2 KOM | Veloce",
+       desc="Bicicletas Giant en Medellín: TCR Advanced Pro Disc 2 con Shimano 105 y ruedas de carbono, TCR Advanced Disc 1 KOM con Ultegra y Disc 2 KOM con 105. Últimas unidades en tallas S y M. Precios en pesos y bike fit Retül gratis. Tienda en El Poblado.",
        h1="Bicicletas Giant<br>en Medellín.", og="img/productos/giant-tcr-pro-2-1.jpg",
        intro="La TCR, la bici de carreras de Giant, en carbono y con ruedas de carbono. Conócela en nuestra tienda de El Poblado.",
        cta="Cotizar mi Giant", cta_msg="Hola Veloce, quiero cotizar una bicicleta Giant",
@@ -487,13 +487,15 @@ MARCAS = [
       <p>La TCR es la bici de carreras de Giant, pensada para subir, bajar y rodar rápido por igual. La Advanced Pro Disc 2 trae cuadro y horquilla de carbono, grupo Shimano 105 de 2x11 velocidades, frenos de disco hidráulicos y ruedas de carbono Giant SLR 2 de 42 mm listas para tubeless. Le caben llantas de hasta 32 mm. Nos queda una sola unidad, en talla S.</p>
       <h3>Giant TCR Advanced Disc 1 KOM: Ultegra para la montaña</h3>
       <p>La misma base de carbono de la TCR, con grupo Shimano Ultegra de 2x11 velocidades y una relación pensada para escalar: platos 50/34 y casete 11-34. Nos queda una sola unidad, en talla S.</p>
+      <h3>Giant TCR Advanced Disc 2 KOM: la puerta de entrada al carbono</h3>
+      <p>Modelo 2023 con el mismo cuadro de carbono, grupo Shimano 105 de 2x11 velocidades y la misma relación para escalar, platos 50/34 y casete 11-34. Nos queda una unidad en talla S y una en talla M.</p>
       <h3>¿Para quién son?</h3>
-      <p>Para quien quiere una bici de carbono para entrenar en serio, hacer gran fondos y competir. La Pro Disc 2 trae ruedas de carbono desde el primer día; la KOM trae Ultegra y una relación más suave para subir. Si buscas una posición más relajada para fondos largos, mira la <a href="/wilier-medellin">Wilier Garda</a>, y también <a href="/colnago-medellin">Colnago</a>, <a href="/pinarello-medellin">Pinarello</a> y <a href="/orbea-medellin">Orbea</a>.</p>
+      <p>Para quien quiere una bici de carbono para entrenar en serio, hacer gran fondos y competir. La Pro Disc 2 trae ruedas de carbono desde el primer día; las KOM traen una relación más suave para subir, con Ultegra en la Disc 1 y 105 en la Disc 2. Si buscas una posición más relajada para fondos largos, mira la <a href="/wilier-medellin">Wilier Garda</a>, y también <a href="/colnago-medellin">Colnago</a>, <a href="/pinarello-medellin">Pinarello</a> y <a href="/orbea-medellin">Orbea</a>.</p>
       <h3>Tallas Giant</h3>
-      <p>De las dos nos queda la última unidad, en talla S, para ciclistas de 165 a 175 cm aproximadamente. En la página de cada modelo están las medidas, y con el bike fit Retül confirmamos que la talla te sirve.</p>""",
+      <p>Son últimas unidades: la Pro Disc 2 y la Disc 1 KOM en talla S (165 a 175 cm de estatura aproximadamente), y la Disc 2 KOM en tallas S y M (171 a 181 cm). En la página de cada modelo están las medidas, y con el bike fit Retül confirmamos que la talla te sirve.</p>""",
        porque=FIT_BICI,
        faqs=[("¿Dónde comprar una bicicleta Giant en Medellín?", "En Veloce, en el Mall Campestre Drive Inn, El Poblado (Calle 16A Sur #32B-38, Local 101). Escríbenos por WhatsApp al +57 305 245 1204."),
-             ("¿Qué talla de Giant TCR necesito?", "De las dos Giant TCR nos queda la última unidad, en talla S, para ciclistas de 165 a 175 cm aproximadamente. Con el bike fit Retül confirmamos que la talla te sirve."),
+             ("¿Qué talla de Giant TCR necesito?", "Son últimas unidades: la TCR Advanced Pro Disc 2 y la Disc 1 KOM en talla S (165 a 175 cm de estatura aproximadamente), y la Disc 2 KOM en tallas S y M (171 a 181 cm). Con el bike fit Retül confirmamos que la talla te sirve."),
              ("¿La bicicleta incluye bike fit?", "Sí. Toda bicicleta de más de $8.000.000 que compres en Veloce incluye bike fit Retül gratis."),
              ("¿Envían bicicletas Giant a otras ciudades?", "Sí. Hacemos envíos a toda Colombia, gratis en compras desde $399.000.")]),
   dict(slug="cascos-abus-medellin", marca="ABUS", miga="Cascos ABUS", corto="Cascos alemanes de ruta y gravel.",
