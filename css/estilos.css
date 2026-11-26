@@ -581,3 +581,4 @@ a.prod-more{display:inline-block}
 .bf-fit-lat{margin:0 0 18px;padding:14px}
 .bf-fit-lat b{font-size:22px}.bf-fit-lat span{font-size:14px}
 @media (max-width:520px){.bf-nota{font-size:10px;margin:-4px 0 8px;letter-spacing:.02em}.bf-fit b{font-size:24px}}
+.bf-franja:not(.bf-exp) .bf-txt strong::after{content:none}

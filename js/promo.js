@@ -47,6 +47,7 @@
     function pintar() {
       var n = ahora();
       if (n >= FIN_CAMPANA) { f.remove(); clearInterval(reloj); return; }
+      f.className = "bf-franja" + (n < INICIO_CAMPANA ? " bf-exp" : "");
       if (n < INICIO_CAMPANA) {
         var s = Math.max(0, Math.floor((INICIO_CAMPANA - n) / 1000));
         var h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), x = s % 60;
