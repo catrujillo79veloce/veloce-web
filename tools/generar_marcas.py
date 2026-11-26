@@ -474,6 +474,52 @@ MARCAS = [
              ("¿El Magene C706 funciona con otros potenciómetros y sensores?", "Sí. Es compatible con potenciómetros y sensores, y también con los segmentos de Strava."),
              ("¿Instalan el potenciómetro?", "Sí. En nuestro taller instalamos potenciómetros y los configuramos con tu ciclocomputador."),
              ("¿Envían productos Magene a otras ciudades?", "Sí. Hacemos envíos a toda Colombia, gratis en compras desde $399.000.")]),
+  dict(slug="cascos-abus-medellin", marca="ABUS", miga="Cascos ABUS", corto="Cascos alemanes de ruta y gravel.",
+       title="Cascos ABUS en Medellín · AirBreaker, StormChaser y Viantor | Veloce",
+       desc="Cascos de bicicleta ABUS en Medellín con precios en pesos: AirBreaker, StormChaser y Viantor para ruta y gravel. Tallas S, M y L. Tienda en El Poblado. Pide el tuyo por WhatsApp.",
+       h1="Cascos ABUS<br>en Medellín.", og="img/productos/abus-airbreaker-gris-1.jpg",
+       intro="Cascos de ruta y gravel de la marca alemana ABUS: AirBreaker, StormChaser y Viantor, en nuestra tienda de El Poblado.",
+       cta="Pedir mi casco ABUS", cta_msg="Hola Veloce, me interesa un casco ABUS. ¿Qué modelos, colores y tallas tienen?",
+       titulo_prod="Cascos ABUS.", titulo_det="Cada casco ABUS en detalle", sin_prod="",
+       cuerpo="""      <h2>¿Por qué un casco de bicicleta ABUS?</h2>
+      <p>ABUS es una marca alemana con cerca de cien años haciendo productos de seguridad. Sus cascos de ciclismo se usan en el pelotón profesional y se reconocen por ser livianos, muy ventilados y cómodos para rodar muchas horas.</p>
+      <h3>¿Cuál casco ABUS elegir?</h3>
+      <ul>
+        <li><b>AirBreaker:</b> el tope de gama para ruta, muy ventilado y aerodinámico, desde 200 g.</li>
+        <li><b>StormChaser:</b> el todoterreno para ruta, gravel y ciclocross, liviano y fresco.</li>
+        <li><b>Viantor:</b> el casco de ruta para empezar con tecnología de la gama de carreras.</li>
+      </ul>
+      <h3>Tecnología ABUS</h3>
+      <p>Los tres llevan el refuerzo ActiCage, una estructura integrada en el casco que permite aberturas de ventilación grandes sin sacrificar seguridad, y el ajuste Zoom Ace, una rueda en la nuca de regulación fina. Todos son compatibles con cola de caballo.</p>
+      <h3>Tallas</h3>
+      <p>Vienen en tallas S, M y L. Se mide el contorno de la cabeza un poco por encima de las cejas; en la página de cada casco está la medida de cada talla. Lo mejor es venir a la tienda y probártelo.</p>
+      <p>Recuerda que un casco se debe cambiar después de un golpe fuerte, aunque por fuera se vea bien. Si buscas otras opciones, mira también los <a href="/cascos-kask-medellin">cascos Kask</a>.</p>""",
+       porque='        <li><b>Te ayudamos con la talla:</b> ven a la tienda y pruébate el casco antes de llevarlo.</li>',
+       faqs=[("¿Dónde comprar cascos ABUS en Medellín?", "En Veloce, en el Mall Campestre Drive Inn, El Poblado. También puedes pedirlo por WhatsApp al +57 305 245 1204."),
+             ("¿Qué talla de casco ABUS necesito?", "Se mide el contorno de la cabeza un poco por encima de las cejas. En la página de cada casco está la medida de cada talla. Lo mejor es venir a la tienda y probártelo, o escríbenos y te ayudamos."),
+             ("¿Cuál es el mejor casco ABUS para ruta?", "El AirBreaker es el tope de gama, muy ventilado y aerodinámico. El StormChaser es más versátil y sirve también para gravel, y el Viantor es la opción para empezar."),
+             ("¿Envían cascos ABUS a otras ciudades?", "Sí. Hacemos envíos a toda Colombia, gratis en compras desde $399.000.")]),
+  dict(slug="xxf-medellin", marca="XXF", miga="XXF", corto="Maletas y racks para transportar tu bici.",
+       title="XXF en Medellín · Maleta para bicicleta y rack para platón | Veloce",
+       desc="Accesorios XXF en Medellín para transportar tu bicicleta: maleta semirrígida para viajar en avión y rack portabicicletas para el platón de la camioneta. Precios en pesos. Tienda en El Poblado.",
+       h1="XXF<br>en Medellín.", og="img/productos/maleta-xxf-1.jpg",
+       intro="Accesorios para llevar tu bicicleta a donde vayas: la maleta para viajar en avión y el rack para el platón de la camioneta.",
+       cta="Preguntar por XXF", cta_msg="Hola Veloce, me interesan los productos XXF. ¿Qué tienen disponible?",
+       titulo_prod="Productos XXF.", titulo_det="Cada producto XXF en detalle", sin_prod="",
+       cuerpo="""      <h2>XXF: lleva tu bici protegida</h2>
+      <p>XXF hace accesorios para transportar la bicicleta sin que se golpee ni se raye, ya sea en un vuelo o en la camioneta camino a la salida del fin de semana.</p>
+      <h3>¿Qué necesitas?</h3>
+      <ul>
+        <li><b>Para viajar en avión o bus:</b> la maleta semirrígida con ruedas protege el marco y las ruedas en compartimientos separados.</li>
+        <li><b>Para la camioneta de platón:</b> el rack acolchado va sobre la compuerta y permite llevar varias bicicletas sin desarmarlas.</li>
+      </ul>
+      <h3>¿Viajas con tu bici?</h3>
+      <p>En nuestro <a href="/taller-de-bicicletas-medellin">taller</a> te ayudamos a desarmar y empacar la bicicleta antes del viaje, y a armarla y revisarla cuando regreses.</p>""",
+       porque='        <li><b>Te ayudamos a empacar:</b> en el taller desarmamos, empacamos y armamos tu bici. <a href="/taller-de-bicicletas-medellin">Ver el taller</a>.</li>',
+       faqs=[("¿Dónde comprar productos XXF en Medellín?", "En Veloce, en el Mall Campestre Drive Inn, El Poblado. También puedes pedirlos por WhatsApp al +57 305 245 1204."),
+             ("¿La maleta XXF sirve para mi bicicleta?", "Sirve para bicicletas de ruta 700c y MTB de 26 y 27,5 pulgadas. Escríbenos con el modelo y la talla de tu bici y te confirmamos."),
+             ("¿El rack XXF sirve para mi camioneta?", "Mide 130 cm de largo y va sobre la compuerta del platón. Revisa el ancho de la compuerta de tu camioneta o escríbenos y te ayudamos."),
+             ("¿Envían productos XXF a otras ciudades?", "Sí. Hacemos envíos a toda Colombia, gratis en compras desde $399.000.")]),
 ]
 
 if __name__ == "__main__":
