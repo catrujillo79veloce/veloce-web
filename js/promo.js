@@ -16,13 +16,16 @@
   function enCampana() { var t = ahora(); return t >= INICIO_CAMPANA && t < FIN_CAMPANA; }
   if (enCampana()) document.documentElement.className += " bf-on";
   function precios() {
-    if (!enCampana()) return;
-    var els = document.querySelectorAll(".prod-price[data-bf]");
+    var camp = enCampana();
+    var post = prueba ? prueba[1] === "despues" : Date.now() >= FIN_CAMPANA;
+    if (!camp && !post) return;
+    var els = document.querySelectorAll(camp ? ".prod-price[data-bf]" : ".prod-price[data-bf-sigue]");
     for (var i = 0; i < els.length; i++) {
       var e = els[i];
       if (e.getAttribute("data-bf-ok")) continue;
       e.setAttribute("data-bf-ok", "1");
       e.innerHTML = "<s>" + e.getAttribute("data-normal") + "</s> " + e.getAttribute("data-bf");
+      if (!camp) continue;
       var n = document.createElement("div");
       n.className = "bf-nota";
       n.textContent = "Precio Black Friday pagando en efectivo o transferencia";

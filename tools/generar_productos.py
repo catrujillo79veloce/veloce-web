@@ -16,7 +16,7 @@ FITBOX = '<a class="fit-incl" href="/bike-fit-retul-medellin"><b>Bike fit Retül
 
 def bf_attr(p):
     """Precio de Black Friday: lo activa js/promo.js solo durante la campaña."""
-    return f' data-bf="{p["bf"]}" data-normal="{p.get("antes") or p.get("precio")}"' if p.get("bf") else ""
+    return f' data-bf="{p["bf"]}" data-normal="{p.get("antes") or p.get("precio")}"{" data-bf-sigue" if p.get("bfSigue") else ""}' if p.get("bf") else ""
 
 TIPO = {"Ruta": "Bicicleta de ruta", "Gravel": "Bicicleta gravel", "MTB": "Bicicleta MTB",
         "E-MTB": "Bicicleta eléctrica de montaña", "E-Ruta": "Bicicleta eléctrica de ruta", "Casco": "Casco", "Casco aero": "Casco aero",

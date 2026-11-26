@@ -37,7 +37,7 @@ def tarjeta(p):
     msg = p.get("wa") or (f"Hola Veloce, me interesa: {nombre}" + (f" ({precio})" if precio else ". ¿Qué configuraciones tienen?"))
     test = (f'<a class="btn btn-test" href="{wa(f"Hola Veloce, quiero agendar un test ride de la {nombre}. ¿Qué días tienen disponibles?")}">Agendar test ride</a>'
             if p.get("test") else "")
-    bf = f' data-bf="{p["bf"]}" data-normal="{p.get("antes") or p.get("precio")}"' if p.get("bf") else ""
+    bf = f' data-bf="{p["bf"]}" data-normal="{p.get("antes") or p.get("precio")}"{" data-bf-sigue" if p.get("bfSigue") else ""}' if p.get("bf") else ""
     return f"""<article class="prod">
       <a class="prod-img" href="{url_prod(p)}" aria-label="Ver {nombre}"><img src="/{foto}" alt="{nombre} en Veloce Medellín" loading="lazy">{badges}</a>
       <div class="prod-body">
