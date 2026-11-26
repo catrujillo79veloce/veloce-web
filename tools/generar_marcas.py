@@ -26,8 +26,8 @@ def tarjeta(p):
     nombre = f'{p["marca"]} {p["nombre"]}'
     foto = p.get("foto", "")
     badges = '<span class="prod-cat">%s</span>' % p["cat"]
-    if p.get("antes"): badges += '<span class="prod-oferta">Oferta</span>'
-    if p.get("outlet"): badges += '<span class="prod-outlet">Outlet</span>'
+    if p.get("outlet"): badges += '<span class="prod-oferta">Outlet</span>'
+    elif p.get("antes"): badges += '<span class="prod-oferta">Oferta</span>'
     if p.get("test"): badges += '<span class="prod-test">Test ride</span>'
     if p.get("fit"): badges += '<span class="prod-fit">+ Bike fit gratis</span>'
     if p.get("ref"): badges += '<span class="prod-ref">*Imagen de referencia</span>'
@@ -561,10 +561,11 @@ OUTLET = dict(slug="outlet", marca="Outlet", filtro="outlet", miga="Outlet", cor
         <li><b>Son pocas unidades.</b> En las bicicletas queda una por talla; antes de venir o de pagar, escríbenos para confirmar que sigue disponible.</li>
         <li><b>Revisa la talla.</b> En la página de cada producto están las tallas que quedan y sus medidas. Si tienes dudas, te ayudamos por WhatsApp o en la tienda.</li>
         <li><b>Productos nuevos y con garantía,</b> igual que el resto del catálogo.</li>
-        <li><b>El precio de outlet se mantiene</b> hasta agotar existencias.</li>
+        <li><b>El precio de outlet aplica para cualquier medio de pago</b> (efectivo, transferencia y tarjetas de crédito o débito) y se mantiene hasta agotar existencias.</li>
       </ul>""",
        porque=FIT_BICI,
        faqs=[("¿Los productos del outlet son nuevos?", "Sí. Son productos nuevos, de últimas unidades o de colecciones anteriores. No son usados ni de segunda."),
+             ("¿El precio del outlet aplica con tarjeta?", "Sí. El precio de outlet aplica para cualquier medio de pago: efectivo, transferencia y tarjetas de crédito o débito."),
              ("¿Hasta cuándo duran los precios del outlet?", "Hasta agotar existencias. Como son últimas unidades, escríbenos por WhatsApp para confirmar disponibilidad antes de venir."),
              ("¿Qué tallas quedan de las bicicletas del outlet?", "En la página de cada bicicleta están las tallas disponibles y sus medidas. De la mayoría queda una sola unidad por talla."),
              ("¿Las bicicletas del outlet incluyen bike fit?", "Las bicicletas de más de $8.000.000 incluyen bike fit Retül gratis. En cada producto se indica si aplica."),
