@@ -582,3 +582,19 @@ a.prod-more{display:inline-block}
 .bf-fit-lat b{font-size:22px}.bf-fit-lat span{font-size:14px}
 @media (max-width:520px){.bf-nota{font-size:10px;margin:-4px 0 8px;letter-spacing:.02em}.bf-fit b{font-size:24px}}
 .bf-franja:not(.bf-exp) .bf-txt strong::after{content:none}
+
+/* ===== Outlet ===== */
+.menu a.m-outlet{color:var(--rojo);font-weight:700}
+.dest.outlet{background:var(--black);color:#fff}
+.dest.outlet h2{color:#fff}
+.outlet-tag{display:inline-block;background:var(--rojo);color:#fff;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:6px 10px;margin-bottom:14px}
+.outlet-sub{color:#d9d6d0;font-size:17px;margin-top:10px}
+.outlet-pre{color:#fff;font-size:14px;margin-top:8px;border-left:3px solid var(--rojo);padding-left:10px}
+.bf-on .outlet-pre,.bf-post .outlet-pre{display:none}
+.prod-outlet{display:none;position:absolute;top:12px;right:12px;background:var(--rojo);color:#fff;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:5px 9px}
+.bf-on .prod-outlet,.bf-post .prod-outlet{display:block}
+.prose .outlet-pre{color:inherit;font-weight:600}
+@media(max-width:640px){.prod-outlet{top:6px;right:6px;font-size:8px;padding:3px 6px;letter-spacing:.12em}}
+.dest.outlet .dcard{color:var(--ink)}
+.menu a{white-space:nowrap}
+@media(min-width:1001px) and (max-width:1260px){.menu{gap:18px;font-size:13px}}

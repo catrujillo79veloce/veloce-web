@@ -15,6 +15,7 @@
   }
   function enCampana() { var t = ahora(); return t >= INICIO_CAMPANA && t < FIN_CAMPANA; }
   if (enCampana()) document.documentElement.className += " bf-on";
+  if (prueba ? prueba[1] === "despues" : Date.now() >= FIN_CAMPANA) document.documentElement.className += " bf-post";
   function precios() {
     var camp = enCampana();
     var post = prueba ? prueba[1] === "despues" : Date.now() >= FIN_CAMPANA;

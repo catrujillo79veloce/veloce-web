@@ -223,7 +223,7 @@ def pagina(p):
 
 def sitemap():
     """Reescribe sitemap.xml con las páginas fijas, las de marca y las de producto."""
-    fijas = [("", "weekly", "1.0")]
+    fijas = [("", "weekly", "1.0"), ("outlet", "daily", "0.9")]
     fijas += [(m["slug"], "weekly", "0.9") for m in MARCAS]
     fijas += [("bike-fit-retul-medellin", "monthly", "0.8"), ("taller-de-bicicletas-medellin", "monthly", "0.8"),
               ("centro-de-entrenamiento-ciclismo-medellin", "monthly", "0.7")]

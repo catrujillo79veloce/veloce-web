@@ -27,6 +27,7 @@ def tarjeta(p):
     foto = p.get("foto", "")
     badges = '<span class="prod-cat">%s</span>' % p["cat"]
     if p.get("antes"): badges += '<span class="prod-oferta">Oferta</span>'
+    if p.get("outlet"): badges += '<span class="prod-outlet">Outlet</span>'
     if p.get("test"): badges += '<span class="prod-test">Test ride</span>'
     if p.get("fit"): badges += '<span class="prod-fit">+ Bike fit gratis</span>'
     if p.get("ref"): badges += '<span class="prod-ref">*Imagen de referencia</span>'
@@ -107,7 +108,7 @@ def faqs_precio(prods):
     return out
 
 def pagina(m):
-    prods = [p for p in productos if p["marca"] == m["marca"]]
+    prods = [p for p in productos if (p.get(m["filtro"]) if m.get("filtro") else p["marca"] == m["marca"])]
     m = dict(m, faqs=list(m["faqs"]) + faqs_precio(prods))
     grid = "".join(tarjeta(p) for p in prods)
     if prods:
@@ -160,7 +161,7 @@ def pagina(m):
 
 <section class="page-hero">{hero}
   <div class="wrap">
-    <div class="crumbs"><a href="/">Inicio</a> / <a href="/#marcas">Marcas</a> / {m["miga"]}</div>
+    <div class="crumbs"><a href="/">Inicio</a> / {'' if m.get("filtro") else '<a href="/#marcas">Marcas</a> / '}{m["miga"]}</div>
     <div class="tri on-dark"><i></i><i></i><i></i></div>
     <h1 class="display">{m["h1"]}</h1>
     <p>{m["intro"]}</p>
@@ -546,7 +547,34 @@ MARCAS = [
              ("¿Envían productos XXF a otras ciudades?", "Sí. Hacemos envíos a toda Colombia, gratis en compras desde $399.000.")]),
 ]
 
+OUTLET = dict(slug="outlet", marca="Outlet", filtro="outlet", miga="Outlet", corto="Últimas unidades con grandes rebajas.",
+       title="Outlet Veloce · Bicicletas Giant y cascos ABUS hasta 40 % de descuento | Medellín",
+       desc="Outlet de Veloce en Medellín: últimas unidades de bicicletas de ruta Giant TCR de carbono y cascos ABUS con hasta 40 % de descuento. Hasta agotar existencias. Tienda en El Poblado y envíos a toda Colombia.",
+       h1="Outlet<br>Veloce.", og="img/productos/giant-tcr-pro-2-1.jpg",
+       intro="Últimas unidades en liquidación, con hasta 40 % de descuento. Bicicletas de ruta de carbono y cascos nuevos, con garantía. Cuando se acaban, se acaban.",
+       cta="Preguntar por el outlet", cta_msg="Hola Veloce, me interesa un producto del outlet. ¿Qué tienen disponible?",
+       titulo_prod="En liquidación.", titulo_det="Cada producto del outlet, en detalle", sin_prod="",
+       cuerpo="""      <h2>¿Qué es el outlet de Veloce?</h2>
+      <p class="outlet-pre">Los precios de outlet empiezan este viernes 27 de noviembre a las 12:00 AM.</p>
+      <p>Es la zona de grandes rebajas de la tienda: productos nuevos, de últimas unidades o de colecciones anteriores, que liquidamos con descuentos de hasta el 40 % para hacerle espacio a lo que llega. No son productos usados ni de segunda.</p>
+      <h3>Lo que debes saber</h3>
+      <ul>
+        <li><b>Son pocas unidades.</b> En las bicicletas queda una por talla; antes de venir o de pagar, escríbenos para confirmar que sigue disponible.</li>
+        <li><b>Revisa la talla.</b> En la página de cada producto están las tallas que quedan y sus medidas. Si tienes dudas, te ayudamos por WhatsApp o en la tienda.</li>
+        <li><b>Productos nuevos y con garantía,</b> igual que el resto del catálogo.</li>
+        <li><b>El precio de outlet se mantiene</b> hasta agotar existencias.</li>
+      </ul>""",
+       porque=FIT_BICI,
+       faqs=[("¿Los productos del outlet son nuevos?", "Sí. Son productos nuevos, de últimas unidades o de colecciones anteriores. No son usados ni de segunda."),
+             ("¿Hasta cuándo duran los precios del outlet?", "Hasta agotar existencias. Como son últimas unidades, escríbenos por WhatsApp para confirmar disponibilidad antes de venir."),
+             ("¿Qué tallas quedan de las bicicletas del outlet?", "En la página de cada bicicleta están las tallas disponibles y sus medidas. De la mayoría queda una sola unidad por talla."),
+             ("¿Las bicicletas del outlet incluyen bike fit?", "Las bicicletas de más de $8.000.000 incluyen bike fit Retül gratis. En cada producto se indica si aplica."),
+             ("¿Dónde queda el outlet de Veloce?", "En nuestra tienda del Mall Campestre Drive Inn, El Poblado, Medellín (Calle 16A Sur #32B-38, Local 101). También vendemos por WhatsApp al +57 305 245 1204."),
+             ("¿Envían los productos del outlet a otras ciudades?", "Sí. Hacemos envíos a toda Colombia, gratis en compras desde $399.000.")])
+
 if __name__ == "__main__":
+    open("outlet.html", "w", encoding="utf-8").write(pagina(OUTLET))
+    print("ok outlet", len([p for p in productos if p.get("outlet")]), "productos")
     for m in MARCAS:
         open(f'{m["slug"]}.html', "w", encoding="utf-8").write(pagina(m))
         print("ok", m["slug"], len([p for p in productos if p["marca"] == m["marca"]]), "productos")
