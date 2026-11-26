@@ -476,16 +476,20 @@ MARCAS = [
              ("¿Instalan el potenciómetro?", "Sí. En nuestro taller instalamos potenciómetros y los configuramos con tu ciclocomputador."),
              ("¿Envían productos Magene a otras ciudades?", "Sí. Hacemos envíos a toda Colombia, gratis en compras desde $399.000.")]),
   dict(slug="wahoo-medellin", marca="Wahoo", miga="Wahoo", corto="Ciclocomputadores GPS.",
-       title="Wahoo en Medellín · Ciclocomputador ELEMNT ROAM 3 | Veloce",
-       desc="Wahoo en Medellín: ciclocomputador GPS ELEMNT ROAM 3 con pantalla táctil a color, navegación con voz y hasta 25 horas de batería. Precio en pesos. Tienda en El Poblado. Pídelo por WhatsApp.",
+       title="Wahoo en Medellín · Ciclocomputadores ELEMNT ROAM 3 y BOLT 3 | Veloce",
+       desc="Wahoo en Medellín: ciclocomputadores GPS ELEMNT ROAM 3, con pantalla táctil y 25 horas de batería, y ELEMNT BOLT 3, compacto y aerodinámico. Precios en pesos. Tienda en El Poblado. Pídelo por WhatsApp.",
        h1="Wahoo<br>en Medellín.", og="img/productos/wahoo-roam3-1.jpg",
-       intro="El ciclocomputador GPS ELEMNT ROAM 3, con pantalla táctil a color y navegación completa, en nuestra tienda de El Poblado.",
+       intro="Los ciclocomputadores GPS ELEMNT ROAM 3 y ELEMNT BOLT 3, con navegación y pantalla a color, en nuestra tienda de El Poblado.",
        cta="Preguntar por Wahoo", cta_msg="Hola Veloce, me interesan los productos Wahoo. ¿Qué tienen disponible?",
-       titulo_prod="Productos Wahoo.", titulo_det="El Wahoo que tenemos, en detalle", sin_prod="",
+       titulo_prod="Productos Wahoo.", titulo_det="Los Wahoo que tenemos, uno por uno", sin_prod="",
        cuerpo="""      <h2>Wahoo: ciclocomputadores fáciles de usar</h2>
       <p>Los ciclocomputadores ELEMNT de Wahoo son conocidos por lo simples que son de configurar y de usar en la ruta: se ajustan desde el celular y muestran lo que necesitas sin enredos.</p>
       <h3>ELEMNT ROAM 3: para explorar y entrenar</h3>
       <p>Tiene pantalla táctil a color de 2,8 pulgadas que se lee a pleno sol, botones físicos para usarlo con guantes, navegación con indicaciones por voz y hasta 25 horas de batería. Muestra el perfil de las subidas, los segmentos de Strava en vivo y tus entrenamientos estructurados.</p>
+      <h3>ELEMNT BOLT 3: compacto y aerodinámico</h3>
+      <p>Es la opción más liviana y pequeña, con pantalla a color de 2,3 pulgadas, navegación en el equipo y hasta 20 horas de batería. Comparte con el ROAM las funciones de subidas, Strava y entrenamientos.</p>
+      <h3>¿ROAM 3 o BOLT 3?</h3>
+      <p>Si haces salidas largas, exploras rutas nuevas o prefieres una pantalla grande y táctil, el <b>ROAM 3</b>. Si quieres algo compacto y liviano para entrenar y competir, el <b>BOLT 3</b>.</p>
       <h3>¿Entrenas por potencia?</h3>
       <p>Un ciclocomputador es la pantalla de tus datos. Si quieres medir tus vatios, mira los <a href="/magene-medellin">pedales de potencia Magene</a>, y en nuestro <a href="/taller-de-bicicletas-medellin">taller</a> te instalamos y configuramos todo.</p>""",
        porque='        <li><b>Te lo entregamos configurado:</b> te ayudamos a emparejarlo con tu celular y tus sensores.</li>',
