@@ -598,3 +598,21 @@ a.prod-more{display:inline-block}
 .dest.outlet .dcard{color:var(--ink)}
 .menu a{white-space:nowrap}
 @media(min-width:1001px) and (max-width:1260px){.menu{gap:18px;font-size:13px}}
+
+/* Franja de Black Friday fija debajo del menú */
+.bf-franja{position:sticky;top:75px;z-index:49}
+.bf-franja.bf-mini .bf-in{padding-top:6px;padding-bottom:6px}
+.bf-franja.bf-mini .bf-txt span{display:none}
+.bf-franja.bf-mini .bf-txt strong{font-size:22px}
+.bf-franja.bf-mini .bf-reloj b{font-size:22px;min-width:32px;padding:2px 5px}
+.bf-franja.bf-mini .bf-btn{padding:7px 12px}
+@media (max-width:700px){
+  .bf-franja.bf-mini .bf-in{flex-wrap:nowrap;gap:8px}
+  .bf-franja.bf-mini .bf-txt{min-width:0}
+  .bf-franja.bf-mini .bf-txt strong{font-size:16px;line-height:1.05}
+  .bf-franja.bf-mini .bf-txt strong::after{content:none}
+  .bf-franja.bf-mini .bf-reloj b{font-size:17px;min-width:26px;padding:2px 3px}
+  .bf-franja.bf-mini .bf-reloj i{margin-right:1px}
+  .bf-franja.bf-mini .bf-btn{padding:6px 8px;font-size:10px;flex:none;white-space:nowrap}
+  .bf-franja.bf-mini .bf-btn2{display:none}
+}

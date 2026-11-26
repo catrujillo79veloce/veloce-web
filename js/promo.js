@@ -43,11 +43,17 @@
     f.id = "bf-franja";
     f.className = "bf-franja";
     header.insertAdjacentElement("afterend", f);
+    // La franja se queda fija debajo del menú al bajar por la página, en versión compacta.
+    function fijar() { f.style.top = header.offsetHeight + "px"; }
+    function compacta() { var m = window.scrollY > 260; if (m !== f.classList.contains("bf-mini")) f.classList.toggle("bf-mini", m); }
+    fijar(); compacta();
+    window.addEventListener("resize", fijar);
+    window.addEventListener("scroll", compacta, { passive: true });
     var enHome = location.pathname === "/" || /index\.html$/.test(location.pathname);
     function pintar() {
       var n = ahora();
       if (n >= FIN_CAMPANA) { f.remove(); clearInterval(reloj); return; }
-      f.className = "bf-franja" + (n < INICIO_CAMPANA ? " bf-exp" : "");
+      f.className = "bf-franja" + (n < INICIO_CAMPANA ? " bf-exp" : "") + (window.scrollY > 260 ? " bf-mini" : "");
       if (n < INICIO_CAMPANA) {
         var s = Math.max(0, Math.floor((INICIO_CAMPANA - n) / 1000));
         var h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), x = s % 60;
