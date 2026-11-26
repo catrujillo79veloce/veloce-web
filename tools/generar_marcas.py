@@ -474,6 +474,26 @@ MARCAS = [
              ("¿El Magene C706 funciona con otros potenciómetros y sensores?", "Sí. Es compatible con potenciómetros y sensores, y también con los segmentos de Strava."),
              ("¿Instalan el potenciómetro?", "Sí. En nuestro taller instalamos potenciómetros y los configuramos con tu ciclocomputador."),
              ("¿Envían productos Magene a otras ciudades?", "Sí. Hacemos envíos a toda Colombia, gratis en compras desde $399.000.")]),
+  dict(slug="giant-medellin", marca="Giant", miga="Giant", corto="Bicicletas de ruta de carbono.",
+       title="Bicicletas Giant en Medellín · TCR Advanced Pro Disc 2 | Veloce",
+       desc="Bicicletas Giant en Medellín: TCR Advanced Pro Disc 2 de carbono con Shimano 105, frenos de disco y ruedas de carbono. Precio en pesos, tallas XS a XL y bike fit Retül gratis. Tienda en El Poblado.",
+       h1="Bicicletas Giant<br>en Medellín.", og="img/productos/giant-tcr-pro-2-1.jpg",
+       intro="La TCR, la bici de carreras de Giant, en carbono y con ruedas de carbono. Conócela en nuestra tienda de El Poblado.",
+       cta="Cotizar mi Giant", cta_msg="Hola Veloce, quiero cotizar una bicicleta Giant",
+       titulo_prod="Modelos Giant.", titulo_det="La Giant que tenemos, en detalle", sin_prod="",
+       cuerpo="""      <h2>Giant: uno de los grandes fabricantes del mundo</h2>
+      <p>Giant es una marca de Taiwán y uno de los mayores fabricantes de bicicletas del mundo. Hace sus propios cuadros de carbono y sus propias ruedas, y por eso sus bicis suelen venir muy bien equipadas para lo que cuestan.</p>
+      <h3>Giant TCR Advanced Pro Disc 2: una bici de carreras completa</h3>
+      <p>La TCR es la bici de carreras de Giant, pensada para subir, bajar y rodar rápido por igual. La Advanced Pro Disc 2 trae cuadro y horquilla de carbono, grupo Shimano 105 de 2x11 velocidades, frenos de disco hidráulicos y ruedas de carbono Giant SLR 2 de 42 mm listas para tubeless. Le caben llantas de hasta 32 mm.</p>
+      <h3>¿Para quién es?</h3>
+      <p>Para quien quiere una bici de carbono para entrenar en serio, hacer gran fondos y competir, con ruedas de carbono desde el primer día. Si buscas una posición más relajada para fondos largos, mira la <a href="/wilier-medellin">Wilier Garda</a>, y también <a href="/colnago-medellin">Colnago</a>, <a href="/pinarello-medellin">Pinarello</a> y <a href="/orbea-medellin">Orbea</a>.</p>
+      <h3>Tallas Giant</h3>
+      <p>La TCR viene en seis tallas, de XS a XL. En la página del modelo encuentras la guía de tallas según tu estatura, y con el bike fit Retül elegimos la talla exacta.</p>""",
+       porque=FIT_BICI,
+       faqs=[("¿Dónde comprar una bicicleta Giant en Medellín?", "En Veloce, en el Mall Campestre Drive Inn, El Poblado (Calle 16A Sur #32B-38, Local 101). Escríbenos por WhatsApp al +57 305 245 1204."),
+             ("¿Qué talla de Giant TCR necesito?", "La TCR Advanced Pro Disc 2 viene en tallas XS a XL. En la página del modelo está la guía de tallas según tu estatura, y con el bike fit Retül elegimos la talla exacta."),
+             ("¿La bicicleta incluye bike fit?", "Sí. Toda bicicleta de más de $8.000.000 que compres en Veloce incluye bike fit Retül gratis."),
+             ("¿Envían bicicletas Giant a otras ciudades?", "Sí. Hacemos envíos a toda Colombia, gratis en compras desde $399.000.")]),
   dict(slug="cascos-abus-medellin", marca="ABUS", miga="Cascos ABUS", corto="Cascos alemanes de ruta y gravel.",
        title="Cascos ABUS en Medellín · AirBreaker, StormChaser y Viantor | Veloce",
        desc="Cascos de bicicleta ABUS en Medellín con precios en pesos: AirBreaker, StormChaser y Viantor para ruta y gravel. Tallas S, M y L. Tienda en El Poblado. Pide el tuyo por WhatsApp.",
