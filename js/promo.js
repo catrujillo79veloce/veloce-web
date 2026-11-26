@@ -19,7 +19,6 @@
   function precios() {
     var camp = enCampana();
     var post = prueba ? prueba[1] === "despues" : Date.now() >= FIN_CAMPANA;
-    if (!camp && !post) return;
     var els = document.querySelectorAll(camp ? ".prod-price[data-bf]" : ".prod-price[data-bf-sigue]");
     for (var i = 0; i < els.length; i++) {
       var e = els[i];

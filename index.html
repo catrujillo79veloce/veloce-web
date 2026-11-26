@@ -139,8 +139,7 @@
   <div class="wrap">
     <div class="dest-head">
       <div><span class="outlet-tag">Hasta 40 % de descuento</span><h2 class="display">Outlet Veloce.</h2>
-        <p class="outlet-sub">Últimas unidades en liquidación. Cuando se acaban, se acaban.</p>
-        <p class="outlet-pre">Los precios de outlet empiezan este viernes 27 de noviembre a las 12:00 AM.</p></div>
+        <p class="outlet-sub">Últimas unidades en liquidación. Cuando se acaban, se acaban.</p></div>
       <a class="btn btn-light" href="/outlet">Ver todo el outlet</a>
     </div>
     <div class="dest-row" id="outlet-row"></div>
@@ -892,7 +891,7 @@
   const BF_Q=/[?&]bf=(\w+)/.exec(location.search);
   const BF_ON=(()=>{const t=Date.now();return BF_Q?BF_Q[1]==="campana":t>=Date.parse("2026-11-27T00:00:00-05:00")&&t<Date.parse("2026-12-01T00:00:00-05:00")})();
   const BF_POST=BF_Q?BF_Q[1]==="despues":Date.now()>=Date.parse("2026-12-01T00:00:00-05:00");
-  if(BF_POST)lista.forEach(p=>{if(p.bf&&p.bfSigue){p.normal=p.precio;p.antes=p.antes||p.precio;p.precio=p.bf}});
+  if(!BF_ON)lista.forEach(p=>{if(p.bf&&p.bfSigue){p.normal=p.precio;p.antes=p.antes||p.precio;p.precio=p.bf}});
   if(BF_ON)lista.forEach(p=>{if(p.bf){p.normal=p.precio;p.antes=p.antes||p.precio;p.precio=p.bf;p.bfOn=true}});
   const BF_NOTA='<div class="bf-nota">Precio Black Friday pagando en efectivo o transferencia</div>';
   const slugP=p=>(p.marca+" "+p.nombre).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");

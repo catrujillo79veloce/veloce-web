@@ -555,7 +555,6 @@ OUTLET = dict(slug="outlet", marca="Outlet", filtro="outlet", miga="Outlet", cor
        cta="Preguntar por el outlet", cta_msg="Hola Veloce, me interesa un producto del outlet. ¿Qué tienen disponible?",
        titulo_prod="En liquidación.", titulo_det="Cada producto del outlet, en detalle", sin_prod="",
        cuerpo="""      <h2>¿Qué es el outlet de Veloce?</h2>
-      <p class="outlet-pre">Los precios de outlet empiezan este viernes 27 de noviembre a las 12:00 AM.</p>
       <p>Es la zona de grandes rebajas de la tienda: productos nuevos, de últimas unidades o de colecciones anteriores, que liquidamos con descuentos de hasta el 40 % para hacerle espacio a lo que llega. No son productos usados ni de segunda.</p>
       <h3>Lo que debes saber</h3>
       <ul>
