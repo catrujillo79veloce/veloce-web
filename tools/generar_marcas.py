@@ -475,6 +475,24 @@ MARCAS = [
              ("¿El Magene C706 funciona con otros potenciómetros y sensores?", "Sí. Es compatible con potenciómetros y sensores, y también con los segmentos de Strava."),
              ("¿Instalan el potenciómetro?", "Sí. En nuestro taller instalamos potenciómetros y los configuramos con tu ciclocomputador."),
              ("¿Envían productos Magene a otras ciudades?", "Sí. Hacemos envíos a toda Colombia, gratis en compras desde $399.000.")]),
+  dict(slug="wahoo-medellin", marca="Wahoo", miga="Wahoo", corto="Ciclocomputadores GPS.",
+       title="Wahoo en Medellín · Ciclocomputador ELEMNT ROAM 3 | Veloce",
+       desc="Wahoo en Medellín: ciclocomputador GPS ELEMNT ROAM 3 con pantalla táctil a color, navegación con voz y hasta 25 horas de batería. Precio en pesos. Tienda en El Poblado. Pídelo por WhatsApp.",
+       h1="Wahoo<br>en Medellín.", og="img/productos/wahoo-roam3-1.jpg",
+       intro="El ciclocomputador GPS ELEMNT ROAM 3, con pantalla táctil a color y navegación completa, en nuestra tienda de El Poblado.",
+       cta="Preguntar por Wahoo", cta_msg="Hola Veloce, me interesan los productos Wahoo. ¿Qué tienen disponible?",
+       titulo_prod="Productos Wahoo.", titulo_det="El Wahoo que tenemos, en detalle", sin_prod="",
+       cuerpo="""      <h2>Wahoo: ciclocomputadores fáciles de usar</h2>
+      <p>Los ciclocomputadores ELEMNT de Wahoo son conocidos por lo simples que son de configurar y de usar en la ruta: se ajustan desde el celular y muestran lo que necesitas sin enredos.</p>
+      <h3>ELEMNT ROAM 3: para explorar y entrenar</h3>
+      <p>Tiene pantalla táctil a color de 2,8 pulgadas que se lee a pleno sol, botones físicos para usarlo con guantes, navegación con indicaciones por voz y hasta 25 horas de batería. Muestra el perfil de las subidas, los segmentos de Strava en vivo y tus entrenamientos estructurados.</p>
+      <h3>¿Entrenas por potencia?</h3>
+      <p>Un ciclocomputador es la pantalla de tus datos. Si quieres medir tus vatios, mira los <a href="/magene-medellin">pedales de potencia Magene</a>, y en nuestro <a href="/taller-de-bicicletas-medellin">taller</a> te instalamos y configuramos todo.</p>""",
+       porque='        <li><b>Te lo entregamos configurado:</b> te ayudamos a emparejarlo con tu celular y tus sensores.</li>',
+       faqs=[("¿Dónde comprar un Wahoo ELEMNT ROAM 3 en Medellín?", "En Veloce, en el Mall Campestre Drive Inn, El Poblado. También puedes pedirlo por WhatsApp al +57 305 245 1204."),
+             ("¿El ELEMNT ROAM 3 tiene pantalla táctil?", "Sí. Tiene pantalla táctil a color de 2,8 pulgadas y además botones físicos, para usarlo con guantes o con lluvia."),
+             ("¿Cuánto dura la batería del ELEMNT ROAM 3?", "Hasta 25 horas, según el brillo de la pantalla y los sensores que conectes."),
+             ("¿Envían productos Wahoo a otras ciudades?", "Sí. Hacemos envíos a toda Colombia, gratis en compras desde $399.000.")]),
   dict(slug="giant-medellin", marca="Giant", miga="Giant", corto="Bicicletas de ruta de carbono.",
        title="Bicicletas Giant TCR en Medellín · Pro Disc 2, Disc 1 KOM y Disc 2 KOM | Veloce",
        desc="Bicicletas Giant en Medellín: TCR Advanced Pro Disc 2 con Shimano 105 y ruedas de carbono, TCR Advanced Disc 1 KOM con Ultegra y Disc 2 KOM con 105. Últimas unidades en tallas S y M. Precios en pesos y bike fit Retül gratis. Tienda en El Poblado.",
