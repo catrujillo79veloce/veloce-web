@@ -564,3 +564,5 @@ a.prod-more{display:inline-block}
 }
 @media (max-width:700px){.bf-reloj small{display:none}.bf-reloj::before{content:"Empieza en";font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#bbb;margin-right:4px}.bf-reloj b{font-size:22px;min-width:31px;padding:3px 4px}.bf-btn{padding:8px 10px;letter-spacing:.04em}}
 @media (max-width:380px){.bf-reloj::before{display:none}}
+@media (max-width:700px){.bf-reloj::before{display:none}.bf-in{flex-wrap:nowrap;flex-wrap:wrap}.bf-reloj{flex:0 0 auto}.bf-btn{flex:0 1 auto;margin-left:auto;white-space:normal;text-align:center;line-height:1.15}.bf-txt strong::after{content:" · empieza en";font-size:14px;font-weight:700;color:#ff6b5e;letter-spacing:.04em}}
+@media (max-width:420px){.feature-text h3{font-size:34px;overflow-wrap:anywhere}}
