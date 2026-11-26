@@ -538,3 +538,29 @@ a.prod-more{display:inline-block}
 @media (max-width:520px){.prod-fitline{font-size:10px;margin:-4px 0 8px;letter-spacing:.03em}}
 .fit-quien{margin-bottom:64px}
 @media (max-width:620px){.fit-quien{margin-bottom:44px}}
+
+/* ===== Black Friday ===== */
+.bf-franja{background:#000;color:#fff;border-bottom:3px solid var(--rojo)}
+.bf-in{max-width:1240px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.bf-txt{flex:1;min-width:260px;display:flex;flex-direction:column;gap:2px}
+.bf-txt strong{font-family:"Barlow Condensed",sans-serif;font-style:italic;font-weight:900;text-transform:uppercase;font-size:30px;line-height:1;letter-spacing:.01em}
+.bf-txt span{font-size:14px;color:#d9d6d0}
+.bf-reloj{display:flex;align-items:baseline;gap:4px;font-variant-numeric:tabular-nums}
+.bf-reloj small{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#bbb;margin-right:8px}
+.bf-reloj b{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:34px;line-height:1;background:var(--rojo);padding:4px 7px;min-width:46px;text-align:center}
+.bf-reloj i{font-style:normal;font-size:11px;color:#bbb;margin-right:6px;text-transform:uppercase}
+.bf-btn{background:#fff;color:#000;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.08em;padding:12px 18px;white-space:nowrap;border:2px solid #fff;transition:.2s}
+.bf-btn:hover{background:var(--rojo);border-color:var(--rojo);color:#fff}
+.bf-btn2{background:transparent;color:#fff}
+@media (max-width:700px){
+  .bf-in{padding:10px 16px;gap:10px 12px}
+  .bf-txt{min-width:100%}
+  .bf-txt strong{font-size:26px}
+  .bf-txt span{font-size:12.5px;line-height:1.35}
+  .bf-reloj small{margin-right:4px;font-size:10px}
+  .bf-reloj b{font-size:24px;min-width:34px;padding:3px 5px}
+  .bf-reloj i{font-size:9px;margin-right:3px}
+  .bf-btn{padding:9px 12px;font-size:11px;margin-left:auto}
+}
+@media (max-width:700px){.bf-reloj small{display:none}.bf-reloj::before{content:"Empieza en";font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#bbb;margin-right:4px}.bf-reloj b{font-size:22px;min-width:31px;padding:3px 4px}.bf-btn{padding:8px 10px;letter-spacing:.04em}}
+@media (max-width:380px){.bf-reloj::before{display:none}}

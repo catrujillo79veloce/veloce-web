@@ -141,6 +141,7 @@ def pagina(m):
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BCTKZM82SJ"></script>
 <script src="/js/analytics.js"></script>
+<script src="/js/promo.js" defer></script>
 <meta name="description" content="{m["desc"]}">
 <link rel="canonical" href="{SITE}/{m["slug"]}">
 <meta property="og:type" content="website">
