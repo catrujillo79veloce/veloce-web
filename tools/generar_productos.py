@@ -20,7 +20,7 @@ def bf_attr(p):
 
 TIPO = {"Ruta": "Bicicleta de ruta", "Gravel": "Bicicleta gravel", "MTB": "Bicicleta MTB",
         "E-MTB": "Bicicleta eléctrica de montaña", "E-Ruta": "Bicicleta eléctrica de ruta", "Casco": "Casco", "Casco aero": "Casco aero",
-        "Gafas": "Gafas", "Zapatillas": "Zapatillas", "Ciclocomputador": "Ciclocomputador", "Pedales": "Pedales de ruta"}
+        "Gafas": "Gafas", "Zapatillas": "Zapatillas", "Ciclocomputador": "Ciclocomputador", "Pedales": "Pedales de ruta", "Sillines": "Sillín"}
 
 def nombre_largo(p):
     """'Bicicleta de ruta Colnago V3 Black Edition', 'Casco Kask Mojito³', 'Zapatillas Sidi MTB Speed'..."""
@@ -98,7 +98,7 @@ def pagina(p):
     tallas = ""
     if p.get("tallas"):
         tb = "".join(f'<button class="t-btn" data-t="{t}">{t}</button>' for t in p["tallas"])
-        tallas = f'<div class="m-opt"><h4>Talla{" (EU)" if p["cat"] == "Zapatillas" else ""}</h4><div class="t-row">{tb}</div></div>'
+        tallas = f'<div class="m-opt"><h4>{"Ancho" if p["cat"] == "Sillines" else "Talla"}{" (EU)" if p["cat"] == "Zapatillas" else ""}</h4><div class="t-row">{tb}</div></div>'
     specs = "".join(f"<li>{x}</li>" for x in p.get("specs") or [])
     if p.get("fit"): specs += '<li><b style="color:#1e9be0">Incluye bike fit Retül GRATIS</b></li>'
     precio_html = (f"<s>{antes}</s> " if antes else "") + (precio or "Precio según configuración")

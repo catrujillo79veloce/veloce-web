@@ -411,12 +411,12 @@ MARCAS = [
              ("¿La bicicleta incluye bike fit?", "Sí. Toda bicicleta de más de $8.000.000 que compres en Veloce incluye bike fit Retül gratis."),
              ("¿Envían bicicletas Look a otras ciudades?", "Sí. Hacemos envíos a toda Colombia, gratis en compras desde $399.000.")]),
   dict(slug="zapatillas-fizik-medellin", marca="Fizik", miga="Zapatillas Fizik", corto="Zapatillas de ruta italianas con BOA.",
-       title="Zapatillas Fizik en Medellín · Tempo R5 de ruta con BOA | Veloce",
-       desc="Zapatillas de ciclismo Fizik en Medellín: Tempo Overcurve R5 de ruta con dial BOA, en 3 colores y tallas 38 a 45, con precio en pesos. Tienda en El Poblado. Pide las tuyas por WhatsApp.",
+       title="Fizik en Medellín · Zapatillas Tempo R5 y sillín Antares Adaptive | Veloce",
+       desc="Zapatillas de ciclismo Fizik en Medellín: Tempo Overcurve R5 de ruta con dial BOA, en 3 colores y tallas 38 a 45, y sillín Antares Versus Evo R3 Adaptive impreso en 3D. Tienda en El Poblado. Pide las tuyas por WhatsApp.",
        h1="Zapatillas Fizik<br>en Medellín.", og="img/productos/fizik-tempo-r5-negro-1.jpg",
-       intro="Zapatillas de ruta italianas con dial BOA. Conoce la Tempo Overcurve R5 en 3 colores y tallas 38 a 45.",
+       intro="Zapatillas de ruta italianas con dial BOA y sillines impresos en 3D. Conoce la Tempo Overcurve R5 y el sillín Antares Versus Evo R3 Adaptive.",
        cta="Pedir mis Fizik", cta_msg="Hola Veloce, me interesan unas zapatillas Fizik. ¿Qué tallas y colores tienen?",
-       titulo_prod="Zapatillas Fizik.", titulo_det="La Fizik que tenemos", sin_prod="",
+       titulo_prod="Zapatillas y sillines Fizik.", titulo_det="La Fizik que tenemos", sin_prod="",
        cuerpo="""      <h2>Fizik: zapatillas y sillines italianos</h2>
       <p>Fizik es una marca italiana de sillines y zapatillas de ciclismo, muy usada en el pelotón profesional. Sus zapatillas se reconocen por su diseño limpio y por un ajuste pensado para muchas horas sobre la bici.</p>
       <h3>Tempo Overcurve R5: para rodar cómodo</h3>
