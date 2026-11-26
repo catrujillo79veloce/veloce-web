@@ -64,7 +64,7 @@ def pagina(slug, title, desc, kicker, h1, intro, cta_txt, cta_msg, cuerpo, faqs,
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BCTKZM82SJ"></script>
 <script src="/js/analytics.js"></script>
-<script src="/js/promo.js" defer></script>
+<script src="/js/promo.js"></script>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{SITE}/{slug}">
 <meta property="og:type" content="website">
@@ -165,7 +165,8 @@ bf_faq = [
     ("¿Conviene hacer el bike fit antes de comprar bici?", "Sí. Es la mejor forma de acertar con la talla y el modelo. Escríbenos y te asesoramos."),
     ("¿El bike fit viene incluido si compro mi bici en Veloce?", "En algunas bicicletas sí: las que lo incluyen lo indican en su ficha del catálogo."),
 ]
-bf_lat = f"""      <h3>Agenda tu bike fit</h3>
+bf_lat = f"""      <div class="bf-solo bf-fit bf-fit-lat"><b>Black Friday · 30% de descuento</b><span><s>$440.000</s> <strong>$308.000</strong> pagando en efectivo o transferencia del 27 al 30 de noviembre. Agenda tu sesión para cualquier día de diciembre.</span></div>
+      <h3>Agenda tu bike fit</h3>
       <p>Sistema Retül con captura 3D.</p>
       <p><b>Para cualquier ciclista y cualquier bicicleta.</b></p>
 {DIR}

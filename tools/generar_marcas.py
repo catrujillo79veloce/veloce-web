@@ -37,13 +37,14 @@ def tarjeta(p):
     msg = p.get("wa") or (f"Hola Veloce, me interesa: {nombre}" + (f" ({precio})" if precio else ". ¿Qué configuraciones tienen?"))
     test = (f'<a class="btn btn-test" href="{wa(f"Hola Veloce, quiero agendar un test ride de la {nombre}. ¿Qué días tienen disponibles?")}">Agendar test ride</a>'
             if p.get("test") else "")
+    bf = f' data-bf="{p["bf"]}" data-normal="{p.get("antes") or p.get("precio")}"' if p.get("bf") else ""
     return f"""<article class="prod">
       <a class="prod-img" href="{url_prod(p)}" aria-label="Ver {nombre}"><img src="/{foto}" alt="{nombre} en Veloce Medellín" loading="lazy">{badges}</a>
       <div class="prod-body">
         <div class="prod-brand">{p["marca"]}</div>
         <h3 class="prod-name"><a href="{url_prod(p)}">{p["nombre"]}</a></h3>
         {f'<p class="prod-res">{p["resumen"]}</p>' if p.get("resumen") else ""}{colores}{tallas}
-        <div class="prod-price {'' if precio else 'consultar'}">{precio_html}</div>
+        <div class="prod-price {'' if precio else 'consultar'}"{bf}>{precio_html}</div>
         <a class="prod-more" href="{url_prod(p)}">Ver detalles</a>
         <a class="btn btn-solid" href="{wa(msg)}">{'Lo quiero' if precio else 'Cotizar'} · WhatsApp</a>
         {test}
@@ -141,7 +142,7 @@ def pagina(m):
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BCTKZM82SJ"></script>
 <script src="/js/analytics.js"></script>
-<script src="/js/promo.js" defer></script>
+<script src="/js/promo.js"></script>
 <meta name="description" content="{m["desc"]}">
 <link rel="canonical" href="{SITE}/{m["slug"]}">
 <meta property="og:type" content="website">

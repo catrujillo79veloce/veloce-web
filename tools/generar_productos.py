@@ -14,6 +14,10 @@ PAG_MARCA = {m["marca"]: m for m in MARCAS}
 
 FITBOX = '<a class="fit-incl" href="/bike-fit-retul-medellin"><b>Bike fit Retül GRATIS con esta bicicleta</b><span>Te la entregamos ajustada a tu cuerpo con medición 3D. Ver cómo funciona</span></a>'
 
+def bf_attr(p):
+    """Precio de Black Friday: lo activa js/promo.js solo durante la campaña."""
+    return f' data-bf="{p["bf"]}" data-normal="{p.get("antes") or p.get("precio")}"' if p.get("bf") else ""
+
 TIPO = {"Ruta": "Bicicleta de ruta", "Gravel": "Bicicleta gravel", "MTB": "Bicicleta MTB",
         "E-MTB": "Bicicleta eléctrica de montaña", "E-Ruta": "Bicicleta eléctrica de ruta", "Casco": "Casco", "Casco aero": "Casco aero",
         "Gafas": "Gafas", "Zapatillas": "Zapatillas", "Ciclocomputador": "Ciclocomputador", "Pedales": "Pedales de ruta"}
@@ -46,7 +50,7 @@ def tarjeta_mini(p):
     return f"""<a class="prod" href="{url_prod(p)}">
       <div class="prod-img"><img src="/{p.get("foto","")}" alt="{p["marca"]} {p["nombre"]}" loading="lazy"><span class="prod-cat">{p["cat"]}</span></div>
       <div class="prod-body"><div class="prod-brand">{p["marca"]}</div><div class="prod-name">{p["nombre"]}</div>
-      <div class="prod-price {'' if p.get("precio") else 'consultar'}">{precio}</div></div></a>"""
+      <div class="prod-price {'' if p.get("precio") else 'consultar'}"{bf_attr(p)}>{precio}</div></div></a>"""
 
 def relacionados(p):
     misma = [x for x in productos if x is not p and x["marca"] == p["marca"]]
@@ -139,7 +143,7 @@ def pagina(p):
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BCTKZM82SJ"></script>
 <script src="/js/analytics.js"></script>
-<script src="/js/promo.js" defer></script>
+<script src="/js/promo.js"></script>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{url}">
 <meta property="og:type" content="product">
@@ -163,7 +167,7 @@ def pagina(p):
       <div class="m-info">
         <div class="prod-brand">{p["marca"]} · {p["cat"]}</div>
         <h1 class="display">{p["nombre"]}</h1>
-        <div class="prod-price {'' if precio else 'consultar'}">{precio_html}</div>{FITBOX if p.get("fit") else ""}
+        <div class="prod-price {'' if precio else 'consultar'}"{bf_attr(p)}>{precio_html}</div>{FITBOX if p.get("fit") else ""}
         <p>{p.get("desc") or p.get("resumen", "")}</p>
         {colores}{tallas}{guia_html(p)}
         <div class="m-ctas"><a class="btn btn-solid" id="m-wa" href="{wa(msg)}">{'Lo quiero · WhatsApp' if precio else 'Cotizar mi configuración'}</a>{test_btn}</div>{test_txt}

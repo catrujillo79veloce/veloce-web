@@ -13,6 +13,23 @@
     if (prueba && prueba[1] === "campana") return INICIO_CAMPANA + 1000;
     return Date.now();
   }
+  function enCampana() { var t = ahora(); return t >= INICIO_CAMPANA && t < FIN_CAMPANA; }
+  if (enCampana()) document.documentElement.className += " bf-on";
+  function precios() {
+    if (!enCampana()) return;
+    var els = document.querySelectorAll(".prod-price[data-bf]");
+    for (var i = 0; i < els.length; i++) {
+      var e = els[i];
+      if (e.getAttribute("data-bf-ok")) continue;
+      e.setAttribute("data-bf-ok", "1");
+      e.innerHTML = "<s>" + e.getAttribute("data-normal") + "</s> " + e.getAttribute("data-bf");
+      var n = document.createElement("div");
+      n.className = "bf-nota";
+      n.textContent = "Precio Black Friday pagando en efectivo o transferencia";
+      e.insertAdjacentElement("afterend", n);
+    }
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", precios); else precios();
   function dos(n) { return (n < 10 ? "0" : "") + n; }
   function montar() {
     var t = ahora();
